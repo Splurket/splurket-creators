@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Roboto&display=swap');
+/* font-family: 'DM Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
+   font-family: 'Roboto', sans-serif; */
+/* root styling */
+
+:root{
+    --light:##52b36c;
+    --secondary:#abd5bd;
+    --dark:#343a40;
+    --primary-color:##52b36c;
+    --secondary-color:#2ec4b6;
+    --border:#e9ecef;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+*>*{
+    box-sizing: border-box;
+}
+
+
+
+
+/* global styling */
+.text-light{
+    color:var(--light);
+}
+.text-secondary{
+    color:var(--secondary);
+}
+.text-dark{
+    color:var(--dark);
+}
+.text-primary{
+    color:var(--primary-color);
+}
+.bg-light{
+    background-color: var(--light);
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+/* section styling */
+
+/* navigation menu */
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.nav-brand{
+    font-family: 'Shadows Into Light Two;
+    font-weight: bold;
+    align-items: center;
+    font-size: 40px;
+}
+.collapse{
+    align-self: center;
+
+}
+.nav-link{
+    font-size: 18px;
+    margin: 12px;
+    color: var(--dark);
+    font-family: 'Arial', Arial;
+}
+.nav-link:hover{
+    color: var(--primary-color);
+}
+
+.search-box{
+    display: inline;
+    border-right: 1px solid var(--secondary);
+    padding-right: 12px;
+    margin-right: 10px;
+}
+.toggle-button{
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 8px 10px;
+    display: none;
+}
+.toggle-button:focus{
+    outline: none;
+}
+/* navigation menu */
+/* media query */
+@media(max-width:992px){
+    .navbar{
+        flex-direction: column;
+    }
+}
+@media(max-width:644px){
+    .toggle-button{
+        display: initial;
+    }
+    .collapse{
+        max-width: 0;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.51,-0.15,0,0.98);
+    }
+}
+    .searchbar{
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: #52b36c;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 300px;
+    caret-color:#52b36c;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #52b36c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+    .change1::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #52b36c;
+    }
+    .change1:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #52b36c;
+        opacity: 1;
+    }
+    .change1::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #52b36c;
+        opacity: 1;
+    }
+    .change1:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #52b36c;
+    }
+
+</style>
+<body>
+    <!-- Header -->
+    <header id="header" class="shadow bg-light"style="background-color:#52b36c;">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark" style="color:white;font-family: 'Shadows Into Light Two';">
+             Splurket
+            </a>
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+                <div class="container">
+                  <div class="d-flex justify-content-center">
+                    <div class="searchbar">
+                      <input class="search_input change1" type="text" name="" placeholder="Search Products..." >
+                      <a href="#" class="search_icon"><i class="fas fa-search" style="color:#52b36c"></i></a>
+                    </div>
+                  </div>
+                </div>
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="LINK GOES HERE" style="color:white;font-size:40px;padding-left: 10px;padding-right: 10px" class="fas fa-home "></i></a>
+                    <a href="LINK GOES HERE" style="color:white;font-size:40px;padding-left: 10px;padding-right: 10px" class="fas fa-shopping-bag"></i></a>
+                    <a href="LINK GOES HERE" style="color:white;font-size:40px;padding-left: 10px;padding-right: 10px"class="fas fa-comments-dollar"></i></a>
+                    <a href="LINK GOES HERE" style="color:white;font-size:40px;padding-left: 10px;padding-right: 10px" class="fas fa-file-alt"></i></a>
+                    <a href="LINK GOES HERE" style="color:white;font-size:40px;padding-left: 10px;padding-right: 10px" class="far fa-credit-card"></i></a>
+                </ul>
+            </div>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header.. -->
+
+    <!-- java script -->
+    <script>
+    let toggle = document.querySelector("#header .toggle-button");
+    let collapse = document.querySelectorAll("#header .collapse");
+
+    toggle.addEventListener('click',function(){
+        collapse.forEach(col=>col.classList.toggle("collapse-toggle"));
+    })
+    </script>
+    
+</body>
+</html>

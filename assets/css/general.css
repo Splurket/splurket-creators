@@ -1,0 +1,27 @@
+@import "colors.css";
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--masthead-bg-color);
+    color: var(--color-white);
+
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main h1 {
+    text-align: center;
+    margin: 2.5rem;
+}
+
+main .rocket-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}

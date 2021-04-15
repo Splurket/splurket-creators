@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+</head>
+<script>
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+    var redirect= getParameterByName('redirect');
+    console.log(redirect)
+    var userSIEmail1 = getParameterByName('bunnyluck');
+    var userSIPassword1 = getParameterByName('rabbitfoot');
+    var userSIEmail = atob(userSIEmail1)
+    var userSIPassword = atob(userSIPassword1)
+    var config = {
+        apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
+        authDomain: "splurket-66df1.firebaseapp.com",
+        databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
+        projectId: "splurket-66df1",
+        storageBucket: "splurket-66df1.appspot.com",
+        messagingSenderId: "286706779903",
+        appId: "1:286706779903:web:fd91c29319f9804e192eca",
+        measurementId: "G-QWQ2M658KL"
+      };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true }); 
+    firebase.auth().signInWithEmailAndPassword(userSIEmail, userSIPassword).then((success) => {
+        var data= JSON.stringify(success)
+        var localdata= {'email': userSIEmail, 'password': userSIPassword};
+        // Put the object into storage
+        localStorage.setItem('usercreds', JSON.stringify(localdata));
+        location.href=redirect + '?user=' + userSIEmail1
+    }).catch((error) => {
+        // Handle Errors here.
+        console.log(error)
+    })
+</script>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
+</head>
+<style>
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: @gray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid @gray-light;
+  //border-radius: 1rem;
+  color: @gray-dark;
+  padding: 0.5rem;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+
+.card__title {
+
+  color: @gray-dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding:10px;
+  padding-bottom: 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+</style>
+<body>
+	<!-- Section: Sidebar -->
+	<section style="float:left;">
+
+	  <!-- Section: Categories -->
+	  <section>
+
+	    <h5>Categories</h5>
+
+	    <div class="text-muted small text-uppercase mb-5">
+
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Frontend Development</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Backend Development</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Code Snippets</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Automation</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Digital Design</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Web Design</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">UI/UX Elements</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Dropshipping Solutions</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Web Apps</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Robotics</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Marketing Solutions</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Payment Systems</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Computer Vision</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Education</a></p>
+	      <p class="mb-3"><a href="#!" class="card-link-secondary">Artificial Intelligence</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Smart Home</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Wearable Tech</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Podcast Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Streaming Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Engineering</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Medical</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Data Science</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">3D Graphics And Design</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Electrical/Energy Systems Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Manufacturing</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Widgets/Tools</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Templates</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Business</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Ecommerce Solution</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Communication Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Games</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Propulsion Systems</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Customer Service Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Circuit Systems</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">GPS And Travel Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Shipping Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Realty Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Company Management</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Team Management</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Booking And Scheduling Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Agricultural Software</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Entertainment</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Block Chain</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Social Netowrking</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Trading</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Safety Systems</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Music</a></p>
+	      <p class="mb-0"><a href="#!" class="card-link-secondary">Videos</a></p>
+	    </div>
+
+	  </section>
+	  <!-- Section: Categories -->
+
+	  <!-- Section: Filters -->
+	  <section>
+
+	    <h5 class="mb-4">Filters</h5>
+
+	    <section class="mb-4">
+
+	      <div class="md-form md-outline mt-0 d-flex justify-content-between align-items-center">
+	        <input type="text" id="search12" class="form-control mb-0" placeholder="Search...">
+	        <a href="#!" class="btn btn-flat btn-md px-3 waves-effect"><i class="fas fa-search fa-lg"></i></a>
+	      </div>
+
+	    </section>
+
+	    <!-- Section: Price -->
+	    <section class="mb-4">
+
+	      <h6 class="font-weight-bold mb-3">Price</h6>
+
+	      <div class="form-check pl-0 mb-3">
+	        <input type="radio" class="form-check-input" id="under25" name="materialExampleRadios">
+	        <label class="form-check-label small text-uppercase card-link-secondary" for="under25">Under $25</label>
+	      </div>
+	      <div class="form-check pl-0 mb-3">
+	        <input type="radio" class="form-check-input" id="2550" name="materialExampleRadios">
+	        <label class="form-check-label small text-uppercase card-link-secondary" for="2550">$25 to $50</label>
+	      </div>
+	      <div class="form-check pl-0 mb-3">
+	        <input type="radio" class="form-check-input" id="50100" name="materialExampleRadios">
+	        <label class="form-check-label small text-uppercase card-link-secondary" for="50100">$50 to $100</label>
+	      </div>
+	      <div class="form-check pl-0 mb-3">
+	        <input type="radio" class="form-check-input" id="100200" name="materialExampleRadios">
+	        <label class="form-check-label small text-uppercase card-link-secondary" for="100200">$100 to $200</label>
+	      </div>
+	      <div class="form-check pl-0 mb-3">
+	        <input type="radio" class="form-check-input" id="200above" name="materialExampleRadios">
+	        <label class="form-check-label small text-uppercase card-link-secondary" for="200above">$200 & Above</label>
+	      </div>
+	      <form>
+	        <div class="d-flex align-items-center mt-4 pb-1">
+	          <div class="md-form md-outline my-0">
+	            <input id="from" type="text" class="form-control mb-0">
+	            <label for="form">$ Min</label>
+	          </div>
+	          <p class="px-2 mb-0 text-muted"> - </p>
+	          <div class="md-form md-outline my-0">
+	            <input id="to" type="text" class="form-control mb-0">
+	            <label for="to">$ Max</label>
+	          </div>
+	        </div>
+	      </form>
+
+	    </section>
+	    <!-- Section: Price -->
+
+	    <!-- Section: Price version 2 -->
+	    <section class="mb-4">
+
+	      <h6 class="font-weight-bold mb-3">Price</h6>
+
+	      <div class="slider-price d-flex align-items-center my-4">
+	        <span class="font-weight-normal small text-muted mr-2">$0</span>
+	        <form class="multi-range-field w-100 mb-1">
+	          <input id="multi" class="multi-range" type="range" />
+	        </form>
+	        <span class="font-weight-normal small text-muted ml-2">$100</span>
+	      </div>
+
+	    </section>
+	    <!-- Section: Price version 2 -->
+	  </section>
+	</section>
+
+	<div class="row">
+		<div id="myData" class="grid"></div>
+</div>
+    <script>
+        fetch('https://api.trello.com/1/lists/6026842adf2e5e3dcd51259e/cards?key=aa8ab2f4e1bf7b8f82f74196837c7d07&token=5b6aff50ab19f53f363bfade341c7e57fa2c0e8a4dad2e0db6d1a19f93c57868')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = `
+                     <div class="column">
+                        <div class="card">
+                          <div class="card__title">${data[i].name}</div>
+                          <p class="card__text">${data[i].desc}</p>
+                          <button class="btn btn--block card__btn" id='${data[i].id}'>Add To Cart</button>
+                        </div>
+                      </div>
+					  `
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    	$('#multi').mdbRange({
+			  single: {
+			    active: true,
+			    multi: {
+			      active: true,
+			      rangeLength: 1
+			    },
+			  }
+			});
+    	</script>
+
+</div>
+</body>
+</html>

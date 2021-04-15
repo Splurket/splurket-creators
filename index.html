@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Splurket: Software Has no Limits</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="icon" src="/assets/images/Logo.ico">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./assets/css/bd-coming-soon.css">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- css -->
+    <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
+</head>
+<style type="text/css">
+    .headerdrop {
+      position: absolute;
+      border-top:solid 2px;
+      border-color: white;
+      top:83px;
+      background-color: #52b36c;
+      width:100%;
+      color: white;
+      display: none;
+}
+    .headerdrop:hover{
+        display: block;
+    }
+</style>
+
+    <!-- Header.. -->
+<body>
+    <!-- Header -->
+    <header id="header" class="shadow bg-light"style="background-color:#52b36c;">
+        <ul style="position: absolute;right:30px;top:25px;" id="cartbutton">
+                <a href="./cart/cart.html" class="icon-shopping-cart" style="font-size: 25px;"><i style="color:white" class="fa fa-shopping-cart"></i>
+                </a><a style="padding-left:7px;padding-right:7px;padding-top:5px;padding-bottom:5px;" id="lblCartCount" cssclass="badge badge-warning" forecolor="White">0</a>
+            </ul>
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark" style="color:white;font-family: 'Shadows Into Light Two';margin-top:30px">Splurket<span class="label label-default" style="font-size: 15px;background-color: white;color: #52b36c;padding:5px;font-family: 'Arial';margin-left: 5px;">Beta</span></a>
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+            <!-- collapse on toggle button click -->
+            <div class="collapse" style="margin-right:20%;margin-top:30px;">
+                <ul class="navbar-nav">
+                    <a href="./index.html" id="home" style="color:white;font-size:20px;padding-left: 10px;padding-right: 10px;transition-delay: 1s; " title="Home" onmouseover="document.getElementById('homeheaderdrop').style.display = 'block';" onmouseout="document.getElementById('homeheaderdrop').style.display = 'none';">Home</a>
+                    <a href="./pages/store.html" id="marketplace" style="color:white;font-size:20px;padding-left: 10px;padding-right: 10px;transition-delay: 1s; " title="Marketplace" onmouseover="document.getElementById('marketplaceheaddrop').style.display = 'block';" onmouseout="document.getElementById('marketplaceheaddrop').style.display = 'none';">Marketplace</a>
+                    
+                    <a href="./pages/messages.html" id="messages" style="color:white;font-size:20px;padding-left: 10px;padding-right: 10px;transition-delay: 1s; " title="Messages" onmouseover="document.getElementById('messageheaderdrop').style.display = 'block';" onmouseout="document.getElementById('messageheaderdrop').style.display = 'none';">Messages</a>
+                    
+                    <a href="./pages/custom request.html" id="support" style="color:white;font-size:20px;padding-left: 10px;padding-right: 10px;transition-delay: 1s; " title="Support" onmouseover="document.getElementById('supportheaderdrop').style.display = 'block';" onmouseout="document.getElementById('supportheaderdrop').style.display = 'none';">Support</a>
+                </ul>
+            </div>
+            <!--Login BUTTON-->
+            <div id="login" hidden="hidden">
+                <button class="login-button" id="login-button" onclick="location.href='https://accounts.splurket.com?redirect='+location.href;">Login</button>
+            </div>
+            <!--AVATAR-->
+            <div class="dropdown" id="avatar" hidden="hidden"><br>
+                <img src="" alt="Avatar" class="avatar" id="avatarpic" width="60px" height="60px" hidden="hidden">
+              <div class="dropdown-content" style="color:white; min-width:240px;right:2%;border-top: solid 2px;border-color: white;">
+                <div>
+                    <p style="display:inline-block"; id="avatarusername1" onclick="profilego()">Signed In As:</p>
+                </div>
+                <hr>
+                <p onclick="profilego()">Your Profile</p>
+                <p>Splurket Pay</p>
+                <p>Splurket Creators</p>
+                <p>Your Payment History</p>
+                <p>Your Job Request History</p>
+                <hr>
+                <div>
+                <center><p onclick="signout()">Sign Out</p></center>
+              </div>
+            </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--Home Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="homeheaderdrop"onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'"> 
+        <div class="fcolumn" style="margin-left:100px"> 
+            <p style="font-size:20px;">Splurket</p><hr>
+                <p>Profile</p>
+                <p>Marketplace</p>
+                <p>Splurket Pay</p>
+                <p>Splurket Creators</p>
+        </div>
+        <div class="fcolumn"> 
+            <p style="font-size:20px;left:100px;">Splurket Creators</p><hr>
+                <p>Become A Creator</p>
+                <p>Add A Product</p>
+                <p>Share Your Talent</p>
+                <p>Fulfill Customer Orders</p>
+        </div>
+
+    </div>
+    <!--marketplace Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="marketplaceheaddrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">   
+        <div class="fcolumn" style="margin-left:100px"> 
+            <p style="font-size:20px;">Marketplace</p><hr>
+                <p>Explore</p>
+                <p>Categories</p>
+                <p>Cart</p>
+                <p>Checkout</p>
+        </div>
+        <div class="fcolumn"> 
+            <p style="font-size:20px;left:100px;">Orders and Job Requests</p><hr>
+                <p>New Job Request</p>
+                <p>Your Orders And Job Requests</p>
+                <p>Job Payment Completion</p>
+                <p>Get A Quote</p>
+        </div>
+        <div class="fcolumn"> 
+            <p style="font-size:20px;left:100px;">Talent</p><hr>
+                <p>Explore Talent</p>
+                <p>Hire Talent</p>
+                <p>Get A Quote</p>
+        </div>
+    </div>
+    <!--Messages Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="messageheaderdrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">
+        <div class="fcolumn" style="margin-left:100px">
+            <p style="font-size:20px;">Messages</p><hr>
+                    <p>New Message</p>
+                    <p>All Messages</p>
+                    <p>Recipients</p>
+        </div>
+        <div class="fcolumn" style="margin-left:100px">
+
+        </div>
+        <div class="fcolumn" style="margin-left:100px">
+            <center><h3 style="background-color: red;padding:10px;">For Added Safety and Your Protection, Keep Payments and Communications Within Splurket.</h3></center>
+        </div>
+    </div>
+
+    <!--Support Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="supportheaderdrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">
+        <p>Support Placeholder</p>
+    </div>
+
+    
+
+    <!-- java script -->
+    <script>
+    let toggle = document.querySelector("#header .toggle-button");
+    let collapse = document.querySelectorAll("#header .collapse");
+
+    toggle.addEventListener('click',function(){
+        collapse.forEach(col=>col.classList.toggle("collapse-toggle"));
+    })
+    </script>
+    
+    <!-- Header ENDS HERE!!!!.. -->
+
+</body>
+</html>
+    
+</body>
+</html>
+<body class="min-vh-100 d-flex flex-column">
+
+    <main class="my-auto">
+        <div class="container">
+            <h1 class="page-title"style="padding-top:60px; padding-bottom:50px;"><center>The Future of Digital Products Is Almost Here!</h1>
+            <center><p class="page-description" style="background-color:black; padding-left:20px; padding-right:20px; padding-top:20px; padding-bottom:20px" >Lot's of work taking place to open up jobs for digital creators! Customers will be able to request anything digital, and others will be able to join as creators to build what they want! This new, innovative idea, will help thousands, and possibly millions of people! Show your support by following us on social media, and if you are interested in volunteering a helping hand to be a part of the future, history and something bigger than yourself, email us with the address above! Thanks for coming, and we hope you'll be back soon to witness awesomeness!
+            <p style="background-color:white;"></p></p></center>
+            <p><center>Show Your Support</p>
+            <nav class="footer-social-links"><center>
+                <a href="#!" class="social-link"><i class="mdi mdi-facebook-box"></i></a>
+                <a href="#!" class="social-link"><i class="mdi mdi-twitter"></i></a>
+                <a href="#!" class="social-link"><i class="mdi mdi-google"></i></a>
+                <a href="https://www.instagram.com/splurket_store/" class="social-link"><i class="mdi mdi-instagram"></i></a>
+                <a href="#!" class="social-link"><i class="mdi mdi-discord"></i></a>
+             </p>
+              <p>Search: Splurket_Store on all major platforms!<p></center><br><br><br><br>
+    </main>
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+        var name, email, photoUrl, uid, emailVerified;
+
+        var config = {
+            apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
+            authDomain: "splurket-66df1.firebaseapp.com",
+            databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
+            projectId: "splurket-66df1",
+            storageBucket: "splurket-66df1.appspot.com",
+            messagingSenderId: "286706779903",
+            appId: "1:286706779903:web:fd91c29319f9804e192eca",
+            measurementId: "G-QWQ2M658KL"
+          };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var user = firebase.auth().currentUser;
+            //splurket@gmail.com
+            var email1 = user.email;
+            
+            /*var email = getParameterByName('user'); 
+            console.log(email)*/
+            //still splurket
+            
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Accept", "application/json, /;q=0.5");
+
+            var raw = JSON.stringify({
+              "stringtoencrypt": `${email1}`
+            });
+            //document.write(raw)
+            var requestOptions = {
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
+            };
+
+            fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+              .then(function (response) {
+                  return response.json();
+              })
+              .then(function (data) {
+                //should be a base64 string by now
+                getuserdata(data);
+            });
+          } else {
+            console.log('fuck')
+            document.getElementById("avatar").style.display = "none";
+            document.getElementById("login").style.display = "block";
+            document.getElementById('cartbutton').style.top='20px';
+            var all = document.getElementsByClassName('headerdrop');
+            for (var i = 0; i < all.length; i++) {
+              all[i].style.top = '83px';
+            }
+          }
+        });
+        function getuserdata(data) {
+            email = data.encryptedstring;
+                var docRef = db.collection("users").doc(email);
+                docRef.get().then((doc) => {
+                    if (doc.exists) {
+                        data1 = doc.data()
+                        pro_pic = data1.pro_pic;
+                        if (data1.username == "" ){
+                            user_name = data1.email
+                        }
+                        if (data1.username != "") {
+                            user_name = data1.username;
+                        }
+                        document.getElementById("avatarpic").src = pro_pic;
+                        //document.getElementById("avatarpic1").src = pro_pic;
+                        document.getElementById("avatarusername1").innerText = "Signed In As: " + user_name;
+                        document.getElementById("avatar").style.display = "block";
+                        document.getElementById("avatarpic").style.display = "inline-block";
+                        var all = document.getElementsByClassName('headerdrop');
+                        for (var i = 0; i < all.length; i++) {
+                          all[i].style.top = '98px';
+                        }
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                        console.log(doc.data())
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
+                });
+        }
+        function profilego() {
+            var localstuff1 = localStorage.getItem('usercreds');
+            var localstuff = JSON.parse(localstuff1)
+            var loginemail = btoa(localstuff.email);
+            var loginpassword = btoa(localstuff.password);
+            location.href = "https://myaccount.splurket.com/login?bunnyluck="+loginemail+"&rabbitfoot="+loginpassword
+
+        }
+        function signout() {
+            firebase.auth().signOut().then(() => {
+                localStorage.removeItem('usercreds');
+                var all = document.getElementsByClassName('headerdrop');
+                for (var i = 0; i < all.length; i++) {
+                  all[i].style.top = '83px';
+                }
+            }).catch((error) => {
+              // An error happened.
+            });
+        }
+    </script>
+
+    <!--BODY ENDS HERE!!!!-->
+    <!--FOOTER STARTS HERE!!!!--->
+
+<div class=" container footercontainer" width="100%" style="max-width:100%;z-index:-1;background-color:#52b36c;">
+  <div class="frow">
+    <center><div class="fcolumn">
+      <img src="./assets/images/Logo.png" width="120px" height="120px">
+      <p style="color:white">Splurket</p>
+      <p style="color:white;font-size: 15px">Software Has No Limits</p>
+    </div>
+    <div class="fcolumn">
+      <h2>Connect</h2>
+      <a onclick="this.innerText = 'Splurket@gmail.com' ">Email</a><br>
+      <a href="">Discord</a><br>
+      <a href="https://www.instagram.com/splurket_store/">Instagram</a><br>
+      <a href="">Facebook</a><br>
+
+    </div>
+    <div class="fcolumn">
+      <h2>Explore</h2>
+      <a href="">Home</a><br>
+      <a href="">Store</a><br>
+      <a href="">About</a><br>
+      <a href="">Cart</a><br>
+      <a href="">Contact</a><br>
+
+    </div>
+    <div class="fcolumn">
+      <h2>Company</h2>
+      <a href="">Home</a><br>
+      <a href="">Legal</a><br>
+      <a href="">Refund</a><br>
+      <a href="">Payment Security</a><br>
+    </div></center>
+  </div>
+  <center><p style="color:white; margin:0px; padding-bottom:20px;">Copyright © 2021 Splurket, All Rights Reserved</p></center>
+</div>
+</head>
+</body>
+</html>
+
+        </nav>
+    </div>
+</main>
+</body>
+
+</html>
