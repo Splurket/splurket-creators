@@ -4625,4 +4625,8 @@ body.box-layout {
 /*  59. Notika custom scrollbar CSS
 /*----------------------------------------*/
 .mCS-light-1.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #52b36c; }
+<<<<<<< HEAD
 .mCS-light-1.mCSB_scrollTools .mCSB_draggerRail{ background-color: #ccc; }
+=======
+.mCS-light-1.mCSB_scrollTools .mCSB_draggerRail{ background-color: #ccc; }
+>>>>>>> bb5feb9ac8e9783d874af4014dbac73cef507823
