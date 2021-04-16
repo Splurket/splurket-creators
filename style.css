@@ -1,11 +1,5 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Notika - Notika Admin Template 
-    Template URI: 
-    Description: Notika Admin Template is a responsive admin template based on the famous Bootstrap framework it's easy to edit and customize by documentation.
-    Author: lucidtemplate
-    Author URI: 
-    Version: 1.0
 
 -----------------------------------------------------------------------------------
     
@@ -188,6 +182,7 @@ body {}
 }
 .logo-area{
 	padding:14px 0px;
+    font-size: 40px;
 }
 .nav.navbar-nav.notika-top-nav{
 	float: right;
