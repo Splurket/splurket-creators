@@ -78,6 +78,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <div class="header-top-menu">
                         <ul class="nav navbar-nav notika-top-nav">
+                            <!--SEARCH BUTTON RIGHT CORNER
                             <li class="nav-item dropdown">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
                                 <div role="menu" class="dropdown-menu search-dd animated ">
@@ -86,7 +87,36 @@
                                         <input type="text" />
                                     </div>
                                 </div>
+                            </li>-->
+
+                            <!--Login BUTTON-->
+                            <li class="nav-item dropdown">
+                                <div id="login" hidden="hidden">
+                                    <button class="login-button" id="login-button" onclick="location.href='https://accounts.splurket.com?redirect='+location.href;">Login</button>
+                                </div>
+                                <!--AVATAR-->
+                                <div class="dropdown" id="avatar" hidden="hidden"><br>
+                                    <img src="" alt="Avatar" class="avatar" id="avatarpic" width="60px" height="60px" hidden="hidden">
+                                  <div class="dropdown-content" style="color:white; min-width:240px;right:2%;border-top: solid 2px;border-color: white;">
+                                    <div>
+                                        <p style="display:inline-block"; id="avatarusername1" onclick="profilego()">Signed In As:</p>
+                                    </div>
+                                    <hr>
+                                    <p onclick="profilego()">Your Profile</p>
+                                    <p>Splurket Pay</p>
+                                    <p>Splurket Creators</p>
+                                    <p>Your Payment History</p>
+                                    <p>Your Job Request History</p>
+                                    <hr>
+                                    <div>
+                                    <center><p onclick="signout()">Sign Out</p></center>
+                                  </div>
+                                </div>
+
+                                </div>
                             </li>
+
+                            <!--Message ICON IN RIGHT CORNER
                             <li class="nav-item dropdown">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
                                 <div role="menu" class="dropdown-menu message-dd animated zoomIn">
@@ -154,7 +184,7 @@
                                         <a href="#">View All</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                             <li class="nav-item nc-al"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-alarm"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>3</span></div></a>
                                 <div role="menu" class="dropdown-menu message-dd notification-dd animated zoomIn">
                                     <div class="hd-mg-tt">
@@ -222,6 +252,7 @@
                                     </div>
                                 </div>
                             </li>
+                            
                             <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>2</span></div></a>
                                 <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
                                     <div class="hd-mg-tt">
