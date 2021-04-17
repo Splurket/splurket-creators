@@ -467,11 +467,11 @@ body {}
 
 }
 
-.dropdown-content p:hover {background-color: #ddd;}
+.dropdown-content1 p:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown1:hover .dropdown-content1 {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown1:hover .dropbtn {background-color: #3e8e41;}
 
 }
 /*----------------------------------------*/
