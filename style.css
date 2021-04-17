@@ -514,6 +514,7 @@ ul.notika-menu-wrap li a{
     display: block;
 	font-size:14px;
 	color:#333;
+    cursor: pointer;
 }
 .custom-menu-content ul.notika-main-menu-dropdown li ul.layout-more-dp{
 	position: absolute;
