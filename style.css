@@ -477,7 +477,7 @@ body {}
 /*  3.  Main Menu CSS
 /*----------------------------------------*/
 .nav-tabs.notika-menu-wrap{
-	border-bottom: 0px solid #ddd;
+	border-bottom: 0px solid #52b36c;
 }
 .nav-tabs.notika-menu-wrap>li.active>a, .nav-tabs.notika-menu-wrap>li.active>a:focus, .nav-tabs.notika-menu-wrap>li.active>a:hover{
 	border: 0px solid #ddd;
