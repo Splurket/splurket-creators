@@ -56,14 +56,7 @@
                 getuserdata(data);
             });
           } else {
-            console.log('fuck')
-            document.getElementById("avatar").style.display = "none";
-            document.getElementById("login").style.display = "block";
-            document.getElementById('cartbutton').style.top='20px';
-            var all = document.getElementsByClassName('headerdrop');
-            for (var i = 0; i < all.length; i++) {
-              all[i].style.top = '83px';
-            }
+                location.href='https://accounts.splurket.com?redirect='+location.href
           }
         });
         function getuserdata(data) {
