@@ -149,5 +149,6 @@ function productshow() {
     for (var i = 0; i < all.length; i++) {
       all[i].style.display = 'none';
     }
+    document.getElementById('sex-dashboard').style.display = "block";
 
 }
