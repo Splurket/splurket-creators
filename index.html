@@ -668,7 +668,30 @@
 
     <!--MYPRODUCTS TABLE!!!!-->
     <div hidden="hidden" id="sex-dashboard" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 1000px;background-color: white;padding: 0px">
-        <center><iframe src="./vueproducts.html" style="border:none" width="1170px" height="1000px"></iframe></center>
+        <center><iframe src="./vueproducts.html" style="border:none" id="iframe1"></iframe></center>
+        <script type="application/javascript">
+
+        function resizeIFrameToFitContent( iFrame ) {
+
+            iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+            iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+        }
+        function resizeIFrameToFitHeight( iFrame ) {
+
+            iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+            iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+        }
+
+        window.addEventListener('DOMContentLoaded', function(e) {
+
+            var iFrame = document.getElementById( 'iFrame1' );
+            resizeIFrameToFitContent( iFrame );
+            var sexdashboard = document.getElementById( 'sex-dashboard' );
+            resizeIFrameToFitheight( iFrame );
+
+        } );
+
+        </script>
     </div>
 
     <!-- Main Menu area End-->
