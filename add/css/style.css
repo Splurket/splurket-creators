@@ -202,13 +202,13 @@ button:focus {
   font-size: 90%;
 }
 .table {
-  background-color: #50697f;
+  background-color: white;
   color: #fff;
   font-size: 85%;
   margin-bottom: 0;
 }
 thead {
-  background-color: #486177;
+  background-color: white;
   color: #fff;
 }
 .table thead th {
@@ -279,15 +279,16 @@ thead {
 }
 .form-control {
   background-color: white;
-  color: #fff;
+  color: black;
   border: 0;
 }
 .form-control:focus {
-  background-color: #60738e;
-  color: #fff;
+  background-color: white;
+  color: black;
   border-color: transparent;
   box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
 }
+
 .form-group label {
   color: #fff;
   margin-bottom: 10px;
