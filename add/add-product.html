@@ -79,12 +79,20 @@
                     <label for="description">Product Description</label>
                     <textarea class="form-control validate" rows="10" required style="color: black"></textarea>
               </div>
-              <div class="row">
+              <div class="row" style="width: 100%">
                 <div class="col-12">
-                  <h2 class="tm-block-title d-inline-block">Shipping Settings</h2>
-                  <p>*Shipping Refers To The Product Being Delivered To The Customer's Email/Account*</p>
+                  <h2 class="tm-block-title d-inline-block">Shipping Settings</h2><hr>
+                  <p style="color: white;">*Shipping Refers To The Product Being Delivered To The Customer's Email/Account*</p>
+                  <div class="custom-file mt-3 mb-3">
+                    <input id="fileInput" type="file" style="display:none;" />
+                    <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD DIGITAL PRODUCT" onclick="document.getElementById('fileInput').click();"/>
+                  </div>
                 </div>
-              </div><hr>
+              </div>
+              </div><br>
+              
+
+
               <div class="row">
                 <div class="col-12">
                   <h2 class="tm-block-title d-inline-block">Product Settings</h2>
