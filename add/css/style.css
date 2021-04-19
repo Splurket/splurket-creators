@@ -174,7 +174,7 @@ button:focus {
 .tm-gray-circle {
   width: 80px;
   height: 80px;
-  background-color: #aaa;
+  background-color: white;
   border-radius: 50%;
   margin-right: 15px;
 }
@@ -510,7 +510,7 @@ input[type="checkbox"]:focus {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #aaa;
+  background: white;
 }
 .tm-product-img-edit {
   max-width: 100%;
