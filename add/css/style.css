@@ -708,3 +708,6 @@ input[type="checkbox"]:focus {
     max-height: 350px;
   }
 }
+hr{
+  border-color: white;
+}
