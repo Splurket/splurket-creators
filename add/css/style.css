@@ -12,7 +12,7 @@ html {
 }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: #4e657a;
+  background-color: white;
   overflow-x: hidden;
 }
 a {
@@ -64,9 +64,9 @@ button:focus {
 }
 .tm-block {
   padding: 40px;
-  -webkit-box-shadow: 1px 1px 5px 0 #455c71;
-  -moz-box-shadow: 1px 1px 5px 0 #455c71;
-  box-shadow: 1px 1px 5px 0 #455c71;
+  -webkit-box-shadow: 1px 1px 5px 0 #52b36c;
+  -moz-box-shadow: 1px 1px 5px 0 #52b36c;
+  box-shadow: 1px 1px 5px 0 #52b36c;
   min-height: 350px;
   height: 100%;
   max-height: 450px;
@@ -128,7 +128,7 @@ button:focus {
 }
 .navbar-nav .active > .nav-link,
 .navbar-nav .nav-link.active {
-  background-color: #f5a623;
+  background-color: white;
   color: #fff;
 }
 .navbar-nav .nav-link.active i {
@@ -140,7 +140,7 @@ button:focus {
 }
 .navbar-nav a:hover,
 .navbar-nav a:hover i {
-  color: #f5a623;
+  color: white;
 }
 .nav-item {
   text-align: center;
@@ -184,7 +184,7 @@ button:focus {
 }
 .tm-notification-item {
   padding: 15px;
-  background-color: #4e657a;
+  background-color: white;
   color: #fff;
   font-size: 95%;
   margin-bottom: 15px;
@@ -193,7 +193,7 @@ button:focus {
   margin-bottom: 0;
 }
 .tm-notification-link {
-  color: #f5a623;
+  color: white;
 }
 .tm-text-color-secondary {
   color: #bdcbd8;
@@ -278,7 +278,7 @@ thead {
   padding-right: 15px;
 }
 .form-control {
-  background-color: #54657d;
+  background-color: white;
   color: #fff;
   border: 0;
 }
@@ -338,17 +338,17 @@ thead {
   padding: 10px 24px;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #f5a623;
-  border: 2px solid #f5a623;
+  color: #52b36c;
+  background-color: white;
+  border: 2px solid white;
   font-size: 90%;
   font-weight: 600;
 }
 .btn-primary:active,
 .btn-primary:hover {
-  color: #f5a623;
+  color: white;
   background-color: transparent;
-  border: 2px solid #f5a623;
+  border: 2px solid white;
 }
 .custom-file-input {
   cursor: pointer;
@@ -374,7 +374,7 @@ thead {
   color: #a0c0de;
 }
 .tm-bg-primary-dark {
-  background-color: #435c70;
+  background-color: #52b36c;
 }
 .tm-bg-gray {
   background-color: rgba(0, 0, 0, 0.05);
@@ -466,7 +466,7 @@ input[type="checkbox"]:focus {
 .custom-select {
   width: 100%;
   border: none;
-  color: #acc6de;
+  color: black;
   height: 50px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -479,7 +479,7 @@ input[type="checkbox"]:focus {
   -o-border-radius: 0;
   border-radius: 0;
   padding: 15px;
-  background: url(../img/arrow-down.png) 98% no-repeat #50657b;
+  background: url(../img/arrow-down.png) 98% no-repeat white;
 }
 .custom-select:focus {
   outline: 0;
@@ -524,7 +524,7 @@ input[type="checkbox"]:focus {
   display: block;
 }
 .tm-upload-icon {
-  background: #455c71;
+  background: #52b36c;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -543,24 +543,24 @@ input[type="checkbox"]:focus {
   transition: all 0.2s ease;
 }
 .navbar-toggler:hover {
-  border-color: #f5a623;
-  color: #f5a623;
+  border-color: white;
+  color: white;
 }
 .tm-nav-icon {
   color: #fff;
 }
 .navbar-toggler:hover .tm-nav-icon {
-  color: #f5a623;
+  color: white;
 }
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #394f62;
+  background: #52b36c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6d8da6;
+  background: #52b36c;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8ab5d6;
