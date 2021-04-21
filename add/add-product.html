@@ -62,7 +62,7 @@
                       <option value="3">Trending</option>
                     </select>
                   </div>
-                  
+    
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4" style="color: white;" id="cover-drop">
                 <label for="cover-drop">Upload Cover Image
@@ -80,12 +80,14 @@
                     <textarea class="form-control validate" rows="10" required placeholder="Product Description" style="color: black"></textarea>
               </div>
 
-              <div class="row" style="width: 100%">
+              <div class="row tm-edit-product-row" style="width: 100%">
                 <div class="col-12"><br><br>
                   <h2 class="tm-block-title d-inline-block">Shipping Settings</h2>
-                  <p style="color: white;">*Shipping Refers To The Product Being Delivered To The Customer's Email/Account*</p><hr>
-                    <div class="col-xl-6 col-lg-6 col-md-12 mb-4" style="color: white;margin-left: 0px;" id="product-upload">
+                  <p style="color: white;">*Shipping Refers To The Product Being Delivered To The Customer's Email/Account*</p><hr><br>
                       
+                  <div class="row tm-edit-product-row">
+                  <div class="col-xl-6 col-lg-6 col-md-12">
+                    <form action="" class="tm-edit-product-form">
                       <div class="form-group mb-3">
                         <center><label for="producturl">Provide Product Files Download Link
                         </label></center>
@@ -95,13 +97,35 @@
                      
                       <div class="custom-file mt-3 mb-3">
                         <input id="productupload" type="file" style="display:none;" />
-                        <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR DIGITAL PRODUCT" onclick="document.getElementById('fileInput').click();"/>
+                        <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR DIGITAL PRODUCT" onclick="document.getElementById('productupload').click();"/>
                         <center><p style="color:white">*Please Upload The Files Which Will Be Sent To The Customer! ZIP Files ONLY*</p></center>
                       </div>
+                      
+                  </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4" style="color: white;" id="shipping-selection">
+                      <center><form id="mainForm" name="mainForm">
+                        <label for="producturl">Shipping Options
+                        </label><br>
+                        <input type="radio" name="rads" value="Complex" onclick="Radclick(this.value)" /><span style="color:white;">I Will Ship To My Customers</span><br>
+                        <input type="radio" name="rads" onclick="Radclick(this.value)" value="standard" /><span style="color:white">I Want Splurket To Ship My Products</span>
+                    </form>
+                    <div style="color: white;display: none;" id="shipping-template">
+                      <div class="custom-file mt-3 mb-3">
+                        <input id="templateupload" type="file" style="display:none;" />
+                        <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR SHIPPING TEMPLATE" onclick="document.getElementById('templateupload').click();"/>
+                      </div>
+                      <center><p style="color: white;padding-top: 10px;">OR</p></center>
+                      <a href="creators.splurket.com/Splurkator"><button type="submit" class="btn btn-primary btn-block text-uppercase">Create Your Own Email Template</button></a>
+                      <center><p style="color: white;padding-top: 10px;">OR</p></center>
+                      <a href="creators.splurket.com/shipping-templates"><button type="submit" class="btn btn-primary btn-block text-uppercase">Use A Splurket-Made Template</button></a>
                     </div>
-                    </div>
-              </div>
-              </div><br>
+                  </center>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><br>
               
 
 
@@ -130,9 +154,14 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script>
-      $(function() {
-        $("#expire_date").datepicker();
-      });
+      function Radclick(radVal) {
+        if (radVal == "Complex" ){
+          document.getElementById('shipping-template').style.display = "block";
+        }
+        if (radVal == "standard") {
+          document.getElementById('shipping-template').style.display = "none";
+        }
+    }
     </script>
   </body>
 </html>
