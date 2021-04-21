@@ -96,7 +96,7 @@
                       <center><p style="color: white;">OR</p></center>
                      
                       <div class="custom-file mt-3 mb-3">
-                        <input id="productupload" type="file" style="display:none;" />
+                        <input id="productupload" type="file" accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed" style="display:none;" />
                         <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR DIGITAL PRODUCT" onclick="document.getElementById('productupload').click();"/>
                         <center><p style="color:white">*Please Upload The Files Which Will Be Sent To The Customer! ZIP Files ONLY*</p></center>
                       </div>
@@ -112,7 +112,7 @@
                     <div style="color: white;display: none;" id="shipping-template">
                       <div class="custom-file mt-3 mb-3">
                         <input id="templateupload" type="file" style="display:none;" />
-                        <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR SHIPPING TEMPLATE" onclick="document.getElementById('templateupload').click();"/>
+                        <input type="button" accept=".html" class="btn btn-primary btn-block mx-auto" value="UPLOAD YOUR SHIPPING TEMPLATE" onclick="document.getElementById('templateupload').click();"/>
                       </div>
                       <center><p style="color: white;padding-top: 10px;">OR</p></center>
                       <a href="creators.splurket.com/Splurkator"><button type="submit" class="btn btn-primary btn-block text-uppercase">Create Your Own Email Template</button></a>
