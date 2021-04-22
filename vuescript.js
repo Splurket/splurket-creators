@@ -14,6 +14,15 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
+  var user;
+  var email1;
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        user = firebase.auth().currentUser;
+        //splurket@gmail.com
+        email1 = user.email;
+    }
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Accept", "application/json, /;q=0.5");
@@ -121,4 +130,5 @@ new Vue({
       }
     } } });
 
+});
 });
