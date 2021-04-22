@@ -24,14 +24,6 @@ function imagelink(get_link1){
 
 
 function Addproduct() {
-	firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        const user = firebase.auth().currentUser;
-        //splurket@gmail.com
-        const email1 = user.email;
-    }
-})
 	var product_name = document.getElementById('name').value;
        if(typeof product_name == 'undefined'){
            var product_name = "";
@@ -78,14 +70,22 @@ function Addproduct() {
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }
-	
+	var user;
+	var email1;
+	firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        user = firebase.auth().currentUser;
+        //splurket@gmail.com
+        email1 = user.email;
+    }
 
 	var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Accept", "application/json, /;q=0.5");
 
         var raw = JSON.stringify({
-          "stringtoencrypt": `${product_name}&${email1}`
+          "stringtoencrypt": `${product_name}&${user.email}`
         });
         console.log(raw)
         //document.write(raw)
@@ -118,6 +118,7 @@ function Addproduct() {
                     product_file: product_file,
                     product_ship_selection: product_ship_selection,
                     product_ship_template: product_ship_template,
+                    product_description: product_description,
             });
             });
 
