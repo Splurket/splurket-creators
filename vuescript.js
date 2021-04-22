@@ -1,4 +1,5 @@
 var product_items;
+var product_data;
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -45,113 +46,114 @@ var firebaseConfig = {
     })
     .then(function (data) {
       var profile_id= data.encryptedstring;
-  var docRef = db.collection("users").doc(profile_id).collection('myproducts');
 
-  docRef.get().then((doc) => {
-      if (doc.exists) {
-          document.write("Document data:", doc.data());
-          product_data = [{
-            value: false,
-            name: 'No Products Found',
-            Price: 'N/A',
-            Date_Added: 'N/A',
-            reviews: 'N/A',
-            purchases: 'N/A',
-            status: 'N/A' },
-            {
-            value: false,
-            name: 'No Products Found',
-            Price: 'N/A',
-            Date_Added: 'N/A',
-            reviews: 'N/A',
-            purchases: 'N/A',
-            status: 'N/A' },
-            {
-            value: false,
-            name: 'No Products Found',
-            Price: 'N/A',
-            Date_Added: 'N/A',
-            reviews: 'N/A',
-            purchases: 'N/A',
-            status: 'N/A' }]
+      var docRef = db.collection("users").doc(profile_id).collection('myproducts');
 
-      } else {
-          // doc.data() will be undefined in this case
-          product_data={
-            value: false,
-            name: 'No Products Found',
-            Price: 'N/A',
-            Date_Added: 'N/A',
-            reviews: 'N/A',
-            purchases: 'N/A',
-            status: 'N/A' }
-      }
-  }).catch((error) => {
-      console.log("Error getting document:", error);
+      docRef.get().then((doc) => {
+          if (doc.exists) {
+              document.write("Document data:", doc.data());
+              product_data = [{
+                value: false,
+                name: 'No Products Found',
+                Price: 'N/A',
+                Date_Added: 'N/A',
+                reviews: 'N/A',
+                purchases: 'N/A',
+                status: 'N/A' },
+                {
+                value: false,
+                name: 'No Products Found',
+                Price: 'N/A',
+                Date_Added: 'N/A',
+                reviews: 'N/A',
+                purchases: 'N/A',
+                status: 'N/A' },
+                {
+                value: false,
+                name: 'No Products Found',
+                Price: 'N/A',
+                Date_Added: 'N/A',
+                reviews: 'N/A',
+                purchases: 'N/A',
+                status: 'N/A' }]
+
+          } else {
+              // doc.data() will be undefined in this case
+              product_data={
+                value: false,
+                name: 'No Products Found',
+                Price: 'N/A',
+                Date_Added: 'N/A',
+                reviews: 'N/A',
+                purchases: 'N/A',
+                status: 'N/A' }
+          }
+      }).catch((error) => {
+          console.log("Error getting document:", error);
+      });
+
+
+
+    new Vue({
+      el: '#app',
+      data: () => ({
+        pagination: {
+          sortBy: 'name' },
+
+        selected: [],
+        search: '',
+        isMobile: false,
+        headers: [{
+          text: 'Product',
+          align: 'left',
+          value: 'name' },
+
+        {
+          text: 'Price',
+          value: 'Price' },
+
+        {
+          text: 'Date_Added',
+          value: 'Date_Added' },
+
+        {
+          text: 'Reviews',
+          value: 'reviews' },
+
+        {
+          text: 'Purchases',
+          value: 'purchases' },
+
+        {
+          text: 'Status',
+          value: 'status' }],
+
+
+        products: product_data }),
+
+
+
+
+      methods: {
+        onResize() {
+          if (window.innerWidth < 769)
+          this.isMobile = true;else
+
+          this.isMobile = false;
+        },
+        toggleAll() {
+          if (this.selected.length) this.selected = [];else
+          this.selected = this.desserts.slice();
+        },
+        changeSort(column) {
+          console.log(column);
+          if (this.pagination.sortBy === column) {
+            this.pagination.descending = !this.pagination.descending;
+          } else {
+            this.pagination.sortBy = column;
+            this.pagination.descending = false;
+          }
+        } } });
+
+    });
   });
-
-
-
-new Vue({
-  el: '#app',
-  data: () => ({
-    pagination: {
-      sortBy: 'name' },
-
-    selected: [],
-    search: '',
-    isMobile: false,
-    headers: [{
-      text: 'Product',
-      align: 'left',
-      value: 'name' },
-
-    {
-      text: 'Price',
-      value: 'Price' },
-
-    {
-      text: 'Date_Added',
-      value: 'Date_Added' },
-
-    {
-      text: 'Reviews',
-      value: 'reviews' },
-
-    {
-      text: 'Purchases',
-      value: 'purchases' },
-
-    {
-      text: 'Status',
-      value: 'status' }],
-
-
-    products: product_data }),
-
-
-
-
-  methods: {
-    onResize() {
-      if (window.innerWidth < 769)
-      this.isMobile = true;else
-
-      this.isMobile = false;
-    },
-    toggleAll() {
-      if (this.selected.length) this.selected = [];else
-      this.selected = this.desserts.slice();
-    },
-    changeSort(column) {
-      console.log(column);
-      if (this.pagination.sortBy === column) {
-        this.pagination.descending = !this.pagination.descending;
-      } else {
-        this.pagination.sortBy = column;
-        this.pagination.descending = false;
-      }
-    } } });
-
-});
-});
