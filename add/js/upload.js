@@ -21,7 +21,7 @@ var feedback = function(res) {
         document.querySelector('.status').classList.add('bg-success');
         var content =
 '<br><input style="display:none;" class="image-url" id="imglink" onchange="imagelink(this.value)" value=\"' + get_link + '\"/>' 
-             + '<center><img class="img" width = "477px" height="260px" alt="Imgur-Upload" src=\"' + get_link + '\"/></center><br>';
+             + '<center><img class="img" width = "537px" height="240px" alt="Imgur-Upload" src=\"' + get_link + '\"/></center><br>';
         addImg('.status', content);
         imagelink(get_link)
     }
