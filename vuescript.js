@@ -53,7 +53,7 @@ var firebaseConfig = {
       docRef.get().then((doc) => {
           if (doc.exists) {
               document.write("Document data:", doc.data());
-              product_data = [{
+              product_data = {
                 value: false,
                 name: 'No Products Found',
                 Price: 'N/A',
@@ -76,7 +76,7 @@ var firebaseConfig = {
                 Date_Added: 'N/A',
                 reviews: 'N/A',
                 purchases: 'N/A',
-                status: 'N/A' }]
+                status: 'N/A' }
 
           } else {
               // doc.data() will be undefined in this case
@@ -130,7 +130,7 @@ var firebaseConfig = {
           value: 'status' }],
 
 
-        products: product_data }),
+        products: [product_data]}),
 
 
 
@@ -155,6 +155,6 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
-
+    console.log(error)
     });
   });
