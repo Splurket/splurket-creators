@@ -18,7 +18,7 @@ var firebaseConfig = {
 	firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
-            var user = firebase.auth().currentUser;
+            user = firebase.auth().currentUser;
             //splurket@gmail.com
             var email1 = user.email;
         }
