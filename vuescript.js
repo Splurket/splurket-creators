@@ -1,6 +1,6 @@
 var product_items;
 var product_data;
-var firebaseConfig = {
+/*var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
     databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
@@ -52,7 +52,7 @@ var firebaseConfig = {
 
       docRef.get().then((doc) => {
           if (doc.exists) {
-              document.write("Document data:", doc.data());
+              document.write("Document data:", doc.data());*/
               product_data = {
                 value: false,
                 name: 'No Products Found',
@@ -76,7 +76,7 @@ var firebaseConfig = {
                 Date_Added: 'N/A',
                 reviews: 'N/A',
                 purchases: 'N/A',
-                status: 'N/A' }
+                status: 'N/A' }/*
 
           } else {
               // doc.data() will be undefined in this case
@@ -92,8 +92,7 @@ var firebaseConfig = {
       }).catch((error) => {
           console.log("Error getting document:", error);
       });
-    });
-  });
+    });*/
 
 
 
@@ -157,3 +156,4 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
+  });
