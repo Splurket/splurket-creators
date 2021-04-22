@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         // User is signed in.
         user = firebase.auth().currentUser;
         //splurket@gmail.com
-        var email1 = user.email;
+        email1 = user.email;
     }
 })
 //Handle Image Upload
