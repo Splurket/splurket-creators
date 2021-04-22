@@ -13,6 +13,10 @@
     <!-- https://fontawesome.com/ -->
     <!-- http://api.jqueryui.com/datepicker/ -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
@@ -67,17 +71,18 @@
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4" style="color: white;" id="cover-drop">
                 <label for="cover-drop">Upload Cover Image
               </label>
-                <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();"></i>
+                <div class="tm-product-img-dummy mx-auto" id="imgr_pic">
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" id="prickpic" onclick="document.getElementById('fileInput').click();"></i>
                 </div>
                 <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
+                  <div class="dropzone">
                   <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT COVER IMAGE" onclick="document.getElementById('fileInput').click();"/>
+                </div>
                 </div>
               </div>
               <div class="form-group col-12">
                     <label for="description">Product Description</label>
-                    <textarea class="form-control validate" rows="10" required placeholder="Product Description" style="color: black"></textarea>
+                    <textarea class="form-control validate" rows="10" required placeholder="Product Description" id="product_description" style="color: black"></textarea>
               </div>
 
               <div class="row tm-edit-product-row" style="width: 100%">
@@ -149,6 +154,8 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="./JS/imgur.js"></script>
+    <script type="text/javascript" src="./JS/upload.js"></script>
     <!-- https://jquery.com/download/ -->
     <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
     <!-- https://jqueryui.com/download/ -->

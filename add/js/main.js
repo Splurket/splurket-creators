@@ -1,24 +1,115 @@
+//HANDLE TEMPALTE INPUT HERE TO EXTRACT HTML FROM FILE AND SAVE TO FIREBASE.
+
+var firebaseConfig = {
+    apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
+    authDomain: "splurket-66df1.firebaseapp.com",
+    databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
+    projectId: "splurket-66df1",
+    storageBucket: "splurket-66df1.appspot.com",
+    messagingSenderId: "286706779903",
+    appId: "1:286706779903:web:fd91c29319f9804e192eca",
+    measurementId: "G-QWQ2M658KL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+  firebase.analytics();
+  var user = firebase.auth().currentUser;
+  //splurket@gmail.com
+  var email1 = user.email;
+//Handle Image Upload
+function imagelink(get_link1){
+	get_link = get_link1;
+}
+
+
+
+
 function Addproduct() {
-	document.getElementById('name').value;
+	var product_name = document.getElementById('name').value;
+       if(typeof product_name == 'undefined'){
+           var product_name = "";
+}
 
-	document.getElementById('price').value;
+	var product_price = document.getElementById('price').value;
+       if(typeof product_price == 'undefined'){
+           var product_price = "";
+}
 
-	document.getElementById('category').value;
+	var product_category = document.getElementById('category').value;
+       if(typeof product_category == 'undefined'){
+           var product_category = "";
+}
 
-	document.getElementById('subcategory').value;
+	var product_subcategory = document.getElementById('subcategory').value;
+       if(typeof product_subcategory == 'undefined'){
+           var product_subcategory = "";
+}
 
-	document.getElementById('cover-drop').value;
 
-	document.getElementById('fileInput').vlaue
+	var product_cover = get_link;
 
-	document.getElementById('DownloadLink').value;
+	var product_downloadlink = document.getElementById('DownloadLink').value;
+       if(typeof product_downloadlink == 'undefined'){
+           var product_downloadlink = "";
+}
 
-	document.getElementById('productupload').value;
+	var product_file = document.getElementById('productupload').value;
+       if(typeof product_file == 'undefined'){
+           var product_file = "";
+}
 
-	document.getElementById('shipping-selection').value;
+	var product_ship_selection = document.getElementById('shipping-selection').value;
+       if(typeof product_ship_selection == 'undefined'){
+           var product_ship_selection = "";
+}
 
-	document.getElementById('shipping-template').value;
+	var product_ship_template = document.getElementById('shipping-template').value;
+       if(typeof product_ship_template == 'undefined'){
+           var product_ship_template = "";
+}
+	var product_description = document.getElementById('product_description').value;
+       if(typeof product_description == 'undefined'){
+           var product_description = "";
+}
+	
 
-	document.getElementById('templateupload').value;
+	var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Accept", "application/json, /;q=0.5");
+
+        var raw = JSON.stringify({
+          "stringtoencrypt": `${product_name}${user.uid}`
+        });
+        console.log(raw)
+        //document.write(raw)
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+        fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (data) {
+            var product_name1 = data.encryptedstring;
+            //document.write(JSON.stringify(data.encryptedstring))
+            db.collection('products').doc(product_name1).set({
+                    product_name: product_name,
+                    product_creator: email1,
+                    product_price: product_price,
+                    product_category: product_category,
+                    product_subcategory: product_subcategory,
+                    product_cover: product_cover,
+                    product_downloadlink: product_downloadlink,
+                    product_file: product_file,
+                    product_ship_selection: product_ship_selection,
+                    product_ship_template: product_ship_template,
+            });
+            });
 
 }
