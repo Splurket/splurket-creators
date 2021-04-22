@@ -156,4 +156,4 @@ var product_data;
             this.pagination.descending = false;
           }
         } } });
-  });
+  
