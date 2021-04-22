@@ -85,7 +85,7 @@ function Addproduct() {
         myHeaders.append("Accept", "application/json, /;q=0.5");
 
         var raw = JSON.stringify({
-          "stringtoencrypt": `${product_name}`
+          "stringtoencrypt": `${product_name}&${email1}`
         });
         console.log(raw)
         //document.write(raw)
@@ -101,7 +101,11 @@ function Addproduct() {
               return response.json();
           })
           .then(function (data) {
-            var product_name1 = data.encryptedstring;
+          	var strings5= data.encryptedstring;
+          	var strings4 = data.encryptedstring.split('&')
+          	console.log(strings4)
+            var product_name1 = strings4[0];
+
             //document.write(JSON.stringify(data.encryptedstring))
             db.collection('products').doc(product_name1).set({
                     product_name: product_name,
