@@ -114,7 +114,7 @@ var firebaseConfig = {
           value: 'Price' },
 
         {
-          text: 'Date_Added',
+          text: 'Date Added',
           value: 'Date_Added' },
 
         {
