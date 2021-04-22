@@ -52,7 +52,7 @@ var firebaseConfig = {
             Date_Added: 'N/A',
             reviews: 'N/A',
             purchases: 'N/A',
-            status: 'N/A' },
+            status: 'N/A' }
       }
   }).catch((error) => {
       console.log("Error getting document:", error);
