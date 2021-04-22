@@ -46,6 +46,7 @@ var firebaseConfig = {
     })
     .then(function (data) {
       var profile_id= data.encryptedstring;
+      console.log(profile_id)
 
       var docRef = db.collection("users").doc(profile_id).collection('myproducts');
 
