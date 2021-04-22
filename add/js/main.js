@@ -15,14 +15,6 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
-	firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        const user = firebase.auth().currentUser;
-        //splurket@gmail.com
-        const email1 = user.email;
-    }
-})
 //Handle Image Upload
 function imagelink(get_link1){
 	get_link = get_link1;
@@ -32,6 +24,14 @@ function imagelink(get_link1){
 
 
 function Addproduct() {
+	firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        const user = firebase.auth().currentUser;
+        //splurket@gmail.com
+        const email1 = user.email;
+    }
+})
 	var product_name = document.getElementById('name').value;
        if(typeof product_name == 'undefined'){
            var product_name = "";
