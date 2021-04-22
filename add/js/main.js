@@ -15,14 +15,8 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
-firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        user = firebase.auth().currentUser;
-        //splurket@gmail.com
-        email1 = user.email;
-    }
-})
+  var user = firebase.auth().currentUser;
+  email1 = user.email;
 //Handle Image Upload
 function imagelink(get_link1){
 	get_link = get_link1;
