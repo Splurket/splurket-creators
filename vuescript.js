@@ -50,7 +50,30 @@ var firebaseConfig = {
   docRef.get().then((doc) => {
       if (doc.exists) {
           document.write("Document data:", doc.data());
-          products_data = []
+          product_data = [{
+            value: false,
+            name: 'No Products Found',
+            Price: 'N/A',
+            Date_Added: 'N/A',
+            reviews: 'N/A',
+            purchases: 'N/A',
+            status: 'N/A' },
+            {
+            value: false,
+            name: 'No Products Found',
+            Price: 'N/A',
+            Date_Added: 'N/A',
+            reviews: 'N/A',
+            purchases: 'N/A',
+            status: 'N/A' },
+            {
+            value: false,
+            name: 'No Products Found',
+            Price: 'N/A',
+            Date_Added: 'N/A',
+            reviews: 'N/A',
+            purchases: 'N/A',
+            status: 'N/A' }]
 
       } else {
           // doc.data() will be undefined in this case
@@ -104,7 +127,7 @@ new Vue({
       value: 'status' }],
 
 
-    products: products_data }),
+    products: product_data }),
 
 
 
