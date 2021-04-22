@@ -79,7 +79,7 @@ function Addproduct() {
         //splurket@gmail.com
         email1 = user.email;
     }
-
+    var product_id;
 	var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Accept", "application/json, /;q=0.5");
@@ -104,10 +104,10 @@ function Addproduct() {
           	var strings5= data.encryptedstring;
           	var strings4 = data.encryptedstring.split('&')
           	console.log(strings4)
-            var product_name1 = strings4[0];
+            product_id = strings4[0];
 
             //document.write(JSON.stringify(data.encryptedstring))
-            db.collection('products').doc(product_name1).set({
+            db.collection('products').doc(product_id).set({
                     product_name: product_name,
                     product_creator: email1,
                     product_price: product_price,
@@ -120,7 +120,45 @@ function Addproduct() {
                     product_ship_template: product_ship_template,
                     product_description: product_description,
             });
+          	var myHeaders = new Headers();
+	        myHeaders.append("Content-Type", "application/json");
+	        myHeaders.append("Accept", "application/json, /;q=0.5");
+
+	        var raw = JSON.stringify({
+	          "stringtoencrypt": `${user.email}`
+	        });
+	        console.log(raw)
+	        //document.write(raw)
+	        var requestOptions = {
+	          method: 'POST',
+	          headers: myHeaders,
+	          body: raw,
+	          redirect: 'follow'
+	        };
+
+	        fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+	          .then(function (response) {
+	              return response.json();
+	          })
+	          .then(function (data) {
+	          	var profile_id= data.encryptedstring;
+	          	let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
+          //document.write(JSON.stringify(data.encryptedstring))
+            db.collection('users').doc('profile_id').collection('myproducts').set({
+                    product_name: product_name,
+                    product_creator: email1,
+                    product_price: product_price,
+                    product_category: product_category,
+                    product_subcategory: product_subcategory,
+                    views:'0',
+                    purchases:'0',
+                    creation_date: `${month}, ${date}, ${year}`,
+
             });
+            document.getElementById('product_form').style.display = "none";
+            
+            });
+	        });
 
 })
 }
