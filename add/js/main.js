@@ -85,7 +85,7 @@ function Addproduct() {
         myHeaders.append("Accept", "application/json, /;q=0.5");
 
         var raw = JSON.stringify({
-          "stringtoencrypt": `${product_name}${user.uid}`
+          "stringtoencrypt": `${product_name}`
         });
         console.log(raw)
         //document.write(raw)
