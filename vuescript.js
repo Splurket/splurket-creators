@@ -92,6 +92,8 @@ var firebaseConfig = {
       }).catch((error) => {
           console.log("Error getting document:", error);
       });
+    });
+  });
 
 
 
@@ -155,6 +157,3 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
-    console.log(error)
-    });
-  });
