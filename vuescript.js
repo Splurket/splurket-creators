@@ -49,7 +49,7 @@ var firebaseConfig = {
             value: false,
             name: 'No Products Found',
             Price: 'N/A',
-            Date Added: 'N/A',
+            Date_Added: 'N/A',
             reviews: 'N/A',
             purchases: 'N/A',
             status: 'N/A' }
@@ -79,8 +79,8 @@ new Vue({
       value: 'Price' },
 
     {
-      text: 'Date Added',
-      value: 'Date Added' },
+      text: 'Date_Added',
+      value: 'Date_Added' },
 
     {
       text: 'Reviews',
