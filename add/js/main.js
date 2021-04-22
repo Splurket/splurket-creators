@@ -15,6 +15,9 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
+
+
+  
 //Handle Image Upload
 function imagelink(get_link1){
 	get_link = get_link1;

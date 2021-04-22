@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@1.5.14/dist/vuetify.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'><link rel="stylesheet" href="./vuestyle.css">
-
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
 </head>
 <style>
   .v-toolbar__content{
@@ -31,7 +34,7 @@
           </v-menu>
       </v-toolbar>
           <v-layout v-resize="onResize" column style="padding-top:56px">
-            <v-data-table :headers="headers" :items="desserts" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
+            <v-data-table :headers="headers" :items="products" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
               <template slot="items" slot-scope="props">
                 <tr v-if="!isMobile">
                   <td>{{ props.item.name }}</td>
