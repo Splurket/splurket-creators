@@ -144,7 +144,7 @@ function Addproduct() {
 	          	var profile_id= data.encryptedstring;
 	          	let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
           //document.write(JSON.stringify(data.encryptedstring))
-            db.collection('users').doc('profile_id').collection('myproducts').doc('product_id').set({
+            db.collection('users').doc(profile_id).collection('myproducts').doc('product_id').set({
                     product_name: product_name,
                     product_creator: email1,
                     product_price: product_price,
