@@ -23,7 +23,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         var email1 = user.email;
     }
 })
-var uid = user.uid;
 //Handle Image Upload
 function imagelink(get_link1){
 	get_link = get_link1;
