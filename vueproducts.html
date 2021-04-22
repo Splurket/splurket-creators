@@ -38,21 +38,21 @@
               <template slot="items" slot-scope="props">
                 <tr v-if="!isMobile">
                   <td>{{ props.item.name }}</td>
-                  <td class="text-xs-right">{{ props.item.calories }}</td>
-                  <td class="text-xs-right">{{ props.item.fat }}</td>
-                  <td class="text-xs-right">{{ props.item.carbs }}</td>
-                  <td class="text-xs-right">{{ props.item.protein }}</td>
-                  <td class="text-xs-right">{{ props.item.iron }}</td>
+                  <td class="text-xs-right">{{ props.item.Price }}</td>
+                  <td class="text-xs-right">{{ props.item.Date_Added }}</td>
+                  <td class="text-xs-right">{{ props.item.reviews }}</td>
+                  <td class="text-xs-right">{{ props.item.purchases }}</td>
+                  <td class="text-xs-right">{{ props.item.status }}</td>
                 </tr>
                 <tr v-else>
                   <td>
                     <ul class="flex-content">
                       <li class="flex-item" data-label="Name">{{ props.item.name }}</li>
-                      <li class="flex-item" data-label="Calories">{{ props.item.calories }}</li>
-                      <li class="flex-item" data-label="Fat (g)">{{ props.item.fat }}</li>
-                      <li class="flex-item" data-label="Carbs (g)">{{ props.item.carbs }}</li>
-                      <li class="flex-item" data-label="Protein (g)">{{ props.item.protein }}</li>
-                      <li class="flex-item" data-label="Iron (%)">{{ props.item.iron }}</li>
+                      <li class="flex-item" data-label="Price">{{ props.item.Price }}</li>
+                      <li class="flex-item" data-label="Date_Added">{{ props.item.Date_Added }}</li>
+                      <li class="flex-item" data-label="Reviews">{{ props.item.reviews }}</li>
+                      <li class="flex-item" data-label="Purchases">{{ props.item.purchases }}</li>
+                      <li class="flex-item" data-label="Status">{{ props.item.status }}</li>
                     </ul>
                   </td>
                 </tr>
