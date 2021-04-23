@@ -1,5 +1,5 @@
 var product_items;
-var product_data;
+var product_data = [];
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -51,31 +51,26 @@ var firebaseConfig = {
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
             if (doc.exists) {
-                document.write("Document data:", JSON.stringify(doc.data()));
-                product_data = [{
-                  value: false,
-                  name: 'pussy',
-                  Price: 'N/A',
-                  Date_Added: 'N/A',
-                  reviews: 'N/A',
-                  purchases: 'N/A',
-                  status: 'N/A' },
-                  {
-                  value: false,
-                  name: 'No Pussy Found',
-                  Price: 'N/A',
-                  Date_Added: 'N/A',
-                  reviews: 'N/A',
-                  purchases: 'N/A',
-                  status: 'N/A' },
-                  {
-                  value: false,
-                  name: 'Nojgvfhdjc Found',
-                  Price: 'N/A',
-                  Date_Added: 'N/A',
-                  reviews: 'N/A',
-                  purchases: 'N/A',
-                  status: 'N/A' }]
+              var hot_data = JSON.stringify(doc.data());
+              var push_data1 = `{
+              value:false,
+              name:${hot_data.product_name},
+              Price:${hot_data.product_price},
+              Date_Added:${hot_data.creation_date},
+              reviews:${hot_data.reviews},
+              purchases: ${hot_data.purchases},
+              status: ${hot_data.status}
+            }`
+              if (product_data.includes('{')){
+                var push_data = ','+push_data1;
+                product_data.push(push_data)
+              }else{
+                var push_data = push_data1;
+                product_data.push(push_data)
+              }
+
+
+
 
             } else {
                 // doc.data() will be undefined in this case
