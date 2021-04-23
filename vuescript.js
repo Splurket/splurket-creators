@@ -94,7 +94,7 @@ var firebaseConfig = {
           console.log("Error getting document:", error);
       });
     })
-    });
+    })
     });
 
 
