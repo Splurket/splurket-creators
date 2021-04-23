@@ -1,5 +1,5 @@
 var product_items;
-var product_data = [[]];
+var product_data = [];
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
