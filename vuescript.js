@@ -50,8 +50,7 @@ var firebaseConfig = {
 
       var docRef = db.collection("users").doc(profile_id).collection('myproducts');
 
-      docRef.get().then((((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+      docRef.get().then((doc) => {
           if (doc.exists) {
               document.write("Document data:", doc.data());
               product_data = [{
@@ -93,9 +92,6 @@ var firebaseConfig = {
       }).catch((error) => {
           console.log("Error getting document:", error);
       });
-    })
-    })
-    })
     });
 
 
