@@ -53,7 +53,7 @@ var firebaseConfig = {
 
             if (doc.exists) {
               var doc= doc.data();
-              var push_data1 = `{
+              var push_data1 = [`{
               value:false,
               name:${doc.product_name},
               Price:${doc.product_price},
@@ -61,7 +61,7 @@ var firebaseConfig = {
               reviews:${doc.reviews},
               purchases: ${doc.purchases},
               status: ${doc.status}
-            }`
+            }`]
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
                 product_data.concat(push_data)
