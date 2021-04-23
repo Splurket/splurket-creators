@@ -48,9 +48,10 @@ var firebaseConfig = {
       var profile_id= data.encryptedstring;
       console.log(profile_id)
 
-      var docRef = db.collection("users").doc(profile_id).collection('myproducts');
-
-      docRef.get().then((doc) => {
+     db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(JSON.stringify(doc));
+            });
           if (doc.exists) {
               document.write("Document data:", doc.data());
               product_data = [{
@@ -156,4 +157,5 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
+  })
   
