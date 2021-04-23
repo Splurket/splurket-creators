@@ -1,6 +1,6 @@
 var product_items;
-var product_data = [];
-/*var firebaseConfig = {
+var product_data = [[]];
+var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
     databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
@@ -53,7 +53,7 @@ var product_data = [];
 
             if (doc.exists) {
               var doc= doc.data();
-              var push_data1 = `{
+              var push_data1 = `[{
               value:false,
               name:${doc.product_name},
               Price:${doc.product_price},
@@ -61,13 +61,13 @@ var product_data = [];
               reviews:${doc.reviews},
               purchases: ${doc.purchases},
               status: ${doc.status}
-            }`
+            }]`
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
-                product_data.push(push_data)
+                product_data.concat(push_data)
               }else{
                 var push_data = push_data1;
-                product_data.push(push_data)
+                product_data.concat(push_data)
 
               }//document.write(product_data)
               //console.log(product_data)
@@ -75,7 +75,7 @@ var product_data = [];
 
 
 
-            } else {*/
+            } else {
                 // doc.data() will be undefined in this case
                 product_data=[{
                   value: false,
@@ -85,13 +85,13 @@ var product_data = [];
                   reviews: 'N/A',
                   purchases: 'N/A',
                   status: 'N/A' }]
-            /*}
+            }
           })
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
       });
-   });*/
+   });
 
 
 
