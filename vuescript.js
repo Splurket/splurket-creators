@@ -95,6 +95,7 @@ var firebaseConfig = {
       });
     });
     });
+    });
 
 
 
@@ -159,5 +160,4 @@ var firebaseConfig = {
           }
         } } });
   });
-});
   
