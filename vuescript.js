@@ -77,14 +77,14 @@ var product_data = [];
 
             } else {*/
                 // doc.data() will be undefined in this case
-                product_data={
+                product_data=[{
                   value: false,
                   name: 'No Products Found',
                   Price: 'N/A',
                   Date_Added: 'N/A',
                   reviews: 'N/A',
                   purchases: 'N/A',
-                  status: 'N/A' }
+                  status: 'N/A' }]
             /*}
           })
         }).catch((error) => {
