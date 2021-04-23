@@ -155,4 +155,5 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
+    document.write(product_data)
   
