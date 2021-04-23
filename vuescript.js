@@ -50,50 +50,49 @@ var firebaseConfig = {
 
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                console.log(JSON.stringify(doc));
-            });
-          if (doc.exists) {
-              document.write("Document data:", doc.data());
-              product_data = [{
-                value: false,
-                name: 'pussy',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' },
-                {
-                value: false,
-                name: 'No Pussy Found',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' },
-                {
-                value: false,
-                name: 'Nojgvfhdjc Found',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' }]
+            if (doc.exists) {
+                document.write("Document data:", doc.data());
+                product_data = [{
+                  value: false,
+                  name: 'pussy',
+                  Price: 'N/A',
+                  Date_Added: 'N/A',
+                  reviews: 'N/A',
+                  purchases: 'N/A',
+                  status: 'N/A' },
+                  {
+                  value: false,
+                  name: 'No Pussy Found',
+                  Price: 'N/A',
+                  Date_Added: 'N/A',
+                  reviews: 'N/A',
+                  purchases: 'N/A',
+                  status: 'N/A' },
+                  {
+                  value: false,
+                  name: 'Nojgvfhdjc Found',
+                  Price: 'N/A',
+                  Date_Added: 'N/A',
+                  reviews: 'N/A',
+                  purchases: 'N/A',
+                  status: 'N/A' }]
 
-          } else {
-              // doc.data() will be undefined in this case
-              product_data={
-                value: false,
-                name: 'No Products Found',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' }
-          }
-      }).catch((error) => {
-          console.log("Error getting document:", error);
+            } else {
+                // doc.data() will be undefined in this case
+                product_data={
+                  value: false,
+                  name: 'No Products Found',
+                  Price: 'N/A',
+                  Date_Added: 'N/A',
+                  reviews: 'N/A',
+                  purchases: 'N/A',
+                  status: 'N/A' }
+            }
+        }).catch((error) => {
+            console.log("Error getting document:", error);
+        });
       });
-    });
+   });
 
 
 
