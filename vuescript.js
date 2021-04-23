@@ -130,7 +130,7 @@ var firebaseConfig = {
           value: 'status' }],
 
 
-        products: product_data}),
+        products: [product_data]}),
 
 
 
