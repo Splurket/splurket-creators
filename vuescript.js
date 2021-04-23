@@ -51,7 +51,7 @@ var firebaseConfig = {
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
             if (doc.exists) {
-                document.write("Document data:", doc.data());
+                document.write("Document data:", JSON.stringify(doc.data()));
                 product_data = [{
                   value: false,
                   name: 'pussy',
