@@ -53,7 +53,7 @@ var product_data;
       docRef.get().then((doc) => {
           if (doc.exists) {
               document.write("Document data:", doc.data());*/
-              product_data = {
+              product_data = [{
                 value: false,
                 name: 'pussy',
                 Price: 'N/A',
@@ -76,7 +76,7 @@ var product_data;
                 Date_Added: 'N/A',
                 reviews: 'N/A',
                 purchases: 'N/A',
-                status: 'N/A' }/*
+                status: 'N/A' }]/*
 
           } else {
               // doc.data() will be undefined in this case
@@ -131,32 +131,7 @@ var product_data;
           value: 'status' }],
 
 
-        products: [{
-                value: false,
-                name: 'pussy',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' },
-                {
-                value: false,
-                name: 'No Pussy Found',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' },
-                {
-                value: false,
-                name: 'Nojgvfhdjc Found',
-                Price: 'N/A',
-                Date_Added: 'N/A',
-                reviews: 'N/A',
-                purchases: 'N/A',
-                status: 'N/A' }
-                ]
-              }),
+        products: product_data}),
 
 
 
