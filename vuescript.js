@@ -56,10 +56,10 @@ var firebaseConfig = {
               var push_data1 = `{value: false, name:${doc.product_name}, Price: '${doc.product_price}', Date_Added: '${doc.creation_date}', reviews: '${doc.reviews}',purchases: '${doc.purchases}',status: '${doc.status}'}`
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
-                product_data.push(JSON.stringify(push_data))
+                product_data.push(push_data)
               }else{
                 var push_data = push_data1;
-                product_data.push(JSON.stringify(push_data))
+                product_data.push(push_data)
 
               }//document.write(product_data)
               console.log(product_data)
