@@ -38,11 +38,11 @@
               <template slot="items" slot-scope="props">
                 <tr v-if="!isMobile">
                   <td>{{ props.item.name }}</td>
-                  <td class="text-xs-right">{{ props.item.Price }}</td>
-                  <td class="text-xs-right">{{ props.item.Date_Added }}</td>
-                  <td class="text-xs-right">{{ props.item.reviews }}</td>
-                  <td class="text-xs-right">{{ props.item.purchases }}</td>
-                  <td class="text-xs-right">{{ props.item.status }}</td>
+                  <td class="text-xs-left">{{ props.item.Price }}</td>
+                  <td class="text-xs-left">{{ props.item.Date_Added }}</td>
+                  <td class="text-xs-left">{{ props.item.reviews }}</td>
+                  <td class="text-xs-left">{{ props.item.purchases }}</td>
+                  <td class="text-xs-left">{{ props.item.status }}</td>
                 </tr>
                 <tr v-else>
                   <td>
