@@ -1,6 +1,6 @@
 var product_items;
 var product_data;
-/*var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
     databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
@@ -50,9 +50,10 @@ var product_data;
 
       var docRef = db.collection("users").doc(profile_id).collection('myproducts');
 
-      docRef.get().then((doc) => {
+      docRef.get().then((((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           if (doc.exists) {
-              document.write("Document data:", doc.data());*/
+              document.write("Document data:", doc.data());
               product_data = [{
                 value: false,
                 name: 'pussy',
@@ -76,7 +77,7 @@ var product_data;
                 Date_Added: 'N/A',
                 reviews: 'N/A',
                 purchases: 'N/A',
-                status: 'N/A' }]/*
+                status: 'N/A' }]
 
           } else {
               // doc.data() will be undefined in this case
@@ -92,7 +93,7 @@ var product_data;
       }).catch((error) => {
           console.log("Error getting document:", error);
       });
-    });*/
+    });
 
 
 
@@ -156,4 +157,7 @@ var product_data;
             this.pagination.descending = false;
           }
         } } });
+  });
+});
+});
   
