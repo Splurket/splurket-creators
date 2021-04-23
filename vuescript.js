@@ -67,7 +67,8 @@ var firebaseConfig = {
               }else{
                 var push_data = push_data1;
                 product_data.push(push_data)
-              }
+
+              }console.log(product_data)
 
 
 
