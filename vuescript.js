@@ -51,15 +51,15 @@ var firebaseConfig = {
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
             if (doc.exists) {
-              var hot_data = JSON.parse(doc.data());
+              var doc= JSON.parse(doc.data());
               var push_data1 = `{
               value:false,
-              name:${hot_data.product_name},
-              Price:${hot_data.product_price},
-              Date_Added:${hot_data.creation_date},
-              reviews:${hot_data.reviews},
-              purchases: ${hot_data.purchases},
-              status: ${hot_data.status}
+              name:${doc.product_name},
+              Price:${doc.product_price},
+              Date_Added:${doc.creation_date},
+              reviews:${doc.reviews},
+              purchases: ${doc.purchases},
+              status: ${doc.status}
             }`
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
@@ -68,7 +68,8 @@ var firebaseConfig = {
                 var push_data = push_data1;
                 product_data.push(push_data)
 
-              }console.log(product_data)
+              }console.log(doc.product_name)
+              console.log(product_data)
 
 
 
