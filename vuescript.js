@@ -70,7 +70,7 @@ var firebaseConfig = {
                 product_data.push(push_data)
 
               }//document.write(product_data)
-              //console.log(product_data)
+              console.log(product_data)
 
 
 
