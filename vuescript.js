@@ -88,6 +88,7 @@ var firebaseConfig = {
                   purchases: 'N/A',
                   status: 'N/A' }
             }
+          })
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
@@ -156,5 +157,4 @@ var firebaseConfig = {
             this.pagination.descending = false;
           }
         } } });
-  })
   
