@@ -134,7 +134,7 @@ var firebaseConfig = {
 
 
       methods: {
-        initialize() {
+        initialize() {product_data},
           onButtonClick(item) {
             console.log('click on ' + item.no)
           },
@@ -156,6 +156,6 @@ var firebaseConfig = {
               this.pagination.sortBy = column;
               this.pagination.descending = false;
             }
-          } } })};
+          } } });
     document.write(product_data)
   
