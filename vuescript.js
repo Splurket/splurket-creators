@@ -141,7 +141,7 @@ var firebaseConfig = {
         },
         toggleAll() {
           if (this.selected.length) this.selected = [];else
-          this.selected = this.desserts.slice();
+          this.selected = this.products.slice();
         },
         changeSort(column) {
           console.log(column);
@@ -150,21 +150,21 @@ var firebaseConfig = {
           } else {
             this.pagination.sortBy = column;
             this.pagination.descending = false;
-          }
+          }}
         editItem(item) {
-          this.editedIndex = this.desserts.indexOf(item);
+          this.editedIndex = this.products.indexOf(item);
           this.editedItem = Object.assign({}, item);
           this.dialog = true;
         },
 
         deleteItem(item) {
-          this.editedIndex = this.desserts.indexOf(item);
+          this.editedIndex = this.products.indexOf(item);
           this.editedItem = Object.assign({}, item);
           this.dialogDelete = true;
         },
 
         deleteItemConfirm() {
-          this.desserts.splice(this.editedIndex, 1);
+          this.products.splice(this.editedIndex, 1);
           this.closeDelete();
         },
 
@@ -186,11 +186,11 @@ var firebaseConfig = {
 
         save() {
           if (this.editedIndex > -1) {
-            Object.assign(this.desserts[this.editedIndex], this.editedItem);
+            Object.assign(this.products[this.editedIndex], this.editedItem);
           } else {
-            this.desserts.push(this.editedItem);
+            this.products.push(this.editedItem);
           }
           this.close();
-        }}) }) });
+        }) }) });
       document.write(product_data)
   
