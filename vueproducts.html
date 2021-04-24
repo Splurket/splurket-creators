@@ -65,6 +65,9 @@
                   </td>
                 </tr>
               </template>
+              <v-alert slot="no-results" :value="true" color="error" icon="warning">
+                Your search "{{ search }}" found no results.
+              </v-alert>
               <template v-slot:item.options="{ item }">
                 <v-icon
                   small
@@ -88,9 +91,6 @@
                   Reset
                 </v-btn>
               </template>
-              <v-alert slot="no-results" :value="true" color="error" icon="warning">
-                Your search "{{ search }}" found no results.
-              </v-alert>
             </v-data-table>
           </v-layout>
     </v-app>

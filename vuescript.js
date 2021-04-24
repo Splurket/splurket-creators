@@ -90,120 +90,74 @@ var firebaseConfig = {
     new Vue({
       el: '#app',
       data: () => ({
-        dialog: false,
-        dialogDelete: false,
-       headers: [{
-              text: 'Product',
-              align: 'left',
-              value: 'name' },
+        rowsPerPageItems: [10, 20, 30, 40],
+        pagination: {
+          rowsPerPage: 20,
+          sortBy: 'Date_Added' },
 
-            {
-              text: 'Price',
-              value: 'Price' },
+        selected: [],
+        search: '',
+        isMobile: false,
+        headers: [{
+          text: 'Product',
+          align: 'left',
+          value: 'name' },
 
-            {
-              text: 'Date Added',
-              value: 'Date_Added' },
+        {
+          text: 'Price',
+          value: 'Price' },
 
-            {
-              text: 'Reviews',
-              value: 'reviews' },
+        {
+          text: 'Date Added',
+          value: 'Date_Added' },
 
-            {
-              text: 'Purchases',
-              value: 'purchases' },
+        {
+          text: 'Reviews',
+          value: 'reviews' },
 
-            {
-              text: 'Status',
-              value: 'status'},
-            {
-              text: 'Options',
-              value: 'options',
-              sortable: false }],
+        {
+          text: 'Purchases',
+          value: 'purchases' },
+
+        {
+          text: 'Status',
+          value: 'status'},
+        {
+          text: 'Options',
+          value: 'options',
+          sortable: false }],
 
 
-        desserts: [],
-        editedIndex: -1,
-        editedItem: {
-          name: '',
-          calories: 0,
-          fat: 0,
-          carbs: 0,
-          protein: 0 },
-
-        defaultItem: {
-          name: '',
-          calories: 0,
-          fat: 0,
-          carbs: 0,
-          protein: 0 } }),
+        products: product_data}),
 
 
 
-      computed: {
-        formTitle() {
-          return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
-        } },
-
-
-      watch: {
-        dialog(val) {
-          val || this.close();
-        },
-        dialogDelete(val) {
-          val || this.closeDelete();
-        } },
-
-
-      created() {
-        this.initialize();
-      },
 
       methods: {
         initialize() {
-          this.desserts = product_data;
-
-
+          this.products = product_data
         },
+          onButtonClick(item) {
+            console.log('click on ' + item.no)
+          },
+          onResize() {
+            if (window.innerWidth < 769)
+            this.isMobile = true;else
 
-        editItem(item) {
-          this.editedIndex = this.desserts.indexOf(item);
-          this.editedItem = Object.assign({}, item);
-          this.dialog = true;
-        },
-
-        deleteItem(item) {
-          this.editedIndex = this.desserts.indexOf(item);
-          this.editedItem = Object.assign({}, item);
-          this.dialogDelete = true;
-        },
-
-        deleteItemConfirm() {
-          this.desserts.splice(this.editedIndex, 1);
-          this.closeDelete();
-        },
-
-        close() {
-          this.dialog = false;
-          this.$nextTick(() => {
-            this.editedItem = Object.assign({}, this.defaultItem);
-            this.editedIndex = -1;
-          });
-        },
-
-        closeDelete() {
-          this.dialogDelete = false;
-          this.$nextTick(() => {
-            this.editedItem = Object.assign({}, this.defaultItem);
-            this.editedIndex = -1;
-          });
-        },
-
-        save() {
-          if (this.editedIndex > -1) {
-            Object.assign(this.desserts[this.editedIndex], this.editedItem);
-          } else {
-            this.desserts.push(this.editedItem);
-          }
-          this.close();
-        } } });
+            this.isMobile = false;
+          },
+          toggleAll() {
+            if (this.selected.length) this.selected = [];else
+            this.selected = this.desserts.slice();
+          },
+          changeSort(column) {
+            console.log(column);
+            if (this.pagination.sortBy === column) {
+              this.pagination.descending = !this.pagination.descending;
+            } else {
+              this.pagination.sortBy = column;
+              this.pagination.descending = false;
+            }
+          } } });
+    document.write(product_data)
+  
