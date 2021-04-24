@@ -84,124 +84,127 @@ var firebaseConfig = {
         });
       });
    });
-new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data: () => ({
-    dialog: false,
-    dialogDelete: false,
-   headers: [{
-          text: 'Product',
-          align: 'left',
-          value: 'name' },
-
-        {
-          text: 'Price',
-          value: 'Price' },
-
-        {
-          text: 'Date Added',
-          value: 'Date_Added' },
-
-        {
-          text: 'Reviews',
-          value: 'reviews' },
-
-        {
-          text: 'Purchases',
-          value: 'purchases' },
-
-        {
-          text: 'Status',
-          value: 'status'},
-        {
-          text: 'Options',
-          value: 'options',
-          sortable: false }],
-
-
-    desserts: [],
-    editedIndex: -1,
-    editedItem: {
-      name: '',
-      calories: 0,
-      fat: 0,
-      carbs: 0,
-      protein: 0 },
-
-    defaultItem: {
-      name: '',
-      calories: 0,
-      fat: 0,
-      carbs: 0,
-      protein: 0 } }),
 
 
 
-  computed: {
-    formTitle() {
-      return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
-    } },
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+        dialog: false,
+        dialogDelete: false,
+       headers: [{
+              text: 'Product',
+              align: 'left',
+              value: 'name' },
+
+            {
+              text: 'Price',
+              value: 'Price' },
+
+            {
+              text: 'Date Added',
+              value: 'Date_Added' },
+
+            {
+              text: 'Reviews',
+              value: 'reviews' },
+
+            {
+              text: 'Purchases',
+              value: 'purchases' },
+
+            {
+              text: 'Status',
+              value: 'status'},
+            {
+              text: 'Options',
+              value: 'options',
+              sortable: false }],
 
 
-  watch: {
-    dialog(val) {
-      val || this.close();
-    },
-    dialogDelete(val) {
-      val || this.closeDelete();
-    } },
+        desserts: [],
+        editedIndex: -1,
+        editedItem: {
+          name: '',
+          calories: 0,
+          fat: 0,
+          carbs: 0,
+          protein: 0 },
+
+        defaultItem: {
+          name: '',
+          calories: 0,
+          fat: 0,
+          carbs: 0,
+          protein: 0 } }),
 
 
-  created() {
-    this.initialize();
-  },
 
-  methods: {
-    initialize() {
-      this.desserts = product_data;
+      computed: {
+        formTitle() {
+          return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
+        } },
 
 
-    },
+      watch: {
+        dialog(val) {
+          val || this.close();
+        },
+        dialogDelete(val) {
+          val || this.closeDelete();
+        } },
 
-    editItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialog = true;
-    },
 
-    deleteItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialogDelete = true;
-    },
+      created() {
+        this.initialize();
+      },
 
-    deleteItemConfirm() {
-      this.desserts.splice(this.editedIndex, 1);
-      this.closeDelete();
-    },
+      methods: {
+        initialize() {
+          this.desserts = product_data;
 
-    close() {
-      this.dialog = false;
-      this.$nextTick(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      });
-    },
 
-    closeDelete() {
-      this.dialogDelete = false;
-      this.$nextTick(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      });
-    },
+        },
 
-    save() {
-      if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem);
-      } else {
-        this.desserts.push(this.editedItem);
-      }
-      this.close();
-    } } });
+        editItem(item) {
+          this.editedIndex = this.desserts.indexOf(item);
+          this.editedItem = Object.assign({}, item);
+          this.dialog = true;
+        },
+
+        deleteItem(item) {
+          this.editedIndex = this.desserts.indexOf(item);
+          this.editedItem = Object.assign({}, item);
+          this.dialogDelete = true;
+        },
+
+        deleteItemConfirm() {
+          this.desserts.splice(this.editedIndex, 1);
+          this.closeDelete();
+        },
+
+        close() {
+          this.dialog = false;
+          this.$nextTick(() => {
+            this.editedItem = Object.assign({}, this.defaultItem);
+            this.editedIndex = -1;
+          });
+        },
+
+        closeDelete() {
+          this.dialogDelete = false;
+          this.$nextTick(() => {
+            this.editedItem = Object.assign({}, this.defaultItem);
+            this.editedIndex = -1;
+          });
+        },
+
+        save() {
+          if (this.editedIndex > -1) {
+            Object.assign(this.desserts[this.editedIndex], this.editedItem);
+          } else {
+            this.desserts.push(this.editedItem);
+          }
+          this.close();
+        } } });
