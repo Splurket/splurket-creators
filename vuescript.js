@@ -92,7 +92,7 @@ var firebaseConfig = {
       data: () => ({
         pagination: {
           rowsPerPage: 20
-          sortBy: 'Date_Added' },
+          sortBy: 'name' },
 },
 
         selected: [],
