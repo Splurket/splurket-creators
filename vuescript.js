@@ -138,7 +138,7 @@ var firebaseConfig = {
           reviews: 0,
           purchases: 0,
           status:0
-          options },
+          options:0 },
 
         defaultItem: {
           name: '',
