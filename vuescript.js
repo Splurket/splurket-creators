@@ -90,6 +90,8 @@ var firebaseConfig = {
     new Vue({
       el: '#app',
       data: () => ({
+        dialog: false,
+        dialogDelete: false,
         rowsPerPageItems: [10, 20, 30, 40],
         pagination: {
           rowsPerPage: 20,
@@ -127,37 +129,164 @@ var firebaseConfig = {
           value: 'options',
           sortable: false }],
 
+        desserts: [],
+        editedIndex: -1,
+        editedItem: {
+          name: '',
+          Price: 0,
+          Date_Added: 0,
+          reviews: 0,
+          purchases: 0,
+          status:0
+          options },
+
+        defaultItem: {
+          name: '',
+          Price: 0,
+          Date_Added: 0,
+          reviews: 0,
+          purchases: 0,
+          status:0
+          options:0 } }),
 
         products: product_data}),
 
 
 
 
-      methods: {
-        initialize() {
-          this.products = product_data
-        },
-          onButtonClick(item) {
-            console.log('click on ' + item.no)
-          },
-          onResize() {
-            if (window.innerWidth < 769)
-            this.isMobile = true;else
+      computed: {
+    formTitle() {
+      return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
+    } },
 
-            this.isMobile = false;
-          },
-          toggleAll() {
-            if (this.selected.length) this.selected = [];else
-            this.selected = this.desserts.slice();
-          },
-          changeSort(column) {
-            console.log(column);
-            if (this.pagination.sortBy === column) {
-              this.pagination.descending = !this.pagination.descending;
-            } else {
-              this.pagination.sortBy = column;
-              this.pagination.descending = false;
-            }
-          } } });
-    document.write(product_data)
-  
+
+  watch: {
+    dialog(val) {
+      val || this.close();
+    },
+    dialogDelete(val) {
+      val || this.closeDelete();
+    } },
+
+
+  created() {
+    this.initialize();
+  },
+
+  methods: {
+    initialize() {
+      this.desserts = [
+      {
+        name: 'Frozen Yogurt',
+        calories: 159,
+        fat: 6.0,
+        carbs: 24,
+        protein: 4.0 },
+
+      {
+        name: 'Ice cream sandwich',
+        calories: 237,
+        fat: 9.0,
+        carbs: 37,
+        protein: 4.3 },
+
+      {
+        name: 'Eclair',
+        calories: 262,
+        fat: 16.0,
+        carbs: 23,
+        protein: 6.0 },
+
+      {
+        name: 'Cupcake',
+        calories: 305,
+        fat: 3.7,
+        carbs: 67,
+        protein: 4.3 },
+
+      {
+        name: 'Gingerbread',
+        calories: 356,
+        fat: 16.0,
+        carbs: 49,
+        protein: 3.9 },
+
+      {
+        name: 'Jelly bean',
+        calories: 375,
+        fat: 0.0,
+        carbs: 94,
+        protein: 0.0 },
+
+      {
+        name: 'Lollipop',
+        calories: 392,
+        fat: 0.2,
+        carbs: 98,
+        protein: 0 },
+
+      {
+        name: 'Honeycomb',
+        calories: 408,
+        fat: 3.2,
+        carbs: 87,
+        protein: 6.5 },
+
+      {
+        name: 'Donut',
+        calories: 452,
+        fat: 25.0,
+        carbs: 51,
+        protein: 4.9 },
+
+      {
+        name: 'KitKat',
+        calories: 518,
+        fat: 26.0,
+        carbs: 65,
+        protein: 7 }];
+
+
+    },
+
+    editItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialog = true;
+    },
+
+    deleteItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialogDelete = true;
+    },
+
+    deleteItemConfirm() {
+      this.desserts.splice(this.editedIndex, 1);
+      this.closeDelete();
+    },
+
+    close() {
+      this.dialog = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
+
+    closeDelete() {
+      this.dialogDelete = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
+
+    save() {
+      if (this.editedIndex > -1) {
+        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+      } else {
+        this.desserts.push(this.editedItem);
+      }
+      this.close();
+    } };
