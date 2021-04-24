@@ -90,10 +90,10 @@ var firebaseConfig = {
     new Vue({
       el: '#app',
       data: () => ({
+        rowsPerPageItems: [10, 20, 30, 40],
         pagination: {
-          rowsPerPage: 20
-          sortBy: 'name' },
-},
+          rowsPerPage: 20,
+          sortBy: 'Date_Added' },
 
         selected: [],
         search: '',
