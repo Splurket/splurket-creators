@@ -141,7 +141,7 @@ var firebaseConfig = {
         },
         toggleAll() {
           if (this.selected.length) this.selected = [];else
-          this.selected = this.products.slice();
+          this.selected = this.desserts.slice();
         },
         changeSort(column) {
           console.log(column);
@@ -150,6 +150,7 @@ var firebaseConfig = {
           } else {
             this.pagination.sortBy = column;
             this.pagination.descending = false;
-          }} }) };
-      document.write(product_data)
+          }
+        } } });
+    document.write(product_data)
   
