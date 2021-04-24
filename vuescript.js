@@ -148,7 +148,7 @@ var firebaseConfig = {
           },
           toggleAll() {
             if (this.selected.length) this.selected = [];else
-            this.selected = this.desserts.slice();
+            this.selected = this.products.slice();
           },
           changeSort(column) {
             console.log(column);
