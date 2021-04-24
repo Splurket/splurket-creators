@@ -17,7 +17,7 @@ var firebaseConfig = {
   firebase.analytics();
 
 
-  
+
 //Handle Image Upload
 function imagelink(get_link1){
 	get_link = get_link1;
@@ -155,7 +155,9 @@ function Addproduct() {
                     product_subcategory: product_subcategory,
                     views:'0',
                     purchases:'0',
+                    reviews:'0';
                     creation_date: `${month}, ${date}, ${year}`,
+                    status: 'active',
 
             });
             document.getElementById('product_form').style.display = "none";
