@@ -43,6 +43,7 @@
                   <td class="text-xs-left">{{ props.item.reviews }}</td>
                   <td class="text-xs-left">{{ props.item.purchases }}</td>
                   <td class="text-xs-left">{{ props.item.status }}</td>
+                  <td class="text-xs-left">{{ props.item.options }}</td>
                 </tr>
                 <tr v-else>
                   <td>
@@ -53,9 +54,34 @@
                       <li class="flex-item" data-label="Reviews">{{ props.item.reviews }}</li>
                       <li class="flex-item" data-label="Purchases">{{ props.item.purchases }}</li>
                       <li class="flex-item" data-label="Status">{{ props.item.status }}</li>
+                      <li class="flex-item" data-label="Status">{{ props.item.options }}</li>
+
                     </ul>
                   </td>
                 </tr>
+              </template>
+              <template v-slot:item.options="{ item }">
+                <v-icon
+                  small
+                  class="mr-2"
+                  @click="editItem(item)"
+                >
+                  mdi-pencil
+                </v-icon>
+                <v-icon
+                  small
+                  @click="deleteItem(item)"
+                >
+                  mdi-delete
+                </v-icon>
+              </template>
+              <template v-slot:no-data>
+                <v-btn
+                  color="primary"
+                  @click="initialize"
+                >
+                  Reset
+                </v-btn>
               </template>
               <v-alert slot="no-results" :value="true" color="error" icon="warning">
                 Your search "{{ search }}" found no results.
