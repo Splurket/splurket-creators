@@ -134,6 +134,9 @@ var firebaseConfig = {
 
 
       methods: {
+        onButtonClick(item) {
+          console.log('click on ' + item.no)
+        },
         onResize() {
           if (window.innerWidth < 769)
           this.isMobile = true;else
