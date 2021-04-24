@@ -151,15 +151,15 @@ var firebaseConfig = {
             this.pagination.sortBy = column;
             this.pagination.descending = false;
           }}
-        editItem(item) {
-          this.editedIndex = this.products.indexOf(item);
-          this.editedItem = Object.assign({}, item);
+        editItem(product) {
+          this.editedIndex = this.products.indexOf(product);
+          this.editedItem = Object.assign({}, product);
           this.dialog = true;
         },
 
-        deleteItem(item) {
-          this.editedIndex = this.products.indexOf(item);
-          this.editedItem = Object.assign({}, item);
+        deleteItem(product) {
+          this.editedIndex = this.products.indexOf(product);
+          this.editedItem = Object.assign({}, product);
           this.dialogDelete = true;
         },
 
