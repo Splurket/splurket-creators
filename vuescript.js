@@ -150,6 +150,6 @@ var firebaseConfig = {
           } else {
             this.pagination.sortBy = column;
             this.pagination.descending = false;
-          }} }) });
+          }} }) };
       document.write(product_data)
   
