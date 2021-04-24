@@ -134,6 +134,7 @@ var firebaseConfig = {
 
 
       methods: {
+        initialize() {
         onButtonClick(item) {
           console.log('click on ' + item.no)
         },
