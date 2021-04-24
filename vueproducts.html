@@ -35,7 +35,7 @@
       </v-toolbar>
           <v-layout v-resize="onResize" column style="padding-top:56px">
             <v-data-table :headers="headers" :items="products" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
-              <template slot="items" slot-scope="props">
+              <template slot="item" slot-scope="props">
                 <tr v-if="!isMobile">
                   <td>{{ props.item.name }}</td>
                   <td class="text-xs-left">{{ props.item.Price }}</td>
@@ -44,6 +44,11 @@
                   <td class="text-xs-left">{{ props.item.purchases }}</td>
                   <td class="text-xs-left">{{ props.item.status }}</td>
                   <td class="text-xs-left">{{ props.item.options }}</td>
+                  <td>
+                    <v-btn class="mx-2" fab dark small color="pink" @click="onButtonClick(row.item)">
+                        <v-icon dark>mdi-heart</v-icon>
+                    </v-btn>
+                  </td>
                 </tr>
                 <tr v-else>
                   <td>

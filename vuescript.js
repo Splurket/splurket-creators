@@ -124,7 +124,8 @@ var firebaseConfig = {
           value: 'status'},
         {
           text: 'Options',
-          value: 'options'}],
+          value: 'options',
+          sortable: false }],
 
 
         products: product_data}),
