@@ -129,7 +129,7 @@ var firebaseConfig = {
           value: 'options',
           sortable: false }],
 
-        desserts: [],
+        products: [],
         editedIndex: -1,
         editedItem: {
           name: '',
@@ -175,24 +175,24 @@ var firebaseConfig = {
 
   methods: {
     initialize() {
-      this.desserts = product_data
+      this.products = product_data
 
     },
 
     editItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
+      this.editedIndex = this.products.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
     },
 
     deleteItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
+      this.editedIndex = this.products.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialogDelete = true;
     },
 
     deleteItemConfirm() {
-      this.desserts.splice(this.editedIndex, 1);
+      this.products.splice(this.editedIndex, 1);
       this.closeDelete();
     },
 
@@ -214,9 +214,9 @@ var firebaseConfig = {
 
     save() {
       if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+        Object.assign(this.products[this.editedIndex], this.editedItem);
       } else {
-        this.desserts.push(this.editedItem);
+        this.products.push(this.editedItem);
       }
       this.close();
     } };
