@@ -107,15 +107,6 @@ var firebaseConfig = {
           purchases: 0,
           status:0,
           options:0 },
-
-        defaultItem: {
-          name: '',
-          Price: 0,
-          Date_Added: 0,
-          reviews: 0,
-          purchases: 0,
-          status:0,
-          options:0 },
         search: '',
         isMobile: false,
         headers: [{
@@ -146,9 +137,6 @@ var firebaseConfig = {
           text: 'Options',
           value: 'options',
           sortable: false }],
-        }),
-        
-
         products: product_data}),
 
 
