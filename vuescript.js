@@ -85,14 +85,13 @@ var firebaseConfig = {
       });
    });
  
+
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
-     data: () => ({
-      rowsPerPageItems: [10, 20, 30, 40],
-        pagination: {
-          rowsPerPage: 20,
-          sortBy: 'Date_Added' },
+  data: () => ({
+    dialog: false,
+    dialogDelete: false,
     headers: [{
           text: 'Product',
           align: 'left',
@@ -117,24 +116,22 @@ new Vue({
         {
           text: 'Status',
           value: 'status'},
-        {
-          text: 'Options',
-          value: 'options',
-          sortable: false }],
-        products: product_data}),
 
-        products: [],
-        editedIndex: -1,
-        editedItem: {
-          name: '',
-          Price: 0,
-          Date_Added: 0,
-          reviews: 0,
-          purchases: 0,
-          status:0,
-          options:0 },
-        search: '',
-        isMobile: false,
+    desserts: [],
+    editedIndex: -1,
+    editedItem: {
+      name: '',
+      calories: 0,
+      fat: 0,
+      carbs: 0,
+      protein: 0 },
+
+    defaultItem: {
+      name: '',
+      calories: 0,
+      fat: 0,
+      carbs: 0,
+      protein: 0 } }),
 
 
 
@@ -159,7 +156,10 @@ new Vue({
 
   methods: {
     initialize() {
-      this.desserts = product_data},
+      this.desserts = product_data
+
+
+    },
 
     editItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
@@ -202,7 +202,3 @@ new Vue({
       }
       this.close();
     } } });
-
-
-
-
