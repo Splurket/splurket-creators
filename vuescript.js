@@ -84,32 +84,15 @@ var firebaseConfig = {
         });
       });
    });
-
-
-
-    new Vue({
-      el: '#app',
-      data: () => ({
-        dialog: false,
-        dialogDelete: false,
-        rowsPerPageItems: [10, 20, 30, 40],
+ 
+new Vue({
+  el: '#app',
+     data: () => ({
+      rowsPerPageItems: [10, 20, 30, 40],
         pagination: {
           rowsPerPage: 20,
           sortBy: 'Date_Added' },
-
-        selected: [],
-        editedIndex: -1,
-        editedItem: {
-          name: '',
-          Price: 0,
-          Date_Added: 0,
-          reviews: 0,
-          purchases: 0,
-          status:0,
-          options:0 },
-        search: '',
-        isMobile: false,
-        headers: [{
+    headers: [{
           text: 'Product',
           align: 'left',
           value: 'name' },
@@ -139,76 +122,86 @@ var firebaseConfig = {
           sortable: false }],
         products: product_data}),
 
-
-      computed: {
-        formTitle() {
-          return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
-        } },
-
-
-      watch: {
-        dialog(val) {
-          val || this.close();
-        },
-        dialogDelete(val) {
-          val || this.closeDelete();
-        } },
+        products: [],
+        editedIndex: -1,
+        editedItem: {
+          name: '',
+          Price: 0,
+          Date_Added: 0,
+          reviews: 0,
+          purchases: 0,
+          status:0,
+          options:0 },
+        search: '',
+        isMobile: false,
 
 
-      created() {
-        this.initialize();
-      },
 
-      methods: {
-        initialize() {
-          this.products = product_data
+  computed: {
+    formTitle() {
+      return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
+    } },
 
-        },
-        onResize() {
-            if (window.innerWidth < 769)
-            this.isMobile = true;else
 
-            this.isMobile = false;
-          },
+  watch: {
+    dialog(val) {
+      val || this.close();
+    },
+    dialogDelete(val) {
+      val || this.closeDelete();
+    } },
 
-        editItem(item) {
-          this.editedIndex = this.products.indexOf(item);
-          this.editedItem = Object.assign({}, item);
-          this.dialog = true;
-        },
 
-        deleteItem(item) {
-          this.editedIndex = this.products.indexOf(item);
-          this.editedItem = Object.assign({}, item);
-          this.dialogDelete = true;
-        },
+  created() {
+    this.initialize();
+  },
 
-        deleteItemConfirm() {
-          this.products.splice(this.editedIndex, 1);
-          this.closeDelete();
-        },
+  methods: {
+    initialize() {
+      this.desserts = product_data},
 
-        close() {
-          this.dialog = false;
-          this.$nextTick(() => {
-            this.editedItem = Object.assign({}, this.defaultItem);
-            this.editedIndex = -1;
-          });
-        },
+    editItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialog = true;
+    },
 
-        closeDelete() {
-          this.dialogDelete = false;
-          this.$nextTick(() => {
-            this.editedItem = Object.assign({}, this.defaultItem);
-            this.editedIndex = -1;
-          });
-        },
+    deleteItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialogDelete = true;
+    },
 
-        save() {
-          if (this.editedIndex > -1) {
-            Object.assign(this.products[this.editedIndex], this.editedItem);
-          } else {
-            this.products.push(this.editedItem);
-          }
-          this.close();
-        } }});
+    deleteItemConfirm() {
+      this.desserts.splice(this.editedIndex, 1);
+      this.closeDelete();
+    },
+
+    close() {
+      this.dialog = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
+
+    closeDelete() {
+      this.dialogDelete = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
+
+    save() {
+      if (this.editedIndex > -1) {
+        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+      } else {
+        this.desserts.push(this.editedItem);
+      }
+      this.close();
+    } } });
+
+
+
+
