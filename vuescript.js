@@ -146,7 +146,7 @@ var firebaseConfig = {
           text: 'Options',
           value: 'options',
           sortable: false }],
-        },
+        }),
         
 
         products: product_data}),
