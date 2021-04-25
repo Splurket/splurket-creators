@@ -205,4 +205,4 @@ var firebaseConfig = {
             this.products.push(this.editedItem);
           }
           this.close();
-        } };
+        } }});
