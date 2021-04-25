@@ -98,6 +98,24 @@ var firebaseConfig = {
           sortBy: 'Date_Added' },
 
         selected: [],
+        editedIndex: -1,
+        editedItem: {
+          name: '',
+          Price: 0,
+          Date_Added: 0,
+          reviews: 0,
+          purchases: 0,
+          status:0,
+          options:0 },
+
+        defaultItem: {
+          name: '',
+          Price: 0,
+          Date_Added: 0,
+          reviews: 0,
+          purchases: 0,
+          status:0,
+          options:0 },
         search: '',
         isMobile: false,
         headers: [{
@@ -131,24 +149,7 @@ var firebaseConfig = {
         },
 
         products: [],
-        editedIndex: -1,
-        editedItem: {
-          name: '',
-          Price: 0,
-          Date_Added: 0,
-          reviews: 0,
-          purchases: 0,
-          status:0,
-          options:0 },
-
-        defaultItem: {
-          name: '',
-          Price: 0,
-          Date_Added: 0,
-          reviews: 0,
-          purchases: 0,
-          status:0,
-          options:0 } }),
+        
 
         products: product_data}),
 
