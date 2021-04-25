@@ -87,6 +87,7 @@ var firebaseConfig = {
  
 new Vue({
   el: '#app',
+  vuetify: new Vuetify(),
      data: () => ({
       rowsPerPageItems: [10, 20, 30, 40],
         pagination: {
