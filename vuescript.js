@@ -164,6 +164,12 @@ var firebaseConfig = {
           this.products = product_data
 
         },
+        onResize() {
+            if (window.innerWidth < 769)
+            this.isMobile = true;else
+
+            this.isMobile = false;
+          },
 
         editItem(item) {
           this.editedIndex = this.products.indexOf(item);
