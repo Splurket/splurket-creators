@@ -147,8 +147,6 @@ var firebaseConfig = {
           value: 'options',
           sortable: false }],
         },
-
-        products: [],
         
 
         products: product_data}),
