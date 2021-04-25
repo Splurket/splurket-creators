@@ -137,7 +137,7 @@ var firebaseConfig = {
           Date_Added: 0,
           reviews: 0,
           purchases: 0,
-          status:0
+          status:0,
           options:0 },
 
         defaultItem: {
