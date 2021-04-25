@@ -128,6 +128,7 @@ var firebaseConfig = {
           text: 'Options',
           value: 'options',
           sortable: false }],
+        },
 
         products: [],
         editedIndex: -1,
@@ -152,71 +153,69 @@ var firebaseConfig = {
         products: product_data}),
 
 
-
-
       computed: {
-    formTitle() {
-      return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
-    } },
+        formTitle() {
+          return this.editedIndex === -1 ? 'New Item' : 'Edit Item';
+        } },
 
 
-  watch: {
-    dialog(val) {
-      val || this.close();
-    },
-    dialogDelete(val) {
-      val || this.closeDelete();
-    } },
+      watch: {
+        dialog(val) {
+          val || this.close();
+        },
+        dialogDelete(val) {
+          val || this.closeDelete();
+        } },
 
 
-  created() {
-    this.initialize();
-  },
+      created() {
+        this.initialize();
+      },
 
-  methods: {
-    initialize() {
-      this.products = product_data
+      methods: {
+        initialize() {
+          this.products = product_data
 
-    },
+        },
 
-    editItem(item) {
-      this.editedIndex = this.products.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialog = true;
-    },
+        editItem(item) {
+          this.editedIndex = this.products.indexOf(item);
+          this.editedItem = Object.assign({}, item);
+          this.dialog = true;
+        },
 
-    deleteItem(item) {
-      this.editedIndex = this.products.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialogDelete = true;
-    },
+        deleteItem(item) {
+          this.editedIndex = this.products.indexOf(item);
+          this.editedItem = Object.assign({}, item);
+          this.dialogDelete = true;
+        },
 
-    deleteItemConfirm() {
-      this.products.splice(this.editedIndex, 1);
-      this.closeDelete();
-    },
+        deleteItemConfirm() {
+          this.products.splice(this.editedIndex, 1);
+          this.closeDelete();
+        },
 
-    close() {
-      this.dialog = false;
-      this.$nextTick(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      });
-    },
+        close() {
+          this.dialog = false;
+          this.$nextTick(() => {
+            this.editedItem = Object.assign({}, this.defaultItem);
+            this.editedIndex = -1;
+          });
+        },
 
-    closeDelete() {
-      this.dialogDelete = false;
-      this.$nextTick(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      });
-    },
+        closeDelete() {
+          this.dialogDelete = false;
+          this.$nextTick(() => {
+            this.editedItem = Object.assign({}, this.defaultItem);
+            this.editedIndex = -1;
+          });
+        },
 
-    save() {
-      if (this.editedIndex > -1) {
-        Object.assign(this.products[this.editedIndex], this.editedItem);
-      } else {
-        this.products.push(this.editedItem);
-      }
-      this.close();
-    } };
+        save() {
+          if (this.editedIndex > -1) {
+            Object.assign(this.products[this.editedIndex], this.editedItem);
+          } else {
+            this.products.push(this.editedItem);
+          }
+          this.close();
+        } };
