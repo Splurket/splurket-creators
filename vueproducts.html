@@ -34,7 +34,7 @@
           </v-menu>
       </v-toolbar>
           <v-layout v-resize="onResize" column style="padding-top:56px">
-            <v-data-table :headers="headers" :items-per-page="10" :items="products" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
+            <v-data-table :headers="headers" :items-per-page="10" :item="products" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
               <template slot="items" slot-scope="props">
                 <tr v-if="!isMobile">
                   <td>{{ props.item.name }}</td>

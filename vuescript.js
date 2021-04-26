@@ -92,10 +92,9 @@ var firebaseConfig = {
       data: () => ({
         rowsPerPageItems: [10, 20, 30, 40],
         pagination: {
-          rowsPerPage: 20,
           sortBy: 'Date_Added' },
 
-        selected: [],
+        products: [],
         search: '',
         isMobile: false,
         headers: [{
