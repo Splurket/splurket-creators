@@ -90,7 +90,7 @@ new Vue({
   data: () => ({
     dialog: false,
     dialogDelete: false,
-    headers: [
+    headers: [{
           text: 'Product',
           align: 'left',
           value: 'name' },
