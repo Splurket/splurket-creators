@@ -63,3 +63,6 @@
 .v-toolbar{
   background-color: #52b36c;
 }
+.v-toolbar__content {
+  padding: 0px;
+}

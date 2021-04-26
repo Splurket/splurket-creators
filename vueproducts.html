@@ -13,41 +13,40 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
 
 </head>
+<style type="text/css">
+  .v-toolbar__content {
+    padding: 0px;
+  }
+</style>
 <body>
 <!-- partial:index.partial.html -->
 <div id="app">
   <v-app id="inspire">
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      sort-by="calories"
-      class="elevation-1"
-    >
+    <v-data-table :headers="headers" :items="desserts" :search="search" :pagination.sync="pagination" :hide-headers="isMobile" :class="{mobile: isMobile}">
       <template v-slot:top>
         <v-toolbar
           flat
         >
-          <v-toolbar-title>My CRUD</v-toolbar-title>
-          <v-divider
-            class="mx-4"
-            inset
-            vertical
-          ></v-divider>
-          <v-spacer></v-spacer>
+      <v-toolbar  style="padding:0px;" dark color="primary" fixed>
+        <v-toolbar-title class="white--text">Products</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details></v-text-field>
+        <v-menu offset-y :nudge-left="170" :close-on-content-click="false">
+            <v-btn icon slot="activator">
+                <v-icon>more_vert</v-icon>
+              </v-btn>
+            <v-list>
+              <v-list-tile  v-for="(item, index) in headers"  :key="item.value"   @click="changeSort(item.value)">
+                <v-list-tile-title>{{ item.text }}<v-icon v-if="pagination.sortBy === item.value">{{pagination.descending ? 'arrow_downward':'arrow_upward'}}</v-icon></v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
+      </v-toolbar>
           <v-dialog
             v-model="dialog"
             max-width="500px"
           >
             <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                color="primary"
-                dark
-                class="mb-2"
-                v-bind="attrs"
-                v-on="on"
-              >
-                New Item
-              </v-btn>
             </template>
             <v-card>
               <v-card-title>
@@ -172,7 +171,7 @@
 <!-- partial -->
   <script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.js'></script><script  src="./vuescript.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
