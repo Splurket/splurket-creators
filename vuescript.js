@@ -31,7 +31,6 @@ var firebaseConfig = {
   var raw = JSON.stringify({
     "stringtoencrypt": `${user.email}`
   });
-  console.log(raw)
   //document.write(raw)
   var requestOptions = {
     method: 'POST',
