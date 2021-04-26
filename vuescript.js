@@ -90,6 +90,12 @@ new Vue({
   data: () => ({
     dialog: false,
     dialogDelete: false,
+    pagination: {
+      sortBy: 'Date_Added' },
+
+    selected: [],
+    search: '',
+    isMobile: false,
     headers: [{
           text: 'Product',
           align: 'left',
