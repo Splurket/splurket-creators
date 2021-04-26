@@ -152,6 +152,6 @@ var firebaseConfig = {
               this.pagination.sortBy = column;
               this.pagination.descending = false;
             }
-          } } })};
+          } } });
     document.write(product_data)
   
