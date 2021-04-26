@@ -86,7 +86,6 @@ var firebaseConfig = {
    });
 new Vue({
   el: '#app',
-  vuetify: new Vuetify(),
   data: () => ({
     dialog: false,
     dialogDelete: false,
