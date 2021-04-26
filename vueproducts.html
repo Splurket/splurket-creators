@@ -123,7 +123,7 @@
         </v-toolbar>
       </template>
       <template v-slot:item.options="{ item }">
-        <v-icon
+        <v-icon style="padding-left:15px;"
           small
           class="mr-2"
           @click="editItem(item)"
@@ -132,12 +132,7 @@
         </v-icon>
       </template>
       <template v-slot:no-data>
-        <v-btn
-          color="primary"
-          @click="initialize"
-        >
-          Reset
-        </v-btn>
+        <h1>No Data</h1>
       </template>
       <template slot="items" slot-scope="props">
                 <tr v-if="!isMobile">
