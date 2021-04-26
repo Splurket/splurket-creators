@@ -90,6 +90,13 @@ new Vue({
   data: () => ({
     dialog: false,
     dialogDelete: false,
+    pagination: {
+      rowsPerPage: 20,
+      sortBy: 'Date_Added' },
+
+    selected: [],
+    search: '',
+    isMobile: false,
     headers: [
     {
       text: 'Dessert (100g serving)',
@@ -103,7 +110,7 @@ new Vue({
     { text: 'Protein (g)', value: 'protein' },
     { text: 'Actions', value: 'actions', sortable: false }],
 
-    desserts: [],
+    selected: [],
     editedIndex: -1,
     editedItem: {
       name: '',
@@ -142,7 +149,8 @@ new Vue({
 
   methods: {
     initialize() {
-      this.desserts = product_data},
+      this.desserts =product_data
+    },
 
     editItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
@@ -167,6 +175,25 @@ new Vue({
         this.editedItem = Object.assign({}, this.defaultItem);
         this.editedIndex = -1;
       });
+    },
+    onResize() {
+      if (window.innerWidth < 769)
+      this.isMobile = true;else
+
+      this.isMobile = false;
+    },
+    toggleAll() {
+      if (this.selected.length) this.selected = [];else
+      this.selected = this.desserts.slice();
+    },
+    changeSort(column) {
+      console.log(column);
+      if (this.pagination.sortBy === column) {
+        this.pagination.descending = !this.pagination.descending;
+      } else {
+        this.pagination.sortBy = column;
+        this.pagination.descending = false;
+      }
     },
 
     closeDelete() {
