@@ -66,3 +66,12 @@
 .v-toolbar__content {
   padding: 0px;
 }
+#search{
+  width:20px;
+}
+.v-toolbar__title .white--text {
+  padding-left:50px;
+}
+.v-menu .v-menu--inline{
+  padding-right:50px; 
+}

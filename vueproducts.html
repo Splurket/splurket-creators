@@ -19,9 +19,9 @@
 <div id="app">
     <v-app id="inspire">
       <v-toolbar dark color="primary" fixed>
-        <v-toolbar-title class="white--text">Products</v-toolbar-title>
+        <v-toolbar-title class="white--text" >Products</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details></v-text-field>
+        <v-text-field v-model="search" append-icon="search" label="Search" id ="search" single-line hide-details></v-text-field>
         <v-menu offset-y :nudge-left="170" :close-on-content-click="false">
             <v-btn icon slot="activator">
                 <v-icon>more_vert</v-icon>
