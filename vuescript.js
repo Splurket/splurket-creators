@@ -86,6 +86,7 @@ var firebaseConfig = {
    });
 new Vue({
   el: '#app',
+  vuetify: new Vuetify(),
   data: () => ({
     dialog: false,
     dialogDelete: false,
@@ -148,8 +149,7 @@ new Vue({
 
   methods: {
     initialize() {
-      this.desserts =product_data
-    },
+      this.desserts = product_data},
 
     editItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
