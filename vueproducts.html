@@ -71,7 +71,7 @@
                       sm="6"
                       md="4"
                     >
-                      <button class="button" style="background-color:#52b36c">
+                      <button class="button" style="background-color:#52b36c" onclick="console.log(this.item)">
                         Edit Product
                       </button>
                     </v-col><br>
@@ -93,6 +93,9 @@
                         Delete Product
                       </button>
                     </v-col>
+                    <button class="button" style="background-color:#52b36c">
+                        Unpublish Product
+                    </button>
                   </v-row>
                 </v-container>
               </v-card-text>
