@@ -170,12 +170,12 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
-      item_id = item;
-      document.getElementById('update_btn').id = item_id.name;
-      document.getElementById('delete_btn').id = item_id.name;
-      document.getElementById('unpublish_btn').id = item_id.name;
-      document.getElementById('discount_btn').id = item_id.name;
-      document.getElementById('coupon_btn').id = item_id.name;
+      console.log(item.name)
+      document.getElementById('update_btn').id = item.name;
+      document.getElementById('delete_btn').id = item.name;
+      document.getElementById('unpublish_btn').id = item.name;
+      document.getElementById('discount_btn').id = item.name;
+      document.getElementById('coupon_btn').id = item.name;
 
 
     },
