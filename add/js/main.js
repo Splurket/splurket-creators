@@ -157,7 +157,7 @@ function Addproduct() {
                     purchases:'0',
                     reviews:'0';
                     creation_date: `${month}, ${date}, ${year}`,
-                    status: 'active',
+                    status: 'Active',
 
             });
             document.getElementById('product_form').style.display = "none";
