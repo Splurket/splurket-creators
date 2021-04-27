@@ -146,7 +146,7 @@ new Vue({
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? 'New Item' : 'Product Options';
-      console.log(this.editedIndex)
+      console.log(this.editedItem)
     } },
 
 
