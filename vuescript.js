@@ -170,7 +170,7 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
-      console.log(item);
+      item_id = item;
     },
 
     deleteItem(item) {
