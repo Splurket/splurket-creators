@@ -146,7 +146,6 @@ new Vue({
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? 'New Item' : 'Product Options';
-      console.log(this.editedItem)
     } },
 
 
@@ -171,6 +170,7 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
+      console.log(item);
     },
 
     deleteItem(item) {
