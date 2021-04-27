@@ -45,7 +45,6 @@ var firebaseConfig = {
     })
     .then(function (data) {
       var profile_id= data.encryptedstring;
-      console.log(profile_id)
 
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -61,7 +60,6 @@ var firebaseConfig = {
                 product_data.push(push_data)
 
               }//document.write(product_data)
-              console.log(product_data)
 
 
 
