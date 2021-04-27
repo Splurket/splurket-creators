@@ -171,12 +171,10 @@ new Vue({
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
       console.log(item.name)
-      document.getElementById('update_btn').id = item.name;
-      document.getElementById('delete_btn').id = item.name;
-      document.getElementById('unpublish_btn').id = item.name;
-      document.getElementById('discount_btn').id = item.name;
-      document.getElementById('coupon_btn').id = item.name;
-
+      var all = document.getElementsByClassName('needid');
+      for (var i = 0; i < all.length; i++) {
+        all[i].id = item.name;
+      }
 
     },
 
