@@ -151,8 +151,8 @@
       <template v-slot:item.options="{ item }">
         <v-icon style="padding-left:15px;"
           small
+          @id="{ item}"
           class="mr-2"
-          id = item.name
           @click="editItem(item)"
         >
           mdi-dots-horizontal
