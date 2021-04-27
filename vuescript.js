@@ -171,6 +171,7 @@ new Vue({
       console.log(item.name)
       var all = document.getElementsByClassName('needid');
       for (var i = 0; i < all.length; i++) {
+        console.log(item.name)
         all[i].id = item.name;
       }
 
