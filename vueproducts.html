@@ -47,7 +47,7 @@
     <v-data-table :headers="headers" :items="desserts" :search="search" :pagination.sync="pagination" :hide-default-header="isMobile" :class="{mobile: isMobile}">
       <template v-slot:top>
         <v-toolbar dark color="primary" fixed>
-        <v-toolbar-title class="white--text" style="padding-left: 50px">Products</v-toolbar-title>
+        <v-toolbar-title class="white--text" style="padding-left: 50px">My Products</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details style="width:20px;padding-right: 50px"></v-text-field>
       </v-toolbar>
