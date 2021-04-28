@@ -1,3 +1,4 @@
+var all = document.getElementsByClassName('needid');
 var product_items;
 var product_data = [];
 var firebaseConfig = {
@@ -168,8 +169,6 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
-      console.log(item.name)
-      var all = document.getElementsByClassName('needid');
       for (var i = 0; i < all.length; i++) {
         console.log(item.name)
         all[i].id = item.name;
