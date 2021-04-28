@@ -1,7 +1,11 @@
-var all = document.getElementsByClassName('needid');
-for (var i = 0; i < all.length; i++) {
-        all[i].id = 'item.name';
-      }
+function chgid(item){
+  var item = item
+  var all = document.getElementsByClassName('needid');
+  for (var i = 0; i < all.length; i++) {
+          all[i].id = item.name;
+        }
+
+}
 var product_items;
 var product_data = [];
 var firebaseConfig = {
@@ -173,9 +177,7 @@ new Vue({
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
       console.log('pussy')
-      for (var i = 0; i < all.length; i++) {
-        all[i].id = item.name;
-      }
+      chgid(item);
     },
     btnclick(item){
       this.editedIndex = this.desserts.indexOf(item);
