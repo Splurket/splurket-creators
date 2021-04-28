@@ -65,7 +65,12 @@
               <v-card-text>
                 <v-container>
                   <center><v-row>
-                      <button class="button needid" style="background-color:#52b36c" v-on:click="btnclick(item)">
+                     <v-col
+                      cols="12"
+                      sm="6"
+                      md="4"
+                    >
+                      <button class="button needid" style="background-color:#52b36c" onclick="updateprod()">
                         Update Product
                       </button>
                     </v-col><br>
@@ -74,7 +79,7 @@
                       sm="6"
                       md="4"
                     >
-                      <button class="button needid" style="background-color:#52b36c">
+                      <button class="button needid" style="background-color:#52b36c" onclick="deleteprod()">
                         Delete Product
                       </button>
                     </v-col>
@@ -83,7 +88,7 @@
                       sm="6"
                       md="4"
                     >
-                    <button class="button needid" style="background-color:#52b36c">
+                    <button class="button needid" style="background-color:#52b36c" onclick="unpublishprod()">
                         Unpublish Product
                     </button>
                   </v-col>
@@ -92,7 +97,7 @@
                       sm="6"
                       md="4"
                     >
-                    <button class="button needid" style="background-color:#52b36c">
+                    <button class="button needid" style="background-color:#52b36c" onclick="discount()">
                         Create Discount
                     </button>
                   </v-col>
@@ -101,11 +106,20 @@
                       sm="6"
                       md="4"
                     >
-                    <button class="button" style="background-color:#52b36c" class="needid">
+                    <button class="button" style="background-color:#52b36c" class="needid" onclick="coupon()">
                         Create Coupon
                     </button>
                   </v-col>
                   </v-row>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="4"
+                    >
+                    <button class="button" style="background-color:#52b36c" class="needid" onclick="clearanal()">
+                        Clear Product Analytics
+                    </button>
+                  </v-col>
                 </v-container>
               </v-card-text>
   

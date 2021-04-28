@@ -1,3 +1,4 @@
+var profile_id;
 var itemval;
 var product_items;
 var product_data = [];
@@ -45,7 +46,7 @@ var firebaseConfig = {
         return response.json();
     })
     .then(function (data) {
-      var profile_id= data.encryptedstring;
+      profile_id= data.encryptedstring;
 
      db.collection("users").doc(profile_id).collection('myproducts').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -170,8 +171,26 @@ new Vue({
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
       itemval = item;
-      console.log('pussy')
+
     },
+    deleteprod(){
+
+    }
+    updateprod(){
+
+    }
+    unpublishprod(){
+
+    }
+    discount(){
+
+    }
+    coupon(){
+
+    }
+    clearanal(){
+      
+    }
 
     deleteItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
@@ -189,7 +208,6 @@ new Vue({
       this.$nextTick(() => {
         this.editedItem = Object.assign({}, this.defaultItem);
         this.editedIndex = -1;
-        console.log(itemval)
 
       });
     },
@@ -209,4 +227,5 @@ new Vue({
         this.desserts.push(this.editedItem);
       }
       this.close();
+
     } } });
