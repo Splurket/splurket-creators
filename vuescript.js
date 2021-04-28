@@ -175,22 +175,22 @@ new Vue({
     },
     deleteprod(){
 
-    }
+    },
     updateprod(){
 
-    }
+    },
     unpublishprod(){
 
-    }
+    },
     discount(){
 
-    }
+    },
     coupon(){
 
-    }
+    },
     clearanal(){
-      
-    }
+
+    },
 
     deleteItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
