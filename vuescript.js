@@ -1,6 +1,7 @@
 var all = document.getElementsByClassName('needid');
 for (var i = 0; i < all.length; i++) {
         all[i].id = 'item.name';
+      }
 var product_items;
 var product_data = [];
 var firebaseConfig = {
