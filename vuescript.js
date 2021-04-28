@@ -172,7 +172,9 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
-
+      for (var i = 0; i < all.length; i++) {
+        all[i].id = item.name;
+      }
     },
     btnclick(item){
       this.editedIndex = this.desserts.indexOf(item);
