@@ -1,11 +1,4 @@
-function chgid(item){
-  var item = item
-  var all = document.getElementsByClassName('needid');
-  for (var i = 0; i < all.length; i++) {
-          all[i].id = item.name;
-        }
-
-}
+var itemval;
 var product_items;
 var product_data = [];
 var firebaseConfig = {
@@ -176,14 +169,8 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
+      itemval = item;
       console.log('pussy')
-      chgid(item);
-    },
-    btnclick(item){
-      this.editedIndex = this.desserts.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialog = false;
-      console.log(item.name)
     },
 
     deleteItem(item) {
@@ -202,6 +189,8 @@ new Vue({
       this.$nextTick(() => {
         this.editedItem = Object.assign({}, this.defaultItem);
         this.editedIndex = -1;
+        console.log(itemval)
+
       });
     },
 
