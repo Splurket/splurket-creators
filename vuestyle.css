@@ -75,3 +75,6 @@
 .v-menu .v-menu--inline{
   padding-right:50px; 
 }
+v-dialog{
+  top:0px;
+}
