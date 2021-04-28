@@ -65,7 +65,7 @@
               <v-card-text>
                 <v-container>
                   <center><v-row>
-                      <button class="button needid" style="background-color:#52b36c">
+                      <button class="button needid" style="background-color:#52b36c" v-on:click="btnclick(item)">
                         Update Product
                       </button>
                     </v-col><br>
@@ -137,7 +137,6 @@
       <template v-slot:item.options="{ item }">
         <v-icon style="padding-left:15px;"
           small
-          @id="{ item}"
           class="mr-2"
           @click="editItem(item)"
         >

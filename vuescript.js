@@ -173,12 +173,12 @@ new Vue({
       this.dialog = true;
 
     },
-    btnclick(){
+    btnclick(item){
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = false;
       console.log(item.name)
-    }
+    },
 
     deleteItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
