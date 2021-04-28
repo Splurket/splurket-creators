@@ -1,4 +1,6 @@
 var all = document.getElementsByClassName('needid');
+for (var i = 0; i < all.length; i++) {
+        all[i].id = 'item.name';
 var product_items;
 var product_data = [];
 var firebaseConfig = {
@@ -52,7 +54,7 @@ var firebaseConfig = {
 
             if (doc.exists) {
               var doc= doc.data();
-              var push_data1 = {value: false, id: `${doc.id}`, name:`${doc.product_name}`, Price: `${doc.product_price}`, Date_Added: `${doc.creation_date}`, reviews: `${doc.reviews}`,purchases: `${doc.purchases}`,status: `${doc.status}`}
+              var push_data1 = {value: false, name:`${doc.product_name}`, Price: `${doc.product_price}`, Date_Added: `${doc.creation_date}`, reviews: `${doc.reviews}`,purchases: `${doc.purchases}`,status: `${doc.status}`}
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
                 product_data.push(push_data)
@@ -169,13 +171,14 @@ new Vue({
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
-      for (var i = 0; i < all.length; i++) {
-        console.log(item.name)
-        all[i].id = item.name;
-      }
 
     },
-
+    btnclick(){
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialog = false;
+      console.log(item.name)
+    }
 
     deleteItem(item) {
       this.editedIndex = this.desserts.indexOf(item);
