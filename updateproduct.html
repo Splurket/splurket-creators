@@ -539,7 +539,21 @@
         <!-- Main Menu area start/NAVIGATION TABS END!!-->
 
             <a href="./index.html" style="color: #52b36c;background-color: transparent;position: absolute; left:20px;">⬅ Back To Dashboard</a><br>
-
         <div class="iframe-container">
-            <iframe src="./update_product.html" width="100%" height="100%"></iframe>
+            <iframe width="100%" height="100%" id="updatesite"></iframe>
         </div>
+        <script>
+        	function getParameterByName(name, url = window.location.href) {
+		        name = name.replace(/[\[\]]/g, '\\$&');
+		        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		            results = regex.exec(url);
+		        if (!results) return null;
+		        if (!results[2]) return '';
+		        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+
+			var prodname= getParameterByName('product');
+			var profile_id = getParameterByName('creator');
+			var catshit= getParameterByName('yrogetac');
+        	var siteurl = "https://creators.splurket.com/add/update_product.html?product="+prodname+"&creator="+profile_id+"&yrogetac="+catshit
+        	document.getElementById('updatesite').src = siteurl;
