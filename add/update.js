@@ -31,7 +31,7 @@ var product_name = document.getElementById('name');
 }
 
 
-  var product_cover = get_link;
+  //var product_cover = get_link;
 
   var product_downloadlink = document.getElementById('DownloadLink');
        if(typeof product_downloadlink == 'undefined'){
