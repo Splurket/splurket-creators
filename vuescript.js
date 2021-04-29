@@ -1,19 +1,19 @@
-updateprod(){
+function updateprod(){
   location.href = "https://creators.splurket.com/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
 };
-deleteprod(){
+function deleteprod(){
 
 };
-unpublishprod(){
+function unpublishprod(){
 
 };
-discount(){
+function discount(){
 
 };
-coupon(){
+function coupon(){
 
 };
-clearanal(){
+function clearanal(){
 
 };
 var profile_id;
