@@ -175,24 +175,6 @@ new Vue({
       itemval = item;
 
     },
-    updateprod(){
-      location.href = "https://creators.splurket.com/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
-    },
-    deleteprod(){
-
-    },
-    unpublishprod(){
-
-    },
-    discount(){
-
-    },
-    coupon(){
-
-    },
-    clearanal(){
-
-    },
 
     deleteItem(item) {
       this.editedIndex = this.products.indexOf(item);
@@ -231,3 +213,22 @@ new Vue({
       this.close();
 
     } } });
+
+    updateprod(){
+      location.href = "https://creators.splurket.com/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
+    };
+    deleteprod(){
+
+    };
+    unpublishprod(){
+
+    };
+    discount(){
+
+    };
+    coupon(){
+
+    };
+    clearanal(){
+
+    };
