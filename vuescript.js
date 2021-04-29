@@ -1,6 +1,7 @@
 var profile_id;
 var itemval;
 var product_items;
+var catshit;
 var product_data = [];
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
@@ -53,6 +54,7 @@ var firebaseConfig = {
 
             if (doc.exists) {
               var doc= doc.data();
+              catshit = doc.product_category;
               var push_data1 = {value: false, name:`${doc.product_name}`, Price: `${doc.product_price}`, Date_Added: `${doc.creation_date}`, reviews: `${doc.reviews}`,purchases: `${doc.purchases}`,status: `${doc.status}`}
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
@@ -173,10 +175,10 @@ new Vue({
       itemval = item;
 
     },
-    deleteprod(){
-
-    },
     updateprod(){
+      location.href = "https://creators.splurket.com/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
+    },
+    deleteprod(){
 
     },
     unpublishprod(){
