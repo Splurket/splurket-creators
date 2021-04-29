@@ -153,7 +153,7 @@ function imagelink(get_link1){
             //document.write(JSON.stringify(data.encryptedstring))
             db.collection("products").doc(strings5).get().then((doc) => {
               if (doc.exists) {
-                console.log(JSon.stringify(doc.data()))
+                console.log(JSON.stringify(doc.data()))
                   product_name.value = doc.product_name;
                   product_price.value = doc.product_price;
                   //product_category.value = doc.product_category;
