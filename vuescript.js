@@ -1,5 +1,5 @@
 function updateprod(){
-  location.href = "https://creators.splurket.com/add/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
+  href = "https://creators.splurket.com/add/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
 };
 function deleteprod(){
 
