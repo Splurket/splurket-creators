@@ -171,7 +171,7 @@ function imagelink(get_link1){
               console.log("Error getting document:", error);
           });
         })
-      }
+      })
 
 
 
