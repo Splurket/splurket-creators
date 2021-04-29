@@ -151,7 +151,7 @@ function imagelink(get_link1){
             product_id = strings4[0];
 
             //document.write(JSON.stringify(data.encryptedstring))
-            db.collection("products").doc(profile_id).get().then((doc) => {
+            db.collection("products").doc(strings5).get().then((doc) => {
               if (doc.exists) {
                   product_name.value = doc.product_name;
                   product_price.value = doc.product_price;
