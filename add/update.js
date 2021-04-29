@@ -154,15 +154,16 @@ function imagelink(get_link1){
             db.collection("products").doc(strings5).get().then((doc) => {
               if (doc.exists) {
                 console.log(JSON.stringify(doc.data()))
-                  product_name.value = doc.product_name;
-                  product_price.value = doc.product_price;
+                data1 = doc.data()
+                  product_name.value = data1.product_name;
+                  product_price.value = data1.product_price;
                   //product_category.value = doc.product_category;
                   //product_subcategory.value = doc.product_subcategory;
-                  product_cover = get_link = doc. product_cover;
-                  product_downloadlink.value = doc.product_downloadlink;
-                  product_ship_selection.value = doc.product_ship_selection;
-                  product_ship_template.value = doc.product_ship_template;
-                  product_description.value = doc.product_description;
+                  product_cover = get_link = data1. product_cover;
+                  product_downloadlink.value = data1.product_downloadlink;
+                  product_ship_selection.value = data1.product_ship_selection;
+                  product_ship_template.value = data1.product_ship_template;
+                  product_description.value = data1.product_description;
            
               } else {
                 
