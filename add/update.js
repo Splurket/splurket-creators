@@ -153,13 +153,13 @@ function imagelink(get_link1){
             //document.write(JSON.stringify(data.encryptedstring))
             db.collection("products").doc(strings5).get().then((doc) => {
               if (doc.exists) {
+                console.log(JSon.stringify(doc.data()))
                   product_name.value = doc.product_name;
                   product_price.value = doc.product_price;
-                  product_category.value = doc.product_category;
-                  product_subcategory.value = doc.product_subcategory;
+                  //product_category.value = doc.product_category;
+                  //product_subcategory.value = doc.product_subcategory;
                   product_cover = get_link = doc. product_cover;
                   product_downloadlink.value = doc.product_downloadlink;
-                  product_file.value = doc.product_file;
                   product_ship_selection.value = doc.product_ship_selection;
                   product_ship_template.value = doc.product_ship_template;
                   product_description.value = doc.product_description;
