@@ -257,4 +257,4 @@ function Addproduct() {
             document.getElementById('product_form').style.display = "none";
             document.getElementById('product_submitted').style.display = "block";
             });
-          });
+          };
