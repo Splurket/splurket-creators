@@ -10,22 +10,22 @@ function getParameterByName(name, url = window.location.href) {
 
 var pname= getParameterByName('product');
 
-var product_name = document.getElementById('name').value;
+var product_name = document.getElementById('name');
        if(typeof product_name == 'undefined'){
            var product_name = "";
 }
 
-  var product_price = document.getElementById('price').value;
+  var product_price = document.getElementById('price');
        if(typeof product_price == 'undefined'){
            var product_price = "";
 }
 
-  var product_category = document.getElementById('category').value;
+  var product_category = document.getElementById('category');
        if(typeof product_category == 'undefined'){
            var product_category = "";
 }
 
-  var product_subcategory = document.getElementById('subcategory').value;
+  var product_subcategory = document.getElementById('subcategory');
        if(typeof product_subcategory == 'undefined'){
            var product_subcategory = "";
 }
@@ -33,26 +33,26 @@ var product_name = document.getElementById('name').value;
 
   var product_cover = get_link;
 
-  var product_downloadlink = document.getElementById('DownloadLink').value;
+  var product_downloadlink = document.getElementById('DownloadLink');
        if(typeof product_downloadlink == 'undefined'){
            var product_downloadlink = "";
 }
 
-  var product_file = document.getElementById('productupload').value;
+  var product_file = document.getElementById('productupload');
        if(typeof product_file == 'undefined'){
            var product_file = "";
 }
 
-  var product_ship_selection = document.getElementById('shipping-selection').value;
+  var product_ship_selection = document.getElementById('shipping-selection');
        if(typeof product_ship_selection == 'undefined'){
            var product_ship_selection = "";
 }
 
-  var product_ship_template = document.getElementById('shipping-template').value;
+  var product_ship_template = document.getElementById('shipping-template');
        if(typeof product_ship_template == 'undefined'){
            var product_ship_template = "";
 }
-  var product_description = document.getElementById('product_description').value;
+  var product_description = document.getElementById('product_description');
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }
