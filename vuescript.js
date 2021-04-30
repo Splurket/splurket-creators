@@ -1,21 +1,6 @@
 function updateprod(){
   top.location.href = "https://creators.splurket.com/updateproduct.html?product="+itemval.name+"&creator="+profile_id+"&yrogetac="+catshit;
 };
-function deleteprod(){
-
-};
-function unpublishprod(){
-
-};
-function discount(){
-
-};
-function coupon(){
-
-};
-function clearanal(){
-
-};
 var profile_id;
 var itemval;
 var product_items;
@@ -231,3 +216,18 @@ new Vue({
       this.close();
 
     } } });
+    function deleteprod(){
+
+    };
+    function unpublishprod(){
+
+    };
+    function discount(){
+
+    };
+    function coupon(){
+
+    };
+    function clearanal(){
+
+    };
