@@ -164,6 +164,7 @@ function imagelink(get_link1){
                   product_ship_selection.value = data1.product_ship_selection;
                   product_ship_template.value = data1.product_ship_template;
                   product_description.value = data1.product_description;
+                  document.getElementById('pussipic').src = data1.product_cover;
            
               } else {
                 
