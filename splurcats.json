@@ -79,23 +79,23 @@
 "Industrial & Product Design":{
     "subcat1":"Concept Development",
     "subcat2":"2D Drawing",
-    "subcat3":    "3D Modeling & Rendering",
-    "subcat4":    "Prototyping & 3D Printing",
-    "subcat5":    "Product Manufacturing"
+    "subcat3":"3D Modeling & Rendering",
+    "subcat4":"Prototyping & 3D Printing",
+    "subcat5":"Product Manufacturing"
 },
 "Trade Booth Design":{
    "subcat1":"Shirts & Merchandise"
 },
 "Fashion Design":{
     "subcat1":"Technical Drawing & Tech Pack",
-    "subcat2":    "Pattern Making",
-    "subcat3":    "Fashion Illustration",
-    "subcat4":    "3D Garment Design",
-    "subcat5":    "Full Design Process"
+    "subcat2":"Pattern Making",
+    "subcat3":"Fashion Illustration",
+    "subcat4":"3D Garment Design",
+    "subcat5":"Full Design Process"
 },
 "Jewelry Design":{
     "subcat1":"3D Modeling & Rendering",
-    "subcat2":    "Concept Design & Sketching"
+    "subcat2":"Concept Design & Sketching"
 },
 "Presentation Design":{},
 "Email Design":{},
@@ -106,17 +106,17 @@
 "Articles & Blog Posts":{},
 "Proofreading & Editing":{
     "subcat1":"Proofreading",
-    "subcat2":    "Copy Editing"
+    "subcat2":"Copy Editing"
 },
 "Translation":{},
 "Website Content":{},
 "Product Descriptions":{},
 "Book & eBook Writing":{
     "subcat1":"Kindle Niche Research",
-    "subcat2":    "Short Stories",
-    "subcat3":    "Book Proposals",
-    "subcat4":    "Book Blurbs",
-    "subcat5":    "Ghostwriting"
+    "subcat2":"Short Stories",
+    "subcat3":"Book Proposals",
+    "subcat4":"Book Blurbs",
+    "subcat5":"Ghostwriting"
 },
 "Book Editing":{},
 "Resume Writing":{},
@@ -129,7 +129,7 @@
 "Social Media Copy":{},
 "Podcast Writing":{
     "subcat1":"Podcast Content",
-    "subcat2":    "Podcast Show Notes"
+    "subcat2":"Podcast Show Notes"
 },
 "Ad Copy":{},
 "Cover Letters":{},
@@ -138,17 +138,17 @@
 "LinkedIn Profiles":{},
 "Creative Writing":{
     "subcat1":"Game Writing",
-    "subcat2":    "Poetry",
-    "subcat3":    "Song Lyrics",
-    "subcat4":    "Letters"
+    "subcat2":"Poetry",
+    "subcat3":"Song Lyrics",
+    "subcat4":"Letters"
 },
 "Scriptwriting":{
     "subcat1":"Webinars",
-    "subcat2":    "Cold Calls",
-    "subcat3":    "Audio Ads",
-    "subcat4":    "Script Coverage",
-    "subcat5":    "Film & TV Screenplays",
-    "subcat6":    "Video Scripts"
+    "subcat2":"Cold Calls",
+    "subcat3":"Audio Ads",
+    "subcat4":"Script Coverage",
+    "subcat5":"Film & TV Screenplays",
+    "subcat6":"Video Scripts"
 
 },
 "Business Names & Slogans":{},
@@ -157,16 +157,16 @@
 "Legal Writing":{},
 "Grant Writing":{
     "subcat1":"Grant Research",
-    "subcat1":    "Grant Proposals"
+    "subcat1":"Grant Proposals"
 },
 "Transcripts":{},
 "Research & Summaries":{},
 "All in Video & Animation":{},
 "Whiteboard & Animated Explainers":{
     "subcat1":"2D Animated Explainers",
-    "subcat2":    "3D Animated Explainers",
-    "subcat3":    "Isometric Explainers",
-    "subcat4":    "Whiteboard Explainers"
+    "subcat2":"3D Animated Explainers",
+    "subcat3":"Isometric Explainers",
+    "subcat4":"Whiteboard Explainers"
 },
 "Video Editing":{},
 "Short Video Ads":{},
@@ -177,13 +177,13 @@
 "3D Product Animation":{},
 "Lyric & Music Videos":{
     "subcat1":"Lyric Videos",
-    "subcat2":    "Music Visualization",
-    "subcat3":    "Dance Videos",
-    "subcat4":    "Narrative Based Videos",
-    "subcat5":    "Performance Videos",
-    "subcat6":    "Conceptual Videos",
-    "subcat7":    "Anime Music Videos",
-    "subcat8":    "Spotify Canvas"
+    "subcat2":"Music Visualization",
+    "subcat3":"Dance Videos",
+    "subcat4":"Narrative Based Videos",
+    "subcat5":"Performance Videos",
+    "subcat6":"Conceptual Videos",
+    "subcat7":"Anime Music Videos",
+    "subcat8":"Spotify Canvas"
 },
 "Animation for Kids":{},
 "Animation for Streamers":{},
@@ -191,11 +191,11 @@
 "Subtitles & Captions":{},
 "Visual Effects":{
     "subcat1":"Rotoscoping & Keying",
-    "subcat2":    "Color Grading",
-    "subcat3":    "Match Moving",
-    "subcat4":    "Compositing",
-    "subcat5":    "Cleanups",
-    "subcat6":    "Beauty Retouching"
+    "subcat2":"Color Grading",
+    "subcat3":"Match Moving",
+    "subcat4":"Compositing",
+    "subcat5":"Cleanups",
+    "subcat6":"Beauty Retouching"
 },
 "Website Animation":{},
 "eLearning Video Production":{},
@@ -216,34 +216,34 @@
 "Mixing & Mastering":{},
 "Producers & Composers":{
     "subcat1":"Composing & Soundtracks",
-    "subcat2":    "Ghost Production",
-    "subcat3":    "Backing Tracks"
+    "subcat2":"Ghost Production",
+    "subcat3":"Backing Tracks"
 },
 "Singers & Vocalists":{},
 "Session Musicians":{},
 "Songwriters":{},
 "Beat Making":{
     "subcat1":"Beats",
-    "subcat2":    "Loops & Kits"
+    "subcat2":"Loops & Kits"
 },
 "Online Music Lessons":{
     "subcat1":"Instruments",
-    "subcat2":    "Production",
-    "subcat3":    "Vocals",
-    "subcat4":    "Theory"
+    "subcat2":"Production",
+    "subcat3":"Vocals",
+    "subcat4":"Theory"
 },
 "Podcast Editing":{},
 "Audiobook Production":{},
 "Audio Ads Production":{},
 "Sound Design":{
     "subcat1":"Sound Effects",
-    "subcat2":    "Foley"
+    "subcat2":"Foley"
 },
 "Dialogue Editing":{
     "subcat1":"Videos & Films",
-    "subcat2":    "Video Games",
-    "subcat3":    "Phone Systems & IVR",
-    "subcat4":    "Radio Ads"
+    "subcat2":"Video Games",
+    "subcat3":"Phone Systems & IVR",
+    "subcat4":"Radio Ads"
 },
 "Music Transcription":{},
 "Vocal Tuning":{},
@@ -251,91 +251,91 @@
 "DJ Mixing":{},
 "Remixing & Mashups":{
     "subcat1":"Remixing",
-    "subcat2":    "Mashups"
+    "subcat2":"Mashups"
 },
 "Synth Presets":{},
 "Meditation Music":{},
 "Jingles & Intros":{
     "subcat1":"Jingles",
-    "subcat2":    "Intros & Outros",
-    "subcat3":    "Skip Tracing"
+    "subcat2":"Intros & Outros",
+    "subcat3":"Skip Tracing"
 },
 "Market Research":{
-    "subcat1":    "Full Package Qual & Quant",
-    "subcat2":    "Interviews & Focus Groups",
-    "subcat3":    "Domain Name Research",
-    "subcat4":    "General Online Research",
-    "subcat5":    "Consultation",
-    "subcat6":    "Surveys"
+    "subcat1":"Full Package Qual & Quant",
+    "subcat2":"Interviews & Focus Groups",
+    "subcat3":"Domain Name Research",
+    "subcat4":"General Online Research",
+    "subcat5":"Consultation",
+    "subcat6":"Surveys"
 },
 "Business Plans":{},
 "Customer Care":{
-    "subcat1":    "Customer Support",
-    "subcat2":    "Planning & Setup",
-    "subcat3":    "Consulting",
-    "subcat4":    "Customer Success"
+    "subcat1":"Customer Support",
+    "subcat2":"Planning & Setup",
+    "subcat3":"Consulting",
+    "subcat4":"Customer Success"
 },
 "Project Management":{
-    "subcat1":    "Graphics & Design Projects",
-    "subcat2":    "Digital Marketing Projects",
-    "subcat3":    "Writing & Translation Projects",
-    "subcat4":    "Video & Animation Projects",
-    "subcat5":    "Music & Audio Projects",
-    "subcat6":    "Programming & Tech Projects",
-    "subcat7":    "General Project Services"
+    "subcat1":"Graphics & Design Projects",
+    "subcat2":"Digital Marketing Projects",
+    "subcat3":"Writing & Translation Projects",
+    "subcat4":"Video & Animation Projects",
+    "subcat5":"Music & Audio Projects",
+    "subcat6":"Programming & Tech Projects",
+    "subcat7":"General Project Services"
 },
 "HR Consulting":{
-    "subcat1":    "Organizational Development",
-    "subcat2":    "Talent Acquisition & Recruitment",
-    "subcat3":    "Performance Management",
-    "subcat4":    "Employee Learning & Development",
-    "subcat5":    "Compensation & Benefits",
-    "subcat6":    "HR Information Systems",
-    "subcat7":    "E-Commerce Management",
-    "subcat8":    "Product Upload",
-    "subcat9":    "Store Management",
-    "subcat10":    "Product Research"
+    "subcat1":"Organizational Development",
+    "subcat2":"Talent Acquisition & Recruitment",
+    "subcat3":"Performance Management",
+    "subcat4":"Employee Learning & Development",
+    "subcat5":"Compensation & Benefits",
+    "subcat6":"HR Information Systems",
+    "subcat7":"E-Commerce Management",
+    "subcat8":"Product Upload",
+    "subcat9":"Store Management",
+    "subcat10":"Product Research"
 },
 "Legal":{
-    "subcat1":    "Legal Research",
-    "subcat2":    "Legal Documents & Contracts",
-    "subcat3":    "General Legal Advice",
-    "subcat4":    "Arbitration & Mediation",
-    "subcat5":    "Applications & Registrations",
-    "subcat6":    "Legal Disputes"
+    "subcat1":"Legal Research",
+    "subcat2":"Legal Documents & Contracts",
+    "subcat3":"General Legal Advice",
+    "subcat4":"Arbitration & Mediation",
+    "subcat5":"Applications & Registrations",
+    "subcat6":"Legal Disputes"
 },
 "Financial Consulting":{
-    "subcat1":    "Analysis",
-    "subcat2":    "Accounting & Bookkeeping",
-    "subcat3":    "Tax Consulting",
-    "subcat4":    "Personal Finance & Wealth Management",
-    "subcat5":    "Financial Forecasting & Modeling",
-    "subcat6":    "Online Trading Lessons"
+    "subcat1":"Analysis",
+    "subcat2":"Accounting & Bookkeeping",
+    "subcat3":"Tax Consulting",
+    "subcat4":"Personal Finance & Wealth Management",
+    "subcat5":"Financial Forecasting & Modeling",
+    "subcat6":"Online Trading Lessons"
 },
 "Business Consulting":{
-    "subcat1":    "Supply Chain Management",
-    "subcat2":    "Logistics",
-    "subcat3":    "Procurement & Vendor Management"
+    "subcat1":"Supply Chain Management",
+    "subcat2":"Logistics",
+    "subcat3":"Procurement & Vendor Management"
 },
 "Presentations":{
-    "subcat1":    "Career Counseling",
-    "subcat2":    "Interview Prep",
-    "subcat3":    "Search & Apply"
+    "subcat1":"Career Counseling",
+    "subcat2":"Interview Prep",
+    "subcat3":"Search & Apply"
 },
 "Game Concept Design":{},
 "Flyer Distribution":{},
 "Lead Generation":{},
 "Gaming":{
-    "subcat1":    "Game Coaching",
-    "subcat2":    "Game Sessions"
+    "subcat1":"Game Coaching",
+    "subcat2":"Game Sessions"
 },
 "Online General Education":{
-    "subcat1":    "Language Tutoring",
-    "subcat2":    "Math Tutoring",
-    "subcat3":    "Science Tutoring",
-    "subcat4":    "Social Sciences Tutoring",
-    "subcat5":    "Business Tutoring",
-    "subcat6":    "Other Subjects"
+    "subcat1":"Language Tutoring",
+    "subcat2":"Math Tutoring",
+    "subcat3":"Science Tutoring",
+    "subcat4":"Social Sciences Tutoring",
+    "subcat5":"Business Tutoring",
+    "subcat6":"Other Subjects"
 },
 "Modeling & Acting":{},
 "Fitness Lessons":{},
@@ -350,229 +350,229 @@
 "Your Message On...":{},
 "Collectibles And NFTS":{},
 "Traveling":{
-    "subcat1":    "Postcards",
-    "subcat2":    "Advisory Resources",
-    "subcat3":    "Shipping Services",
-    "subcat4":    "Trip Plans",
-    "subcat5":    "Other"
+    "subcat1":"Postcards",
+    "subcat2":"Advisory Resources",
+    "subcat3":"Shipping Services",
+    "subcat4":"Trip Plans",
+    "subcat5":"Other"
 },
 "WordPress":{
-    "subcat1":    "Full Website Templates",
-    "subcat2":    "Customization",
-    "subcat3":    "Bug Fixes",
-    "subcat4":    "Landing Page",
-    "subcat5":    "WP Installation & Setup",
-    "subcat6":    "Performance & SEO",
-    "subcat7":    "Backup",
-    "subcat8":    "Security",
-    "subcat9":    "Help/Consultation"
+    "subcat1":"Full Website Templates",
+    "subcat2":"Customization",
+    "subcat3":"Bug Fixes",
+    "subcat4":"Landing Page",
+    "subcat5":"WP Installation & Setup",
+    "subcat6":"Performance & SEO",
+    "subcat7":"Backup",
+    "subcat8":"Security",
+    "subcat9":"Help/Consultation"
 },
 "Website Builders & CMS":{
-    "subcat1":    "Full Website Creation",
-    "subcat2":    "Customization",
-    "subcat3":    "Bug Fixes",
-    "subcat4":    "Landing Page",
-    "subcat5":    "Theme/Plugin Installation",
-    "subcat6":    "Performance & Security",
-    "subcat7":    "Backup",
-    "subcat8":    "Help/Consultation"
+    "subcat1":"Full Website Creation",
+    "subcat2":"Customization",
+    "subcat3":"Bug Fixes",
+    "subcat4":"Landing Page",
+    "subcat5":"Theme/Plugin Installation",
+    "subcat6":"Performance & Security",
+    "subcat7":"Backup",
+    "subcat8":"Help/Consultation"
 },
 "Game Development":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Backup & Migration",
-    "subcat2":    "Customization",
-    "subcat3":    "Prototyping",
-    "subcat4":    "Full Game Creation",
-    "subcat5":    "Bug Fixes"
+    "subcat1":"Consultation",
+    "subcat2":"Backup & Migration",
+    "subcat2":"Customization",
+    "subcat3":"Prototyping",
+    "subcat4":"Full Game Creation",
+    "subcat5":"Bug Fixes"
 },
 "Development for Streamers":{
-    "subcat1":    "Addons & Customization",
-    "subcat2":    "Setup & Installation"
+    "subcat1":"Addons & Customization",
+    "subcat2":"Setup & Installation"
 },
 "Web Programming":{
-    "subcat1":    "Custom Website",
-    "subcat2":    "Web Application",
-    "subcat3":    "Bug Fixes",
-    "subcat4":    "Browser Extensions",
-    "subcat5":    "Email Template",
-    "subcat6":    "Convert PSD",
-    "subcat7":    "Scripting",
-    "subcat8":    "Landing Page",
-    "subcat9":    "Help/Consultation",
-    "subcat10":    "E-Commerce Development",
-    "subcat11":    "Full Website Creation",
-    "subcat12":    "Customization",
-    "subcat13":    "Bug Fixes",
-    "subcat14":    "Theme/Plugin Installation",
-    "subcat15":    "Performance & Security",
-    "subcat16":    "Backup",
-    "subcat17":    "Help/Consultation"
+    "subcat1":"Custom Website",
+    "subcat2":"Web Application",
+    "subcat3":"Bug Fixes",
+    "subcat4":"Browser Extensions",
+    "subcat5":"Email Template",
+    "subcat6":"Convert PSD",
+    "subcat7":"Scripting",
+    "subcat8":"Landing Page",
+    "subcat9":"Help/Consultation",
+    "subcat10":"E-Commerce Development",
+    "subcat11":"Full Website Creation",
+    "subcat12":"Customization",
+    "subcat13":"Bug Fixes",
+    "subcat14":"Theme/Plugin Installation",
+    "subcat15":"Performance & Security",
+    "subcat16":"Backup",
+    "subcat17":"Help/Consultation"
 },
 "Mobile Apps":{
-    "subcat1":    "Custom App",
-    "subcat2":    "Convert Site to App",
-    "subcat3":    "App Improvements",
-    "subcat4":    "Bug Fix",
-    "subcat5":    "Help/Consultation"
+    "subcat1":"Custom App",
+    "subcat2":"Convert Site to App",
+    "subcat3":"App Improvements",
+    "subcat4":"Bug Fix",
+    "subcat5":"Help/Consultation"
 },
 "Desktop Applications":{
-    "subcat1":    "Custom Application",
-    "subcat2":    "Application Improvements",
-    "subcat3":    "Bug Fixes",
-    "subcat4":    "Help/Consultation"
+    "subcat1":"Custom Application",
+    "subcat2":"Application Improvements",
+    "subcat3":"Bug Fixes",
+    "subcat4":"Help/Consultation"
 },
 "Cybersecurity & Data Protection":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Compliance Services",
-    "subcat3":    "Assessment & Penetration Test",
-    "subcat4":    "Cybersecurity Management"
+    "subcat1":"Consultation",
+    "subcat2":"Compliance Services",
+    "subcat3":"Assessment & Penetration Test",
+    "subcat4":"Cybersecurity Management"
 },
 "Support & IT":{},
 "Online Coding Lessons":{},
 "Chatbots":{},
 "Convert Files":{
-    "subcat1":    "Convert to a Fillable Form",
-    "subcat2":    "Convert to an eBook",
-    "subcat3":    "Convert to an Editable File",
-    "subcat4":    "Convert to Another File"
+    "subcat1":"Convert to a Fillable Form",
+    "subcat2":"Convert to an eBook",
+    "subcat3":"Convert to an Editable File",
+    "subcat4":"Convert to Another File"
 },
 "Automated Testing":{},
 "Website Development":{
-    "subcat1":    "Event Website",
-    "subcat2":    "Portfolio Website",
-    "subcat3":    "Blog",
-    "subcat4":    "Online Store",
-    "subcat5":    "Business Website"
+    "subcat1":"Event Website",
+    "subcat2":"Portfolio Website",
+    "subcat3":"Blog",
+    "subcat4":"Online Store",
+    "subcat5":"Business Website"
 },
 "Databases":{},
-    "subcat1":    "SQL",
-    "subcat2":    "Consultation",
-    "subcat3":    "Database Administration (DBA)",
-    "subcat4":    "Cloud Based Solutions",
-    "subcat5":    "Queries",
-    "subcat6":    "Design & Optimization",
-    "subcat7":    "Schematics",
+    "subcat1":"SQL",
+    "subcat2":"Consultation",
+    "subcat3":"Database Administration (DBA)",
+    "subcat4":"Cloud Based Solutions",
+    "subcat5":"Queries",
+    "subcat6":"Design & Optimization",
+    "subcat7":"Schematics",
 
 "Data Processing":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Automations",
-    "subcat3":    "Formulas & Macros",
-    "subcat4":    "Data Mining & Scraping"
+    "subcat1":"Consultation",
+    "subcat2":"Automations",
+    "subcat3":"Formulas & Macros",
+    "subcat4":"Data Mining & Scraping"
 },
 "Data Analytics":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Planning & Supply Chain",
-    "subcat3":    "Business & Financial",
-    "subcat4":    "Surveys & Research",
-    "subcat5":    "Product & UX",
-    "subcat6":    "Marketing & Sales"
+    "subcat1":"Consultation",
+    "subcat2":"Planning & Supply Chain",
+    "subcat3":"Business & Financial",
+    "subcat4":"Surveys & Research",
+    "subcat5":"Product & UX",
+    "subcat6":"Marketing & Sales"
 },
 "Data Visualization":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Reports",
-    "subcat3":    "Geographic Information Systems (GIS)",
-    "subcat4":    "Dashboards",
-    "subcat5":    "Graphs & Charts"
+    "subcat1":"Consultation",
+    "subcat2":"Reports",
+    "subcat3":"Geographic Information Systems (GIS)",
+    "subcat4":"Dashboards",
+    "subcat5":"Graphs & Charts"
 },
 "Data Science":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Time Series Analysis",
-    "subcat3":    "Ranking & Recommendation",
-    "subcat4":    "Text Analysis & NLP",
-    "subcat5":    "Computer Vision"
+    "subcat1":"Consultation",
+    "subcat2":"Time Series Analysis",
+    "subcat3":"Ranking & Recommendation",
+    "subcat4":"Text Analysis & NLP",
+    "subcat5":"Computer Vision"
 },
 "Social Media Advertising":{
-    "subcat1":    "Strategy & Planning",
-    "subcat2":    "Ads Setup & Management",
-    "subcat3":    "Analytics & Tracking"
+    "subcat1":"Strategy & Planning",
+    "subcat2":"Ads Setup & Management",
+    "subcat3":"Analytics & Tracking"
 },
 "Social Media Marketing":{
-    "subcat1":    "Consultation & Audience Research",
-    "subcat2":    "Profile Setup & Integration",
-    "subcat3":    "Social Content",
-    "subcat4":    "Social Media Management",
-    "subcat5":    "Analytics & Tracking"
+    "subcat1":"Consultation & Audience Research",
+    "subcat2":"Profile Setup & Integration",
+    "subcat3":"Social Content",
+    "subcat4":"Social Media Management",
+    "subcat5":"Analytics & Tracking"
 },
 "Search Engine Optimization (SEO)":{
-    "subcat1":    "Keyword Research",
-    "subcat2":    "One Page SEO",
-    "subcat3":    "Voice Search SEO",
-    "subcat4":    "Technical SEO",
-    "subcat5":    "Full SEO Package",
-    "subcat6":    "Competitor Analysis"
+    "subcat1":"Keyword Research",
+    "subcat2":"One Page SEO",
+    "subcat3":"Voice Search SEO",
+    "subcat4":"Technical SEO",
+    "subcat5":"Full SEO Package",
+    "subcat6":"Competitor Analysis"
 },
 "Public Relations":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Events",
-    "subcat3":    "Press Release Pitching",
-    "subcat4":    "Strategy & Planning"
+    "subcat1":"Consultation",
+    "subcat2":"Events",
+    "subcat3":"Press Release Pitching",
+    "subcat4":"Strategy & Planning"
 },
 "Content Marketing":{
-    "subcat1":    "Consultation",
-    "subcat2":    "Events",
-    "subcat3":    "Press Release Pitching",
-    "subcat4":    "Strategy & Planning"
+    "subcat1":"Consultation",
+    "subcat2":"Events",
+    "subcat3":"Press Release Pitching",
+    "subcat4":"Strategy & Planning"
 },
 "Video Marketing":{
-    "subcat1":    "Consultation & Audience Research",
-    "subcat2":    "Video SEO",
-    "subcat3":    "Video Promotion & Distribution",
-    "subcat4":    "Video Ad Campaigns"
+    "subcat1":"Consultation & Audience Research",
+    "subcat2":"Video SEO",
+    "subcat3":"Video Promotion & Distribution",
+    "subcat4":"Video Ad Campaigns"
 },
 "Email Marketing":{
-    "subcat1":    "Campaign Management",
-    "subcat2":    "Email Automations",
-    "subcat3":    "Email Platform Support",
-    "subcat4":    "Audience Development",
-    "subcat5":    "Cold Emails"
+    "subcat1":"Campaign Management",
+    "subcat2":"Email Automations",
+    "subcat3":"Email Platform Support",
+    "subcat4":"Audience Development",
+    "subcat5":"Cold Emails"
 },
 "Crowdfunding":{
-    "subcat1":    "Campaign Marketing",
-    "subcat1":    "Campaign Creation"
+    "subcat1":"Campaign Marketing",
+    "subcat1":"Campaign Creation"
 },
 "Search Engine Marketing (SEM)":{
-    "subcat1":    "Setup & Strategy Consultation",
-    "subcat2":    "Search Engine Marketing Management",
-    "subcat3":    "Shopping Ads",
-    "subcat4":    "Ad Review & Optimization"
+    "subcat1":"Setup & Strategy Consultation",
+    "subcat2":"Search Engine Marketing Management",
+    "subcat3":"Shopping Ads",
+    "subcat4":"Ad Review & Optimization"
 },
 "Display Advertising":{
-    "subcat1":    "Campaign Setup & Management",
-    "subcat2":    "Ad Review & Optimization",
-    "subcat3":    "Retargeting",
-    "subcat4":    "Audio Advertising"
+    "subcat1":"Campaign Setup & Management",
+    "subcat2":"Ad Review & Optimization",
+    "subcat3":"Retargeting",
+    "subcat4":"Audio Advertising"
 },
 "Marketing Strategy":{
-    "subcat1":    "Consulting",
-    "subcat2":    "Marketing Plans"
+    "subcat1":"Consulting",
+    "subcat2":"Marketing Plans"
 },
 "Web Analytics":{
-    "subcat1":    "Setup",
-    "subcat2":    "Tracking & Reporting",
-    "subcat3":    "Optimization",
-    "subcat4":    "Bug Fixes"
+    "subcat1":"Setup",
+    "subcat2":"Tracking & Reporting",
+    "subcat3":"Optimization",
+    "subcat4":"Bug Fixes"
 },
 "Influencer Marketing":{
-    "subcat1":    "Strategy & Research",
-    "subcat1":    "Shoutouts & Promotion"
+    "subcat1":"Strategy & Research",
+    "subcat1":"Shoutouts & Promotion"
 },
 "Community Management":{
-    "subcat1":    "Planning",
-    "subcat2":    "Sourcing & Recruitment",
-    "subcat3":    "Growth",
-    "subcat4":    "Management & Engagement"
+    "subcat1":"Planning",
+    "subcat2":"Sourcing & Recruitment",
+    "subcat3":"Growth",
+    "subcat4":"Management & Engagement"
 },
 "Local SEO":{
-    "subcat1":    "Google My Business",
-    "subcat2":    "Local Citations and Directories",
-    "subcat3":    "E-Commerce Marketing",
-    "subcat4":    "Promoted Listings",
-    "subcat5":    "E-Commerce SEO",
-    "subcat6":    "Website Promotion"
+    "subcat1":"Google My Business",
+    "subcat2":"Local Citations and Directories",
+    "subcat3":"E-Commerce Marketing",
+    "subcat4":"Promoted Listings",
+    "subcat5":"E-Commerce SEO",
+    "subcat6":"Website Promotion"
 },
 "Mobile App Marketing":{
-    "subcat1":    "App Store Optimization",
-    "subcat2":    "App Promotion"
+    "subcat1":"App Store Optimization",
+    "subcat2":"App Promotion"
 
 }
 }

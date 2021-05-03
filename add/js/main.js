@@ -155,7 +155,7 @@ function Addproduct() {
                     product_subcategory: product_subcategory,
                     views:'0',
                     purchases:'0',
-                    reviews:'0';
+                    reviews:'0',
                     creation_date: `${month}, ${date}, ${year}`,
                     status: 'Active',
 
