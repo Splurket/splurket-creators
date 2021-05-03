@@ -572,8 +572,7 @@
     "subcat4":"Online Store",
     "subcat5":"Business Website"
 },
-"Databases":{"subcat1":"Dummy Data"
-},
+"Databases":{
     "subcat1":"SQL",
     "subcat2":"Consultation",
     "subcat3":"Database Administration (DBA)",
@@ -581,7 +580,7 @@
     "subcat5":"Queries",
     "subcat6":"Design & Optimization",
     "subcat7":"Schematics",
-
+},
 "Data Processing":{
     "subcat1":"Consultation",
     "subcat2":"Automations",
