@@ -1,41 +1,66 @@
 
 {
 
-"Graphics & Design":{},
-"Digital Marketing":{},
-"Writing & Translation":{},
-"Video & Animation":{},
-"Music & Audio":{},
-"Programming & Tech":{},
-"Data Science":{},
-"Business":{},
-"Lifestyle":{},
-"All in Graphics & Design":{},
-"Logo Design":{},
-"Brand Style Guides":{},
+"Graphics & Design":{"subcat1":"Dummy Data"
+},
+"Digital Marketing":{"subcat1":"Dummy Data"
+},
+"Writing & Translation":{"subcat1":"Dummy Data"
+},
+"Video & Animation":{"subcat1":"Dummy Data"
+},
+"Music & Audio":{"subcat1":"Dummy Data"
+},
+"Programming & Tech":{"subcat1":"Dummy Data"
+},
+"Data Science":{"subcat1":"Dummy Data"
+},
+"Business":{"subcat1":"Dummy Data"
+},
+"Lifestyle":{"subcat1":"Dummy Data"
+},
+"All in Graphics & Design":{"subcat1":"Dummy Data"
+},
+"Logo Design":{"subcat1":"Dummy Data"
+},
+"Brand Style Guides":{"subcat1":"Dummy Data"
+},
 "Game Art":{
     "subcat1":"Character Design",
     "subcat2":"Props & Objects",
     "subcat3":"Backgrounds & Environments",
     "subcat4":"UI & UX"
 },
-"Graphics for Streamers":{},
-"Business Cards & Stationery":{},
-"Resume Design":{},
-"Illustration":{},
-"Pattern Design":{},
-"Brochure Design":{},
-"Poster Design":{},
-"Flyer Design":{},
+"Graphics for Streamers":{"subcat1":"Dummy Data"
+},
+"Business Cards & Stationery":{"subcat1":"Dummy Data"
+},
+"Resume Design":{"subcat1":"Dummy Data"
+},
+"Illustration":{"subcat1":"Dummy Data"
+},
+"Pattern Design":{"subcat1":"Dummy Data"
+},
+"Brochure Design":{"subcat1":"Dummy Data"
+},
+"Poster Design":{"subcat1":"Dummy Data"
+},
+"Flyer Design":{"subcat1":"Dummy Data"
+},
 "Book Design":{
     "subcat1":"Book Layout Design & Typesetting",
     "subcat2":"Book Cover Design"
 },
-"Album Cover Design":{},
-"Podcast Cover Art":{},
-"Packaging Design":{},
-"AR Filters & Lenses":{},
-"Storyboards":{},
+"Album Cover Design":{"subcat1":"Dummy Data"
+},
+"Podcast Cover Art":{"subcat1":"Dummy Data"
+},
+"Packaging Design":{"subcat1":"Dummy Data"
+},
+"AR Filters & Lenses":{"subcat1":"Dummy Data"
+},
+"Storyboards":{"subcat1":"Dummy Data"
+},
 "Web & Mobile Design":{
     "subcat1":"Wireframe UX",
     "subcat2":"Graphic UI"
@@ -45,16 +70,26 @@
     "subcat2":"Social Posts & Banners",
     "subcat3":"Thumbnails Design"
 },
-"Postcard Design":{},
-"Catalog Design":{},
-"Menu Design":{},
-"Invitation Design":{},
-"Portraits & Caricatures":{},
-"Cartoons & Comics":{},
-"Tattoo Design":{},
-"Signage Design":{},
-"Web Banners":{},
-"Photoshop Editing":{},
+"Postcard Design":{"subcat1":"Dummy Data"
+},
+"Catalog Design":{"subcat1":"Dummy Data"
+},
+"Menu Design":{"subcat1":"Dummy Data"
+},
+"Invitation Design":{"subcat1":"Dummy Data"
+},
+"Portraits & Caricatures":{"subcat1":"Dummy Data"
+},
+"Cartoons & Comics":{"subcat1":"Dummy Data"
+},
+"Tattoo Design":{"subcat1":"Dummy Data"
+},
+"Signage Design":{"subcat1":"Dummy Data"
+},
+"Web Banners":{"subcat1":"Dummy Data"
+},
+"Photoshop Editing":{"subcat1":"Dummy Data"
+},
 "Architecture & Interior Design":{
     "subcat1":"Diagrams & Mapping",
     "subcat2":"Virtual Staging",
@@ -75,7 +110,8 @@
     "subcat5":"BIM 3D Modeling"
 
 },
-"Character Modeling":{},
+"Character Modeling":{"subcat1":"Dummy Data"
+},
 "Industrial & Product Design":{
     "subcat1":"Concept Development",
     "subcat2":"2D Drawing",
@@ -97,20 +133,30 @@
     "subcat1":"3D Modeling & Rendering",
     "subcat2":"Concept Design & Sketching"
 },
-"Presentation Design":{},
-"Email Design":{},
-"Icon Design":{},
-"Infographic Design":{},
-"Car Wraps":{},
-"Vector Tracing":{},
-"Articles & Blog Posts":{},
+"Presentation Design":{"subcat1":"Dummy Data"
+},
+"Email Design":{"subcat1":"Dummy Data"
+},
+"Icon Design":{"subcat1":"Dummy Data"
+},
+"Infographic Design":{"subcat1":"Dummy Data"
+},
+"Car Wraps":{"subcat1":"Dummy Data"
+},
+"Vector Tracing":{"subcat1":"Dummy Data"
+},
+"Articles & Blog Posts":{"subcat1":"Dummy Data"
+},
 "Proofreading & Editing":{
     "subcat1":"Proofreading",
     "subcat2":"Copy Editing"
 },
-"Translation":{},
-"Website Content":{},
-"Product Descriptions":{},
+"Translation":{"subcat1":"Dummy Data"
+},
+"Website Content":{"subcat1":"Dummy Data"
+},
+"Product Descriptions":{"subcat1":"Dummy Data"
+},
 "Book & eBook Writing":{
     "subcat1":"Kindle Niche Research",
     "subcat2":"Short Stories",
@@ -118,24 +164,38 @@
     "subcat4":"Book Blurbs",
     "subcat5":"Ghostwriting"
 },
-"Book Editing":{},
-"Resume Writing":{},
-"Brand Voice & Tone":{},
-"UX Writing":{},
-"Email Copy":{},
-"Technical Writing":{},
-"White Papers":{},
-"Sales Copy":{},
-"Social Media Copy":{},
+"Book Editing":{"subcat1":"Dummy Data"
+},
+"Resume Writing":{"subcat1":"Dummy Data"
+},
+"Brand Voice & Tone":{"subcat1":"Dummy Data"
+},
+"UX Writing":{"subcat1":"Dummy Data"
+},
+"Email Copy":{"subcat1":"Dummy Data"
+},
+"Technical Writing":{"subcat1":"Dummy Data"
+},
+"White Papers":{"subcat1":"Dummy Data"
+},
+"Sales Copy":{"subcat1":"Dummy Data"
+},
+"Social Media Copy":{"subcat1":"Dummy Data"
+},
 "Podcast Writing":{
     "subcat1":"Podcast Content",
     "subcat2":"Podcast Show Notes"
 },
-"Ad Copy":{},
-"Cover Letters":{},
-"Press Releases":{},
-"Case Studies":{},
-"LinkedIn Profiles":{},
+"Ad Copy":{"subcat1":"Dummy Data"
+},
+"Cover Letters":{"subcat1":"Dummy Data"
+},
+"Press Releases":{"subcat1":"Dummy Data"
+},
+"Case Studies":{"subcat1":"Dummy Data"
+},
+"LinkedIn Profiles":{"subcat1":"Dummy Data"
+},
 "Creative Writing":{
     "subcat1":"Game Writing",
     "subcat2":"Poetry",
@@ -151,30 +211,44 @@
     "subcat6":"Video Scripts"
 
 },
-"Business Names & Slogans":{},
-"eLearning Content Development":{},
-"Speechwriting":{},
-"Legal Writing":{},
+"Business Names & Slogans":{"subcat1":"Dummy Data"
+},
+"eLearning Content Development":{"subcat1":"Dummy Data"
+},
+"Speechwriting":{"subcat1":"Dummy Data"
+},
+"Legal Writing":{"subcat1":"Dummy Data"
+},
 "Grant Writing":{
     "subcat1":"Grant Research",
     "subcat1":"Grant Proposals"
 },
-"Transcripts":{},
-"Research & Summaries":{},
-"All in Video & Animation":{},
+"Transcripts":{"subcat1":"Dummy Data"
+},
+"Research & Summaries":{"subcat1":"Dummy Data"
+},
+"All in Video & Animation":{"subcat1":"Dummy Data"
+},
 "Whiteboard & Animated Explainers":{
     "subcat1":"2D Animated Explainers",
     "subcat2":"3D Animated Explainers",
     "subcat3":"Isometric Explainers",
     "subcat4":"Whiteboard Explainers"
 },
-"Video Editing":{},
-"Short Video Ads":{},
-"Animated GIFs":{},
-"Logo Animation":{},
-"Intros & Outros":{},
-"Character Animation":{},
-"3D Product Animation":{},
+"Video Editing":{"subcat1":"Dummy Data"
+},
+"Short Video Ads":{"subcat1":"Dummy Data"
+},
+"Animated GIFs":{"subcat1":"Dummy Data"
+},
+"Logo Animation":{"subcat1":"Dummy Data"
+},
+"Intros & Outros":{"subcat1":"Dummy Data"
+},
+"Character Animation":{"subcat1":"Dummy Data"
+},
+"3D Product Animation":{"subcat1":"Dummy Data"
+},
 "Lyric & Music Videos":{
     "subcat1":"Lyric Videos",
     "subcat2":"Music Visualization",
@@ -185,10 +259,14 @@
     "subcat7":"Anime Music Videos",
     "subcat8":"Spotify Canvas"
 },
-"Animation for Kids":{},
-"Animation for Streamers":{},
-"Spokespersons Videos":{},
-"Subtitles & Captions":{},
+"Animation for Kids":{"subcat1":"Dummy Data"
+},
+"Animation for Streamers":{"subcat1":"Dummy Data"
+},
+"Spokespersons Videos":{"subcat1":"Dummy Data"
+},
+"Subtitles & Captions":{"subcat1":"Dummy Data"
+},
 "Visual Effects":{
     "subcat1":"Rotoscoping & Keying",
     "subcat2":"Color Grading",
@@ -197,31 +275,51 @@
     "subcat5":"Cleanups",
     "subcat6":"Beauty Retouching"
 },
-"Website Animation":{},
-"eLearning Video Production":{},
-"Article to Video":{},
-"Unboxing Videos":{},
-"Screencasting Videos":{},
-"Slideshow Videos":{},
-"App & Website Previews":{},
-"Drone Videography":{},
-"Book Trailers":{},
-"Real Estate Promos":{},
-"Game Trailers":{},
-"Product Photography":{},
-"Local Photography":{},
-"Other":{},
-"All in Music & Audio":{},
-"Voice Over":{},
-"Mixing & Mastering":{},
+"Website Animation":{"subcat1":"Dummy Data"
+},
+"eLearning Video Production":{"subcat1":"Dummy Data"
+},
+"Article to Video":{"subcat1":"Dummy Data"
+},
+"Unboxing Videos":{"subcat1":"Dummy Data"
+},
+"Screencasting Videos":{"subcat1":"Dummy Data"
+},
+"Slideshow Videos":{"subcat1":"Dummy Data"
+},
+"App & Website Previews":{"subcat1":"Dummy Data"
+},
+"Drone Videography":{"subcat1":"Dummy Data"
+},
+"Book Trailers":{"subcat1":"Dummy Data"
+},
+"Real Estate Promos":{"subcat1":"Dummy Data"
+},
+"Game Trailers":{"subcat1":"Dummy Data"
+},
+"Product Photography":{"subcat1":"Dummy Data"
+},
+"Local Photography":{"subcat1":"Dummy Data"
+},
+"Other":{"subcat1":"Dummy Data"
+},
+"All in Music & Audio":{"subcat1":"Dummy Data"
+},
+"Voice Over":{"subcat1":"Dummy Data"
+},
+"Mixing & Mastering":{"subcat1":"Dummy Data"
+},
 "Producers & Composers":{
     "subcat1":"Composing & Soundtracks",
     "subcat2":"Ghost Production",
     "subcat3":"Backing Tracks"
 },
-"Singers & Vocalists":{},
-"Session Musicians":{},
-"Songwriters":{},
+"Singers & Vocalists":{"subcat1":"Dummy Data"
+},
+"Session Musicians":{"subcat1":"Dummy Data"
+},
+"Songwriters":{"subcat1":"Dummy Data"
+},
 "Beat Making":{
     "subcat1":"Beats",
     "subcat2":"Loops & Kits"
@@ -232,9 +330,12 @@
     "subcat3":"Vocals",
     "subcat4":"Theory"
 },
-"Podcast Editing":{},
-"Audiobook Production":{},
-"Audio Ads Production":{},
+"Podcast Editing":{"subcat1":"Dummy Data"
+},
+"Audiobook Production":{"subcat1":"Dummy Data"
+},
+"Audio Ads Production":{"subcat1":"Dummy Data"
+},
 "Sound Design":{
     "subcat1":"Sound Effects",
     "subcat2":"Foley"
@@ -245,16 +346,22 @@
     "subcat3":"Phone Systems & IVR",
     "subcat4":"Radio Ads"
 },
-"Music Transcription":{},
-"Vocal Tuning":{},
-"DJ Drops & Tags":{},
-"DJ Mixing":{},
+"Music Transcription":{"subcat1":"Dummy Data"
+},
+"Vocal Tuning":{"subcat1":"Dummy Data"
+},
+"DJ Drops & Tags":{"subcat1":"Dummy Data"
+},
+"DJ Mixing":{"subcat1":"Dummy Data"
+},
 "Remixing & Mashups":{
     "subcat1":"Remixing",
     "subcat2":"Mashups"
 },
-"Synth Presets":{},
-"Meditation Music":{},
+"Synth Presets":{"subcat1":"Dummy Data"
+},
+"Meditation Music":{"subcat1":"Dummy Data"
+},
 "Jingles & Intros":{
     "subcat1":"Jingles",
     "subcat2":"Intros & Outros",
@@ -268,7 +375,8 @@
     "subcat5":"Consultation",
     "subcat6":"Surveys"
 },
-"Business Plans":{},
+"Business Plans":{"subcat1":"Dummy Data"
+},
 "Customer Care":{
     "subcat1":"Customer Support",
     "subcat2":"Planning & Setup",
@@ -322,9 +430,12 @@
     "subcat2":"Interview Prep",
     "subcat3":"Search & Apply"
 },
-"Game Concept Design":{},
-"Flyer Distribution":{},
-"Lead Generation":{},
+"Game Concept Design":{"subcat1":"Dummy Data"
+},
+"Flyer Distribution":{"subcat1":"Dummy Data"
+},
+"Lead Generation":{"subcat1":"Dummy Data"
+},
 "Gaming":{
     "subcat1":"Game Coaching",
     "subcat2":"Game Sessions"
@@ -337,18 +448,30 @@
     "subcat5":"Business Tutoring",
     "subcat6":"Other Subjects"
 },
-"Modeling & Acting":{},
-"Fitness Lessons":{},
-"Dance Lessons":{},
-"Personal Stylists":{},
-"Cooking Lessons":{},
-"Craft Lessons":{},
-"Arts & Crafts":{},
-"Health":{},
-"Family & Genealogy":{},
-"Greeting Cards & Videos":{},
-"Your Message On...":{},
-"Collectibles And NFTS":{},
+"Modeling & Acting":{"subcat1":"Dummy Data"
+},
+"Fitness Lessons":{"subcat1":"Dummy Data"
+},
+"Dance Lessons":{"subcat1":"Dummy Data"
+},
+"Personal Stylists":{"subcat1":"Dummy Data"
+},
+"Cooking Lessons":{"subcat1":"Dummy Data"
+},
+"Craft Lessons":{"subcat1":"Dummy Data"
+},
+"Arts & Crafts":{"subcat1":"Dummy Data"
+},
+"Health":{"subcat1":"Dummy Data"
+},
+"Family & Genealogy":{"subcat1":"Dummy Data"
+},
+"Greeting Cards & Videos":{"subcat1":"Dummy Data"
+},
+"Your Message On...":{"subcat1":"Dummy Data"
+},
+"Collectibles And NFTS":{"subcat1":"Dummy Data"
+},
 "Traveling":{
     "subcat1":"Postcards",
     "subcat2":"Advisory Resources",
@@ -427,16 +550,20 @@
     "subcat3":"Assessment & Penetration Test",
     "subcat4":"Cybersecurity Management"
 },
-"Support & IT":{},
-"Online Coding Lessons":{},
-"Chatbots":{},
+"Support & IT":{"subcat1":"Dummy Data"
+},
+"Online Coding Lessons":{"subcat1":"Dummy Data"
+},
+"Chatbots":{"subcat1":"Dummy Data"
+},
 "Convert Files":{
     "subcat1":"Convert to a Fillable Form",
     "subcat2":"Convert to an eBook",
     "subcat3":"Convert to an Editable File",
     "subcat4":"Convert to Another File"
 },
-"Automated Testing":{},
+"Automated Testing":{"subcat1":"Dummy Data"
+},
 "Website Development":{
     "subcat1":"Event Website",
     "subcat2":"Portfolio Website",
@@ -444,7 +571,8 @@
     "subcat4":"Online Store",
     "subcat5":"Business Website"
 },
-"Databases":{},
+"Databases":{"subcat1":"Dummy Data"
+},
     "subcat1":"SQL",
     "subcat2":"Consultation",
     "subcat3":"Database Administration (DBA)",
