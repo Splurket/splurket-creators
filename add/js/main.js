@@ -1,5 +1,5 @@
 //HANDLE TEMPALTE INPUT HERE TO EXTRACT HTML FROM FILE AND SAVE TO FIREBASE.
-
+var data1;
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -15,7 +15,6 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
-
 
 
 //Handle Image Upload
@@ -81,6 +80,50 @@ function Addproduct() {
         user = firebase.auth().currentUser;
         //splurket@gmail.com
         email1 = user.email;
+        var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Accept", "application/json, /;q=0.5");
+
+      var raw = JSON.stringify({
+        "stringtoencrypt": `${email1}`
+      });
+      //document.write(raw)
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+          //should be a base64 string by now
+          getuserdata(data);
+      });
+  function getuserdata(data) {
+      email = data.encryptedstring;
+          var docRef = db.collection("users").doc(email);
+          docRef.get().then((doc) => {
+              if (doc.exists) {
+                  data1 = doc.data()
+                  pro_pic = data1.pro_pic;
+                  if (data1.username == "" ){
+                      user_name = data1.email
+                  }
+                  if (data1.username != "") {
+                      user_name = data1.username;
+                  }
+              } else {
+                  // doc.data() will be undefined in this case
+                  console.log("No such document!");
+              }
+          }).catch((error) => {
+              console.log("Error getting document:", error);
+          });
+  }
     }
     var product_id;
 	var myHeaders = new Headers();
@@ -110,9 +153,11 @@ function Addproduct() {
             product_id = strings4[0];
 
             //document.write(JSON.stringify(data.encryptedstring))
+
             db.collection('products').doc(product_id).set({
                     product_name: product_name,
-                    product_creator: email1,
+                    product_creator: data1.username,
+                    product_creatorpic: data1.pro_pic,
                     product_price: product_price,
                     product_category: product_category,
                     product_subcategory: product_subcategory,
@@ -122,6 +167,8 @@ function Addproduct() {
                     product_ship_selection: product_ship_selection,
                     product_ship_template: product_ship_template,
                     product_description: product_description,
+                    reviewsn: '0',
+                    product_id: product_id,
             });
           	var myHeaders = new Headers();
 	        myHeaders.append("Content-Type", "application/json");
