@@ -86,7 +86,7 @@ var firebaseConfig = {
         myHeaders.append("Accept", "application/json, /;q=0.5");
 
         var raw = JSON.stringify({
-          "stringtoencrypt": `${pname}&${user.email}`
+          "flemishGiant": `${pname}&${user.email}`
         });
         console.log(raw)
         //document.write(raw)
@@ -97,7 +97,7 @@ var firebaseConfig = {
           redirect: 'follow'
         };
 
-        fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+        fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
           .then(function (response) {
               return response.json();
           })
@@ -129,7 +129,7 @@ function imagelink(get_link1){
         myHeaders.append("Accept", "application/json, /;q=0.5");
 
         var raw = JSON.stringify({
-          "stringtoencrypt": `${pname}&${user.email}`
+          "flemishGiant": `${pname}&${user.email}`
         });
         console.log(raw)
         //document.write(raw)
@@ -140,7 +140,7 @@ function imagelink(get_link1){
           redirect: 'follow'
         };
 
-        fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+        fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
           .then(function (response) {
               return response.json();
           })
@@ -229,7 +229,7 @@ function Addproduct() {
 	        myHeaders.append("Accept", "application/json, /;q=0.5");
 
 	        var raw = JSON.stringify({
-	          "stringtoencrypt": `${user.email}`
+	          "flemishGiant": `${user.email}`
 	        });
 	        console.log(raw)
 	        //document.write(raw)
@@ -240,7 +240,7 @@ function Addproduct() {
 	          redirect: 'follow'
 	        };
 
-	        fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+	        fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
 	          .then(function (response) {
 	              return response.json();
 	          })
