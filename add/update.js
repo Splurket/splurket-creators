@@ -82,8 +82,7 @@ var firebaseConfig = {
         email1 = user.email;
     }
   var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Accept", "application/json, /;q=0.5");
+        myHeaders.append("Content-Type", "text/plain");
 
         var raw = JSON.stringify({
           "flemishGiant": `${pname}&${user.email}`
@@ -125,8 +124,7 @@ function imagelink(get_link1){
     }
     var product_id;
      var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Accept", "application/json, /;q=0.5");
+        myHeaders.append("Content-Type", "text/plain");
 
         var raw = JSON.stringify({
           "flemishGiant": `${pname}&${user.email}`
@@ -225,8 +223,7 @@ function Addproduct() {
            var product_description = "";
 }
           var myHeaders = new Headers();
-	        myHeaders.append("Content-Type", "application/json");
-	        myHeaders.append("Accept", "application/json, /;q=0.5");
+	        myHeaders.append("Content-Type", "text/plain");
 
 	        var raw = JSON.stringify({
 	          "flemishGiant": `${user.email}`
