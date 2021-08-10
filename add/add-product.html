@@ -302,9 +302,9 @@ console.log(JSON.stringify(text))
     //var strings4 = data.encryptedstring.split('&')
     console.log(strings5)
     product_id = strings5
-
+    pro_pic = window.top.document.getElementById('avatarpic').src
             //document.write(JSON.stringify(data.encryptedstring))
-console.log(pro_pic)
+
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
