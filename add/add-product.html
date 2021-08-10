@@ -257,13 +257,12 @@ function Addproduct() {
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }
-  var dispdesc1 = document.getElementById('markflash').contentWindow.document.getElementById('text')
+  var text = document.getElementById('markflash').contentWindow.document.getElementById('text')
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }else if(typeof product_description != 'undefined'){
-           const text = JSON.stringify(dispdesc1)
          }
-console.log(text)
+console.log(JSON.stringify(text))
 
   var user;
   var email1;
