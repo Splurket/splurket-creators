@@ -303,13 +303,15 @@ console.log(JSON.stringify(text))
     console.log(strings5)
     product_id = strings5
     pro_pic = window.parent.document.getElementById('avatarpic').src
+    username1=window.parent.document.getElementById('avatarusername1').innerHTML
+    username =username1.replace("Signed In As: ","")
     console.log(pro_pic)
             //document.write(JSON.stringify(data.encryptedstring))
 
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
-                    product_creator: user_name,
+                    product_creator: username,
                     product_creatorpic: pro_pic,
                     product_price: product_price,
                     product_category: product_category,
