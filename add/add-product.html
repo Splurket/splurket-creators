@@ -363,6 +363,7 @@ console.log(JSON.stringify(text))
     var storeref = ref.child(strings5 +'.zip')
     storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
       console.log('Uploaded a data_url string!');
+    })
             //document.write(JSON.stringify(data.encryptedstring))
 
             db.collection('products').doc(product_id).set({
