@@ -69,11 +69,11 @@ function Addproduct() {
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }
-  var dispdesc1 = markflash.getElementById('text').value;
+  var dispdesc1 = document.getElementById('markflash').contentWindow.document.getElementById('text')
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }else if(typeof product_description != 'undefined'){
-           var text = JSON.stringify(dispdesc1)
+           const text = JSON.stringify(dispdesc1)
          }
 console.log(text)
 
