@@ -55,10 +55,6 @@ function Addproduct() {
            var product_downloadlink = "";
 }
 
-	var product_file = document.getElementById('productupload').value;
-       if(typeof product_file == 'undefined'){
-           var product_file = "";
-}
 
 	var product_ship_selection = document.getElementById('shipping-selection').value;
        if(typeof product_ship_selection == 'undefined'){
@@ -171,7 +167,6 @@ console.log(text)
                     product_subcategory: product_subcategory,
                     product_cover: product_cover,
                     product_downloadlink: product_downloadlink,
-                    product_file: product_file,
                     product_ship_selection: product_ship_selection,
                     product_ship_template: product_ship_template,
                     product_description: product_description,
