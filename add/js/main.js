@@ -78,6 +78,7 @@ function Addproduct() {
            var product_description = "";
 }else if(typeof product_description != 'undefined'){
            var text = JSON.stringify(dispdesc1)
+         }
 console.log(text)
 
 	var user;
