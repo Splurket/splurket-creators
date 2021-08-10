@@ -294,6 +294,7 @@ console.log(JSON.stringify(text))
           //should be a base64 string by now
           getuserdata(data);
       });
+        var data1;
   function getuserdata(data) {
       email = data.encryptedstring;
           var docRef = db.collection("users").doc(email);
