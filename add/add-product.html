@@ -213,7 +213,7 @@ function imagelink(get_link1){
 
 
 
-
+var pro_pic;
 function Addproduct() {
   var markflash = document.getElementById('markflash')
   var product_name = document.getElementById('name').value;
@@ -295,28 +295,6 @@ console.log(JSON.stringify(text))
           //should be a base64 string by now
           getuserdata(data);
       });
-        var pro_pic;
-  function getuserdata(data) {
-      email = data.encryptedstring;
-          var docRef = db.collection("users").doc(email);
-          docRef.get().then((doc) => {
-              if (doc.exists) {
-                  data1 = doc.data()
-                  pro_pic = data1.pro_pic;
-                  if (data1.username == "" ){
-                      user_name = data1.email
-                  }
-                  if (data1.username != "") {
-                      user_name = data1.username;
-                  }
-              } else {
-                  // doc.data() will be undefined in this case
-                  console.log("No such document!");
-              }
-          }).catch((error) => {
-              console.log("Error getting document:", error);
-          });
-  }
     }
     var product_id;
 
@@ -385,6 +363,27 @@ console.log(JSON.stringify(text))
           });
 
 }
+  function getuserdata(data) {
+      email = data.encryptedstring;
+          var docRef = db.collection("users").doc(email);
+          docRef.get().then((doc) => {
+              if (doc.exists) {
+                  data1 = doc.data()
+                  pro_pic = data1.pro_pic;
+                  if (data1.username == "" ){
+                      user_name = data1.email
+                  }
+                  if (data1.username != "") {
+                      user_name = data1.username;
+                  }
+              } else {
+                  // doc.data() will be undefined in this case
+                  console.log("No such document!");
+              }
+          }).catch((error) => {
+              console.log("Error getting document:", error);
+          });
+  }
 
     </script>
   </body>
