@@ -188,6 +188,7 @@
     <script>
       //HANDLE TEMPALTE INPUT HERE TO EXTRACT HTML FROM FILE AND SAVE TO FIREBASE.
 var data1;
+var user_name
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -348,7 +349,7 @@ console.log(JSON.stringify(text))
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
-                    product_creator: data1.username,
+                    product_creator: user_name,
                     product_creatorpic: data1.pro_pic,
                     product_price: product_price,
                     product_category: product_category,
