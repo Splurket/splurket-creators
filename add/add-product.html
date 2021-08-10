@@ -319,30 +319,11 @@ console.log(JSON.stringify(text))
   }
     }
     var product_id;
-  var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "text/plain");
 
-        var raw = JSON.stringify({
-          "flemishGiant": `${product_name}&${user.email}`
-        });
-        console.log(raw)
-        //document.write(raw)
-        var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
-        };
-
-        fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
-          .then(function (response) {
-              return response.json();
-          })
-          .then(function (data) {
-            var strings5= data.encryptedstring;
-            var strings4 = data.encryptedstring.split('&')
-            console.log(strings4)
-            product_id = strings4[0];
+    var strings5= btoa(`${product_name}&${user.email}`)
+    //var strings4 = data.encryptedstring.split('&')
+    console.log(strings5)
+    product_id = strings5
 
             //document.write(JSON.stringify(data.encryptedstring))
 
@@ -350,7 +331,7 @@ console.log(JSON.stringify(text))
                     dispdesc: text,
                     product_name: product_name,
                     product_creator: user_name,
-                    product_creatorpic: data1.pro_pic,
+                    product_creatorpic: pro_pic,
                     product_price: product_price,
                     product_category: product_category,
                     product_subcategory: product_subcategory,
