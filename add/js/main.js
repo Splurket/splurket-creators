@@ -26,6 +26,7 @@ function imagelink(get_link1){
 
 
 function Addproduct() {
+  var markflash = document.getElementById('markflash')
 	var product_name = document.getElementById('name').value;
        if(typeof product_name == 'undefined'){
            var product_name = "";
@@ -68,10 +69,17 @@ function Addproduct() {
        if(typeof product_ship_template == 'undefined'){
            var product_ship_template = "";
 }
-	var product_description = document.getElementById('product_description').value;
+	var product_description = document.getElementById('prod_desc').value;
        if(typeof product_description == 'undefined'){
            var product_description = "";
 }
+  var dispdesc1 = markflash.getElementById('text').value;
+       if(typeof product_description == 'undefined'){
+           var product_description = "";
+}else if(typeof product_description != 'undefined'){
+           var text = JSON.stringify(dispdesc1)
+console.log(text)
+
 	var user;
 	var email1;
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -153,6 +161,7 @@ function Addproduct() {
             //document.write(JSON.stringify(data.encryptedstring))
 
             db.collection('products').doc(product_id).set({
+                    dispdesc: text,
                     product_name: product_name,
                     product_creator: data1.username,
                     product_creatorpic: data1.pro_pic,
