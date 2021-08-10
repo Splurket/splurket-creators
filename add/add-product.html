@@ -205,7 +205,7 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true });
   firebase.analytics();
-
+var ref = firebase.storage().ref();
 
 //Handle Image Upload
 function imagelink(get_link1){
