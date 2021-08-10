@@ -188,7 +188,7 @@
     <script>
       //HANDLE TEMPALTE INPUT HERE TO EXTRACT HTML FROM FILE AND SAVE TO FIREBASE.
 var data1;
-var user_name
+var content;
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -212,6 +212,59 @@ function imagelink(get_link1){
 }
 
 
+    var zip;
+    var myVar;
+  function handleFileSelect(evt) {
+    zip = new JSZip();
+    var files = evt.target.files; // FileList object
+    var x = 0;
+    var timer = setInterval(function() {
+    ++x
+    myTimer()
+    if (x === 1) clearInterval(timer);
+        //console.log('post-interval'); //this will still run after clearing
+    }, 5000);
+
+    // Loop through the FileList and render image files as thumbnails.
+    const len = Object.keys(files).length
+    for (var i = 0, f; f = files[i]; i++) {
+        console.log(i)
+
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var b641 = e.target.result.split(",")
+          var b64 = b641[1]
+          console.log(theFile.name)
+          zip.file(theFile.name, b64, {base64: true});
+         console.log(e.target.result)
+        };
+
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+
+    }
+
+  }
+
+
+function myTimer() {
+    zip.generateAsync({type:"base64"}).then(function (content) {
+        console.log("data:application/zip;base64," + content);
+    clearInterval()
+    content = content
+    });
+}
+
+function myStopFunction() {
+  clearInterval(myVar);
+}
 
 var pro_pic;
 function Addproduct() {
@@ -306,6 +359,10 @@ console.log(JSON.stringify(text))
     username1=window.parent.document.getElementById('avatarusername1').innerHTML
     username =username1.replace("Signed In As: ","")
     console.log(pro_pic)
+
+    var storeref = ref.child(strings5 +'.zip')
+    storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
+      console.log('Uploaded a data_url string!');
             //document.write(JSON.stringify(data.encryptedstring))
 
             db.collection('products').doc(product_id).set({
@@ -388,6 +445,7 @@ console.log(JSON.stringify(text))
           });
   }
 
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
     </script>
   </body>
 </html>
