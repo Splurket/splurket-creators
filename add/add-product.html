@@ -320,7 +320,17 @@ function Addproduct() {
          }
 console.log(JSON.stringify(text))
     
-    var strings5= btoa(`${product_name}&${user.email}`)
+            //document.write(JSON.stringify(data.encryptedstring))
+    
+  var user;
+  var email1;
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        user = firebase.auth().currentUser;
+        //splurket@gmail.com
+        email1 = user.email;
+      var strings5= btoa(`${product_name}&${user.email}`)
     var storeref = ref.child(strings5 +'.zip')
     content = window.localStorage.getItem('zip_file')
     console.log(content)
@@ -333,16 +343,6 @@ console.log(JSON.stringify(text))
       });
       console.log('Uploaded a data_url string!'+ product_downloadlink);
     })
-            //document.write(JSON.stringify(data.encryptedstring))
-    
-  var user;
-  var email1;
-  firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        user = firebase.auth().currentUser;
-        //splurket@gmail.com
-        email1 = user.email;
         var myHeaders = new Headers();
   myHeaders.append("Content-Type", "text/plain");
 
