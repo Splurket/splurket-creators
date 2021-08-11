@@ -366,7 +366,8 @@ console.log(JSON.stringify(text))
     content = window.localStorage.getItem('zip_file')
     console.log(content)
     storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
-      storeref.snapshot.ref.getDownloadURL().then((product_downloadlink)=>{
+      console.log(snapshot)
+      snapshot.ref.getDownloadURL().then((product_downloadlink)=>{
         var product_downloadlink= product_downloadlink
         console.log(product_downloadlink)
       });
