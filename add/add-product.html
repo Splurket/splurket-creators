@@ -260,7 +260,7 @@ function myTimer() {
     zip.generateAsync({type:"base64"}).then(function (content) {
         console.log("data:application/zip;base64," + content);
     clearInterval()
-    content = content
+    window.localStorage.setItem('zip_file', content)
     });
 }
 
@@ -363,6 +363,7 @@ console.log(JSON.stringify(text))
     //console.log(pro_pic)
 
     var storeref = ref.child(strings5 +'.zip')
+    content = window.localStorage.getItem('zip_file')
     console.log(content)
     storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
       storeref.getDownloadURL().then((product_downloadlink)=>{
