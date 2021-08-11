@@ -320,7 +320,21 @@ function Addproduct() {
          }
 console.log(JSON.stringify(text))
     
-
+    var strings5= btoa(`${product_name}&${user.email}`)
+    var storeref = ref.child(strings5 +'.zip')
+    content = window.localStorage.getItem('zip_file')
+    console.log(content)
+    storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
+      console.log(snapshot)
+      snapshot.ref.getDownloadURL().then((product_downloadlink)=>{
+        var product_downloadlink= product_downloadlink
+        //console.log(product_downloadlink)
+        window.localStorage.setItem("product_link", product_downloadlink)
+      });
+      console.log('Uploaded a data_url string!'+ product_downloadlink);
+    })
+            //document.write(JSON.stringify(data.encryptedstring))
+    
   var user;
   var email1;
   firebase.auth().onAuthStateChanged(function(user) {
@@ -353,8 +367,6 @@ console.log(JSON.stringify(text))
       });
     }
     var product_id;
-    var strings5= btoa(`${product_name}&${user.email}`)
-    let product_downloadlink = upload_shit(strings5)
 
     //var strings4 = data.encryptedstring.split('&')
     //console.log(strings5)
@@ -363,8 +375,11 @@ console.log(JSON.stringify(text))
     username1=window.parent.document.getElementById('avatarusername1').innerHTML
     username =username1.replace("Signed In As: ","")
     //console.log(pro_pic)
-    //var product_downloadlink = window.localStorage.getItem("product_link")
+    var product_downloadlink = window.localStorage.getItem("product_link")
 
+    if(product_downloadlink == "null" || product_downloadlink == null || product_downloadlink == "undefined"){
+      var product_downloadlink = window.localStorage.getItem("product_link")
+    }else if(product_downloadlink != "null" || product_downloadlink != null || product_downloadlink != "undefined"){
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
@@ -443,24 +458,6 @@ console.log(JSON.stringify(text))
           }).catch((error) => {
               console.log("Error getting document:", error);
           });
-  }
-  function upload_shit(strings5){
-    var storeref = ref.child(strings5 +'.zip')
-    content = window.localStorage.getItem('zip_file')
-    console.log(content)
-    storeref.putString("data:application/zip;base64," + content, 'data_url').then((snapshot) => {
-      console.log(snapshot)
-      snapshot.ref.getDownloadURL().then((product_downloadlink)=>{
-        var product_downloadlink= product_downloadlink
-        //console.log(product_downloadlink)
-        window.localStorage.setItem("product_link", product_downloadlink)
-      });
-      //console.log('Uploaded a data_url string!'+ product_downloadlink);
-      product_downloadlink = localStorage.getItem('product_link')
-      return product_downloadlink
-    })
-            //document.write(JSON.stringify(data.encryptedstring))
-    
   }
 
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
