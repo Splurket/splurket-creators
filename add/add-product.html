@@ -369,12 +369,13 @@ console.log(JSON.stringify(text))
       console.log(snapshot)
       snapshot.ref.getDownloadURL().then((product_downloadlink)=>{
         var product_downloadlink= product_downloadlink
-        console.log(product_downloadlink)
+        //console.log(product_downloadlink)
+        window.localStorage.setItem("product_link", product_downloadlink)
       });
       console.log('Uploaded a data_url string!'+ product_downloadlink);
     })
             //document.write(JSON.stringify(data.encryptedstring))
-
+            product_downloadlink = window.localStorage.getItem("product_link")
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
