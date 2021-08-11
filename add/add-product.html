@@ -377,9 +377,9 @@ console.log(JSON.stringify(text))
     //console.log(pro_pic)
     var product_downloadlink = window.localStorage.getItem("product_link")
 
-    if(product_downloadlink == "null" || product_downloadlink == null || product_downloadlink == "undefined"){
+    if(product_downloadlink == "null" || product_downloadlink == null || product_downloadlink == "undefined" || product_downloadlink == undefined){
       var product_downloadlink = window.localStorage.getItem("product_link")
-    }else if(product_downloadlink != "null" || product_downloadlink != null || product_downloadlink != "undefined"){
+    }else if(product_downloadlink != "null" || product_downloadlink != null || product_downloadlink != "undefined" || product_downloadlink != undefined){
             db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
