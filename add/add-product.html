@@ -260,8 +260,9 @@ function myTimer() {
     zip.generateAsync({type:"base64"}).then(function (content) {
         console.log("data:application/zip;base64," + content);
     clearInterval()
-    content = content
+    let content = content
     });
+  content = content
 }
 
 function myStopFunction() {
@@ -360,7 +361,7 @@ console.log(JSON.stringify(text))
     pro_pic = window.parent.document.getElementById('avatarpic').src
     username1=window.parent.document.getElementById('avatarusername1').innerHTML
     username =username1.replace("Signed In As: ","")
-    console.log(pro_pic)
+    //console.log(pro_pic)
 
     var storeref = ref.child(strings5 +'.zip')
     console.log(content)
