@@ -230,7 +230,7 @@ function imagelink(get_link1){
     // Loop through the FileList and render image files as thumbnails.
     const len = Object.keys(files).length
     for (var i = 0, f; f = files[i]; i++) {
-        console.log(i)
+        //console.log(i)
 
 
       var reader = new FileReader();
@@ -241,9 +241,9 @@ function imagelink(get_link1){
           // Render thumbnail.
           var b641 = e.target.result.split(",")
           var b64 = b641[1]
-          console.log(theFile.name)
+          //console.log(theFile.name)
           zip.file(theFile.name, b64, {base64: true});
-         console.log(e.target.result)
+         //console.log(e.target.result)
         };
 
       })(f);
