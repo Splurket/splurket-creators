@@ -321,7 +321,7 @@ function Addproduct() {
 console.log(JSON.stringify(text))
     
     var strings5= btoa(`${product_name}&${user.email}`)
-    var product_upload= upload_shit(strings5)
+    let product_upload= upload_shit(strings5)
     console.log(product_upload)
     
   var user;
@@ -366,10 +366,7 @@ console.log(JSON.stringify(text))
     //console.log(pro_pic)
     var product_downloadlink = window.localStorage.getItem("product_link")
 
-    if(product_downloadlink == "null" || product_downloadlink == null || product_downloadlink == "undefined"){
-      var product_downloadlink = window.localStorage.getItem("product_link")
-    }else(product_downloadlink != "null" || product_downloadlink != null || product_downloadlink != "undefined"){
-            db.collection('products').doc(product_id).set({
+    db.collection('products').doc(product_id).set({
                     dispdesc: text,
                     product_name: product_name,
                     product_creator: username,
@@ -424,7 +421,6 @@ console.log(JSON.stringify(text))
             document.getElementById('product_form').style.display = "none";
             document.getElementById('product_submitted').style.display = "block";
             });
-          }
           });
 
 }
