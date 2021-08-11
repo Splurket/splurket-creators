@@ -191,6 +191,7 @@
       //HANDLE TEMPALTE INPUT HERE TO EXTRACT HTML FROM FILE AND SAVE TO FIREBASE.
 var data1;
 var content;
+var strings5
 var firebaseConfig = {
     apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
     authDomain: "splurket-66df1.firebaseapp.com",
@@ -330,7 +331,7 @@ console.log(JSON.stringify(text))
         user = firebase.auth().currentUser;
         //splurket@gmail.com
         email1 = user.email;
-      var strings5= btoa(`${product_name}&${user.email}`)
+        strings5= btoa(`${product_name}&${user.email}`)
     var storeref = ref.child(strings5 +'.zip')
     content = window.localStorage.getItem('zip_file')
     console.log(content)
@@ -386,7 +387,7 @@ myHeaders.append("Cookie", "S=maestro=Edzv86W03SwtORV9CaYWIfBCC__m5B0LOXQ709hO2Z
             var raw = JSON.stringify({
               "userdata":{
                 "email":user.email,
-                "encodedtext": btoa(product_name)
+                "encodedtext": strings5
               },
                   "productdata":{
                     "dispdesc": text,
