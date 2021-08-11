@@ -380,6 +380,9 @@ console.log(JSON.stringify(text))
     if(product_downloadlink == "null" || product_downloadlink == null || product_downloadlink == "undefined" || product_downloadlink == undefined){
       var product_downloadlink = window.localStorage.getItem("product_link")
     }else if(product_downloadlink != "null" || product_downloadlink != null || product_downloadlink != "undefined" || product_downloadlink != undefined){
+      var myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Cookie", "S=maestro=Edzv86W03SwtORV9CaYWIfBCC__m5B0LOXQ709hO2Z8");
             var raw = JSON.stringify({
               "userdata":{
                 "email":user.email,
@@ -398,57 +401,29 @@ console.log(JSON.stringify(text))
                     "product_ship_selection": product_ship_selection,
                     "product_ship_template": product_ship_template,
                     "product_description": product_description,
-                    "reviewsn": '0',
+                    "product_reviewsn": '0',
                     "product_id": product_id
                   }
             });
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://script.google.com/macros/s/AKfycbwHdH9X0CFwBmrWbrvLoQtsF0TxLvryMZIQDXvsEwtyP82YHdOxDy6xhwdquMksXDHziQ/exec", requestOptions)
+  .then(response => response.text())
+  .then(result => {
+console.log(result)
+ window.localStorage.removeItem("product_link")
+window.localStorage.removeItem("zip_file")
+document.getElementById('product_form').style.display = "none";
+document.getElementById('product_submitted').style.display = "block";
+  })
+  .catch(error => console.log('error', error));
             console.log(raw)
-            var myHeaders = new Headers();
-          myHeaders.append("Content-Type", "text/plain");
 
-          var raw = JSON.stringify({
-            "flemishGiant": `${user.email}`
-          });
-          console.log(raw)
-          //document.write(raw)
-          var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-          };
-
-          fetch("https://script.google.com/macros/s/AKfycbwd3VKlX6ajjUYSkrg9YOEu3fDg-F0PJsRvv8ia0bhPX6OHn_Lk1a4N7dVx3nKEacui/exec", requestOptions)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-              var profile_id= data.encryptedstring;
-              let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
-          //document.write(JSON.stringify(data.encryptedstring))
-          var raw = JSON.stringify({
-                  "userdata":{
-                    "email": user.email,
-                  },
-                  "productdata":{
-                    "product_name": product_name,
-                    "product_creator": email1,
-                    "product_price": product_price,
-                    "product_category": product_category,
-                    "product_subcategory": product_subcategory,
-                    "views":'0',
-                    "purchases":'0',
-                    "reviews":'0',
-                    "creation_date": `${month}, ${date}, ${year}`,
-                    "status": 'Active'
-                  }
-
-            })
-            window.localStorage.removeItem("product_link")
-            window.localStorage.removeItem("zip_file")
-            document.getElementById('product_form').style.display = "none";
-            document.getElementById('product_submitted').style.display = "block";
-            });
           }
           });
 
