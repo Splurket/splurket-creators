@@ -383,6 +383,7 @@ console.log(JSON.stringify(text))
             var raw = JSON.stringify({
               "userdata":{
                 "email":user.email,
+                "encodedtext": btoa(product_name)
               },
                   "productdata":{
                     "dispdesc": text,
