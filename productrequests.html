@@ -414,6 +414,7 @@
 <div :id="item.id" onclick="hoverHandler(this.id)">
               <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory">
                 <center><v-img
+                  style="padding-top:none"
                   height="250"
                   
                   :src="item.image"
@@ -493,8 +494,9 @@
                   class="ml-2"
                   v-bind="attrs"
                   v-on="on"
-                  style="background-color: #52b36c"
+                  style="background-color: #52b36c;margin-bottom:5px"
                 >Snatch!</v-btn></center>
+                <center><a style="margin-bottom:5px">More Info</a></center>
                 <v-btn
                 class="mx-2"
                 fab
@@ -509,6 +511,7 @@
                   mdi-close
                 </v-icon>
               </v-btn>
+      
             </v-list>
           </v-card>
     </div>
