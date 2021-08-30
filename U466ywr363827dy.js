@@ -10,7 +10,7 @@ var email1;
               var docid = doc.id
               var doc= doc.data();
               catshit = doc.product_category;
-              var push_data1 = {value: false, id: `${docid}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`,*/ desc: `${doc.description}`, skills: `${doc.skills}`, permissions: `${doc.permissions}`, payment:`${doc.payment}`, category:`${doc.category}`, image: `${doc.cover}`}
+              var push_data1 = {value: false, frontid: `front${docid}`, backid: `backfuck${docid}`, id: `${docid}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`,*/ desc: `${doc.description}`, skills: `${doc.skills}`, permissions: `${doc.permissions}`, payment:`${doc.payment}`, category:`${doc.category}`, image: `${doc.cover}`}
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
                 product_data.push(push_data)
@@ -132,5 +132,18 @@ new Vue({
 
 function Snatch(){
   
+}
+function hoverHandler(backside){
+  document.getElementById(backside).style.display = 'none';
+  document.getElementById('backfuck'+backside).style.display = 'block'
+
+}
+function handleOut(backside){
+  backside1 = backside.replace('backfuckchuck',"")
+  console.log(backside1)
+  document.getElementById(`backfuck${backside1}`).style.display = 'none'
+  document.getElementById(backside1).style.display = 'block';
+
+
 }
                     

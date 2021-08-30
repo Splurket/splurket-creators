@@ -411,15 +411,13 @@
               md="4"
               lg="3"
             >
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
+<div :id="item.id" onclick="hoverHandler(this.id)">
               <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory">
                 <center><v-img
                   height="250"
                   
                   :src="item.image"
-                  :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" onclick="window.top.location.href='./product?product='+this.id+'&cat='+this.dataset.cat+'&subcat='+this.dataset.subcat"
+                  :id="item.id"
                   
                 ></v-img></center>
                 <div>
@@ -427,7 +425,7 @@
                     <p style="display: inline-block;margin: 0px;top:265px;left:50px;position: absolute;" class="cardtit" :id="item.creator" onclick="window.top.location.href='./user?user='+this.id">{{ item.creator }}
                 </p>-->
               </div>
-                <v-card-title class="subheading font-weight-bold" :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" onclick="window.top.location.href='./product?product='+this.id+'&cat='+this.dataset.cat+'&subcat='+this.dataset.subcat" style="padding-left:23px">
+                <v-card-title class="subheading font-weight-bold" :id="item.id" style="padding-left:23px">
                   {{ item.name }}
                 </v-card-title>
                 <v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;" class="e546783wyte">{{ item.desc }}</v-card-text>
@@ -469,7 +467,7 @@
         </div>
 
         <!--Back Side Of Card-->
-        <div class="flip-card-back">
+        <div :id="item.backid" style="display: none;">
 <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory">
   
                 <v-list dense>
@@ -497,7 +495,20 @@
                   v-on="on"
                   style="background-color: #52b36c"
                 >Snatch!</v-btn></center>
-                <div style="height:40px"></div>
+                <v-btn
+                class="mx-2"
+                fab
+                dark
+                small
+                color="primary"
+                :id="'backfuckchuck'+item.id"
+                onclick="handleOut(this.id)"
+                style="right:-20px;display:block;top:-20px;position: absolute;font-size:20px"
+              >
+                <v-icon dark>
+                  mdi-close
+                </v-icon>
+              </v-btn>
             </v-list>
           </v-card>
     </div>
