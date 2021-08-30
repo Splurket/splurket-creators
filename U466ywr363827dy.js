@@ -3,13 +3,14 @@ var catshit;
 var product_data = [];
 var user;
 var email1;
-     db.collection("products").get().then((querySnapshot) => {
+     db.collection("requests").doc('unclaimed').collection('products').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
 
             if (doc.exists) {
+              var docid = doc.id
               var doc= doc.data();
               catshit = doc.product_category;
-              var push_data1 = {value: false, id: `${doc.product_id}`, name:`${doc.product_name}`, price: `${doc.product_price}`, date: `${doc.creation_date}`, reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`, desc: `${doc.product_description}`}
+              var push_data1 = {value: false, id: `${docid}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`,*/ desc: `${doc.description}`, skills: `${doc.skills}`, permissions: `${doc.permissions}`, payment:`${doc.payment}`, category:`${doc.category}`, image: `${doc.cover}`}
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
                 product_data.push(push_data)
@@ -58,6 +59,15 @@ new Vue({
       'Name',
       'Price',
       'Ratings'
+      ],
+      keys2: [
+      'Name',
+      'Price',
+      'Date',
+      'Skills',
+      'Payment',
+      'Category',
+
       ],
 
 
@@ -119,4 +129,8 @@ new Vue({
                             mainContainer.appendChild(div2);
                         }
                     }*/
+
+function Snatch(){
+  
+}
                     
