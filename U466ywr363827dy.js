@@ -69,6 +69,14 @@ new Vue({
       'Category',
 
       ],
+      frontKeys: [
+      'Date',
+      'Skills',
+      'Payment',
+      'Category',
+      'Permissions',
+
+      ],
 
 
       items: product_data};},

@@ -23,6 +23,14 @@
     <!-- Font Awesome Icons -->
 </head>
 <style type="text/css">
+  @font-face {
+   font-family: firstFont;
+   src: url(futura medium bt.ttf);
+}
+  @font-face {
+   font-family: secondFont;
+   src: url(./futura/futura medium italic font.ttf);
+}
     .headerdrop {
       position: absolute;
       border-top:solid 2px;
@@ -69,7 +77,7 @@
 }
 
 .subheading:hover{
-    color:#52b36c;
+    /*color:#52b36c;*/
     text-decoration: underline;
 }
 .e546783wyte {
@@ -84,6 +92,30 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
+    padding: 0 12px 5px;
+    margin-top: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-transition: .15s ease-in-out;
+    -o-transition: .15s ease-in-out;
+    transition: .15s ease-in-out;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.e546783wyte1 {
+    color: rgb(135, 135, 135);
+    font-size: 15px;
+    padding-left: 16px;
+    padding-top: 0px;
+    color: #222325;
+    line-height: 22px;
+    font-weight: 400;
+    height: 200px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll;
     padding: 0 12px 5px;
     margin-top: 5px;
     word-wrap: break-word;
@@ -411,9 +443,9 @@
               md="4"
               lg="3"
             >
-<div :id="item.id" onclick="hoverHandler(this.id)">
-              <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory">
-                <center><v-img
+<div :id="item.id" onclick="hoverHandler(this.id)" style="background-color: #52b36c !important;color:white !important">
+              <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;overflow-y: scroll;" scrollbar="no">
+                <!--<center><v-img
                   style="padding-top:none"
                   height="250"
                   
@@ -421,18 +453,32 @@
                   :id="item.id"
                   
                 ></v-img></center>
-                <div>
+                <div>-->
                   <!--<img :src="item.creatorpic" height="30px" width="30px" style="border-radius: 50%;margin-top:10px;margin-left: 10px":id="item.creator" onclick="window.top.location.href='./creator?creator='+this.id"></img></a>
                     <p style="display: inline-block;margin: 0px;top:265px;left:50px;position: absolute;" class="cardtit" :id="item.creator" onclick="window.top.location.href='./user?user='+this.id">{{ item.creator }}
                 </p>-->
-              </div>
-                <v-card-title class="subheading font-weight-bold" :id="item.id" style="padding-left:23px">
+                <br><center><v-card-title class="subheading font-weight-bold" :id="item.id" style="padding-left:23px;color:white;">
                   {{ item.name }}
-                </v-card-title>
-                <v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;" class="e546783wyte">{{ item.desc }}</v-card-text>
+                </v-card-title></center>
+                <center><h1>{{ item.price }}</h1></center>
+                <center><v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;color:white" class="e546783wyte">{{ item.desc }}</v-card-text></center><br>
                 </v-list>
   
-                <v-list dense>
+               <v-list dense>
+                  <v-list-item
+                    v-for="(key, index) in frontKeys"
+                    :key="index"
+                  >
+                    <v-list-item-content :class="{ 'blue--text': sortBy === key }">
+                      {{ key }}:
+                    </v-list-item-content>
+                    <v-list-item-content
+                      class="align-end"
+                      :class="{ 'blue--text': sortBy === key }"
+                    >
+                      {{ item[key.toLowerCase()] }}
+                    </v-list-item-content>
+                  </v-list-item>
                   <!--<v-list-item
                     v-for="(key, index) in filteredKeys"
                     :key="index"
@@ -448,8 +494,7 @@
                     </v-list-item-content>
                   </v-list-item>-->
 
-                <v-divider></v-divider>
-                    <div style="padding-left: 11px;padding-top: 0px;position:absolute;bottom:5px;">
+                    <div style="padding-left: 11px;padding-top: 0px;position:absolute;bottom:5px;"></div>
                   <!--<v-btn
                   dark
                   text
@@ -459,19 +504,15 @@
                   v-on="on"
                   style="background-color: #52b36c"
                 >More Info</v-btn>-->
-                <img width="30px" height="30px" src="https://i.imgur.com/r4NxM8R.png">
-                    </div>
-                <div style="height:40px"></div>
-                <p style="right:20px;display:block;bottom:-5px;position: absolute;font-size:20px">{{ item.price }}</span></p>
             </v-list>
           </v-card>
         </div>
 
         <!--Back Side Of Card-->
         <div :id="item.backid" style="display: none;">
-<v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory">
+<v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="min-height:478px;max-height: 478px">
   
-                <v-list dense>
+                <!--<v-list dense>
                   <v-list-item
                     v-for="(key, index) in keys2"
                     :key="index"
@@ -485,8 +526,17 @@
                     >
                       {{ item[key.toLowerCase()] }}
                     </v-list-item-content>
-                  </v-list-item>
-                  <v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;" class="e546783wyte">{{ item.desc }}</v-card-text>
+                  </v-list-item>-->
+                  <div style="background-color: #52b36c !important;color:white !important;">
+                  <br><center><v-card-title class="subheading font-weight-bold" :id="item.id" style="padding-left:23px;color:white;">
+                  {{ item.name }}
+                </v-card-title></center>
+                <center><h1>{{ item.price }}</h1></center><br>
+              
+              </div>
+
+              <br><center><v-card-text style="color:#767875;font-size:15px;padding-left: 23px;padding-top: 0px;" class="e546783wyte1">{{ item.desc }}</v-card-text></center>
+              <center><div style="padding-left: 11px;padding-top: 0px;position:absolute;bottom:5px;margin-left:26%">
                   <center><v-btn
                   dark
                   text
@@ -494,9 +544,10 @@
                   class="ml-2"
                   v-bind="attrs"
                   v-on="on"
-                  style="background-color: #52b36c;margin-bottom:5px"
+                  style="background-color: #52b36c;margin-bottom:5px;"
                 >Snatch!</v-btn></center>
-                <center><a style="margin-bottom:5px">More Info</a></center>
+                <center><a style="margin-bottom:5px;padding-left:5px">More Info</a></center>
+              </div>
                 <v-btn
                 class="mx-2"
                 fab
