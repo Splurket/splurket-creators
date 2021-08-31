@@ -444,7 +444,7 @@
               lg="3"
             >
 <div :id="item.id" onclick="hoverHandler(this.id)" style="background-color: #52b36c !important;color:white !important">
-              <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;overflow-y: scroll;" scrollbar="no">
+              <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;overflow-y: scroll;">
                 <!--<center><v-img
                   style="padding-top:none"
                   height="250"
@@ -462,8 +462,8 @@
                 </v-card-title></center>
                 <center><h1>{{ item.price }}</h1></center>
                 <center><v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;color:white" class="e546783wyte">{{ item.desc }}</v-card-text></center><br>
-                </v-list>
-  
+
+              <div style="overflow-y:scroll;height:264px">
                <v-list dense>
                   <v-list-item
                     v-for="(key, index) in frontKeys"
@@ -479,6 +479,8 @@
                       {{ item[key.toLowerCase()] }}
                     </v-list-item-content>
                   </v-list-item>
+                </v-list>
+              </div>
                   <!--<v-list-item
                     v-for="(key, index) in filteredKeys"
                     :key="index"
