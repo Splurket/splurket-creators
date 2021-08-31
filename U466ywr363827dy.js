@@ -38,6 +38,20 @@ var email1;
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
+    db.collection("requests").doc('unclaimed').collection('products')
+    .onSnapshot((snapshot) => {
+        snapshot.docChanges().forEach((change) => {
+            if (change.type === "added") {
+                console.log("New city: ", change.doc.data());
+            }
+            if (change.type === "modified") {
+                console.log("Modified city: ", change.doc.data());
+            }
+            if (change.type === "removed") {
+                console.log("Removed city: ", change.doc.data());
+            }
+        });
+    });
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
@@ -138,7 +152,15 @@ new Vue({
                         }
                     }*/
 
-function Snatch(){
+function Snatch(firebase_id){
+  var id = firebase_id.replace('snatchThis',"")
+  console.log(id)
+
+  db.collection("requests").doc('unclaimed').collection('products').doc(id).get().then((doc) => {
+    console.log("Document data:", doc.data());
+  }).catch((error) => {
+      console.log("Error getting document:", error);
+  });
   
 }
 function hoverHandler(backside){
