@@ -71,6 +71,9 @@ var email1;
                 try{
                 document.getElementById('card' +change.doc.id).style.backgroundColor = "red"
                 document.getElementById('card1' +change.doc.id).style.backgroundColor = "red"
+                document.getElementById('snatchThis' + change.doc.id).onclick = ''
+                document.getElementById('snatchThis' + change.doc.id).style.cursor= 'not-allowed'
+                document.getElementById('snatchThis' + change.doc.id).style.backgroundColor= 'red'
               }catch(err){
                 console.log(err)
               }
