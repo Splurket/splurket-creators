@@ -74,6 +74,7 @@ var email1;
                 document.getElementById('snatchThis' + change.doc.id).onclick = ''
                 document.getElementById('snatchThis' + change.doc.id).style.cursor= 'not-allowed'
                 document.getElementById('snatchThis' + change.doc.id).style.backgroundColor= 'red'
+                document.getElementById('snatchThis' + change.doc.id).innerText= 'Taken!'
               }catch(err){
                 console.log(err)
               }
