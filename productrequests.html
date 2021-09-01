@@ -363,7 +363,7 @@
 
     
     <!-- Header ENDS HERE!!!!.. -->
-<body  onload="document.getElementById('navwrap').style.display='none';"><br>
+<body><br>
 <style type="text/css">
   v-card-title{
     display:block;
@@ -444,7 +444,7 @@
               lg="3"
             >
 <div :id="item.id" onclick="hoverHandler(this.id)" style="background-color: #52b36c !important;color:white !important">
-              <v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;overflow-y: scroll;">
+              <v-card :id="'card' + item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;overflow-y: scroll;">
                 <!--<center><v-img
                   style="padding-top:none"
                   height="250"
@@ -529,7 +529,7 @@
                       {{ item[key.toLowerCase()] }}
                     </v-list-item-content>
                   </v-list-item>-->
-                  <div style="background-color: #52b36c !important;color:white !important;">
+                  <div style="background-color: #52b36c !important;color:white !important;" :id="'card1'+item.id">
                   <br><center><v-card-title class="subheading font-weight-bold" :id="item.id" style="padding-left:23px;color:white;">
                   {{ item.name }}
                 </v-card-title></center>
