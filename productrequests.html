@@ -754,6 +754,9 @@
 .flip-card:hover .flip-card-front {
   display:none;
 }
+.v-list{
+  min-height:300px !important;
+}
 </style>
 
     <script>
@@ -969,7 +972,7 @@
               lg="3"
             >
 <div :id="item.id" onclick="hoverHandler(this.id)" style="background-color: #52b36c !important;color:white !important">
-              <v-card :id="'card' + item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:459px;max-height: 459px;overflow-y: scroll;">
+              <v-card :id="'card' + item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;">
                 <!--<center><v-img
                   style="padding-top:none"
                   height="250"
@@ -988,7 +991,7 @@
                 <center><h1>{{ item.price }}</h1></center>
                 <center><v-card-text style="color:#878787;font-size:15px;padding-left: 23px;padding-top: 0px;color:white" class="e546783wyte">{{ item.desc }}</v-card-text></center><br>
 
-              <div style="overflow-y:scroll;max-height:264px">
+              <div style="overflow-y:scroll;min-height:283px;max-height:283px">
                <v-list dense>
                   <v-list-item
                     v-for="(key, index) in frontKeys"
@@ -1037,7 +1040,7 @@
 
         <!--Back Side Of Card-->
         <div :id="item.backid" style="display: none;">
-<v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="max-height: 478px">
+<v-card :id="item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="min-height:478px;max-height: 478px">
   
                 <!--<v-list dense>
                   <v-list-item
