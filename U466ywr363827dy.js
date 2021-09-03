@@ -3,6 +3,7 @@ var catshit;
 var product_data = [];
 var user;
 var email1;
+var search1 = []
      db.collection("requests").doc('unclaimed').collection('products').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
 
@@ -11,6 +12,7 @@ var email1;
               var doc= doc.data();
               catshit = doc.product_category;
               var push_data1 = {value: false, frontid: `front${docid}`, backid: `backfuck${docid}`, id: `${docid}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`,*/ desc: `${doc.description}`, skills: `${doc.skills}`, permissions: `${doc.permissions}`, payment:`${doc.payment}`, category:`${doc.category}`, image: `${doc.cover}`}
+              search1.push(doc.name)
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
                 product_data.push(push_data)
@@ -88,6 +90,7 @@ app = new Vue({
     return {
       itemsPerPageArray: [15, 25, 50],
       search: '',
+      search1: search1,
       filter: {},
       sortDesc: false,
       page: 1,

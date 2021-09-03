@@ -757,6 +757,12 @@
 .v-list{
   min-height:300px !important;
 }
+.v-label .theme--dark{
+  color:black !important;
+}
+.theme--dark.v-label {
+    color: black !important;
+}
 </style>
 
     <script>
@@ -902,7 +908,7 @@
 <div id="app" style="width:100%">
   <v-app id="inspire">
     <!--<v-container fluid style="min-height:100%">-->
-        <strong><v-btn
+        <!--<strong><v-btn
             class="vuebtn"
         id="opensearchbtn"
         style="background-color:#52b36c;color:white;position:fixed;right:15px;bottom:30px;display:block;z-index:6" onclick="document.getElementById('navwrap').style.display='block';document.getElementById('closesearchbtn').style.display='block';this.style.display='none'">
@@ -913,7 +919,7 @@
         id="closesearchbtn"
         style="background-color:#52b36c;color:white;position:fixed;right:15px;bottom:30px;display:none;z-index:6" onclick="document.getElementById('navwrap').style.display='none';document.getElementById('opensearchbtn').style.display='block';this.style.display='none'">
         Close Search And Filters
-      </v-btn></strong>
+      </v-btn></strong>-->
       <v-data-iterator
         :items="items"
         :items-per-page.sync="itemsPerPage"
@@ -926,39 +932,45 @@
         dense
       >
         <template v-slot:header>
+          <div style="background-color: white;height:150px;position: sticky;top:0px;z-index: 6">
           <v-toolbar
             dark
             color="blue darken-3"
             class="mb-1"
-            id="navwrap"
-            style="height: 64px;background-color: rgb(82, 179, 108) !important;width: 330px;position: sticky;top: 0px;z-index: 4;display: none;"
+            id="navwrap1"
+            style="height: 64px;background: unset !important; width: 630px;position: absolute;top: 0px;z-index: 4;margin-left: 86px;margin-top:45px;box-shadow: none !important;"
           >
-          <div style="width: 330px;position: absolute;height: 100vh;background-color: rgb(82, 179, 108);top: 20;left: 0px;">
-            <center><v-text-field
-              v-model="search"
-              clearable
-              flat
-              solo-inverted
-              hide-details
-              prepend-inner-icon="mdi-magnify"
-              label="Search"
-              style="width:320px"
-            ></v-text-field></center>
+          <center><div style="width: 100%;position: relative;height: 100vh;background-color: white;top: 20;left: 0px;"></center>
+            <center><v-autocomplete
+            v-model="search"
+            :loading="loading"
+            :items="search1"
+            :search-input.sync="search"
+            cache-items
+            class="mx-4"
+            flat
+            hide-no-data
+            hide-details
+            label="Search Requests"
+            solo-inverted
+            style="width:610px;border:2px solid black !important;color:black !important"
+    ></v-autocomplete></center>
             <template v-if="$vuetify.breakpoint.mdAndUp">
               <v-spacer></v-spacer>
                 <strong><v-btn
-                    style="background-color:white;color:#52b36c;position:absolute;left:15px;top:80px">
+                    style="background-color:white;color:#52b36c;position:relative;display: inline-block;margin-left:20px">
                     Categories And Subcategories
                 </v-btn></strong>
               <v-spacer></v-spacer>
               <strong><v-btn
-                style="background-color:white;color:#52b36c;position:absolute;left:15px;top:150px">
+                style="background-color:white;color:#52b36c;position:relative;display: inline-block;margin-left:20px">
                 Filters And Settings
               </v-btn></strong>
               </v-btn-toggle>
             </template>
         </div>
           </v-toolbar>
+    </div>
         </template>
   
         <template v-slot:default="props">
@@ -972,7 +984,7 @@
               lg="3"
             >
 <div :id="item.id" onclick="hoverHandler(this.id)" style="background-color: #52b36c !important;color:white !important">
-              <v-card :id="'card' + item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px;">
+              <v-card :id="'card' + item.id" :data-cat="item.category" :data-subcat="item.subcategory" style="background-color: #52b36c !important;color:white !important;min-height:478px;max-height: 478px !important;overflow: hidden;">
                 <!--<center><v-img
                   style="padding-top:none"
                   height="250"
