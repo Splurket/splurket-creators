@@ -141,14 +141,14 @@ app = new Vue({
       // data asynchronously, you could wait until that process returns
 
     var timer = window.setInterval(function(){
-    var in1 = document.getElementById('app').innerHTML
+    var in1 = document.getElementById('app1').innerHTML
     if(in1.includes('No data available')) {
      document.getElementById('loading-wrapper').style.display = "block";
-     document.getElementById('app').style.display = "none";
+     document.getElementById('app1').style.display = "none";
      console.log(in1)
   }else{
       document.getElementById('loading-wrapper').style.display = "none";
-     document.getElementById('app').style.display = "block";
+     document.getElementById('app1').style.display = "block";
      window.clearInterval(timer);
     }
 }, 100);
