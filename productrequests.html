@@ -978,7 +978,7 @@
 </style><!-- partial:index.partial -->
 
 
-<div id="app" style="width:100%;">
+<div id="app" style="width:100%;display: none;">
   <v-app id="inspire">
     <!--<v-container fluid style="min-height:100%">-->
         <!--<strong><v-btn
@@ -1047,7 +1047,7 @@
         </template>
   
         <template v-slot:default="props">
-          <v-row style="margin-top:50px;position:relative;width:90%;margin-right: 5%;margin-left: 5%;" id="app1" style="display: none;">
+          <v-row style="margin-top:50px;position:relative;width:90%;margin-right: 5%;margin-left: 5%;">
             <v-col
               v-for="item in props.items"
               :key="item.name"
