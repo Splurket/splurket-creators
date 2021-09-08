@@ -4,7 +4,7 @@ var product_data = [];
 var user;
 var email1;
 var search1 = []
-     db.collection("requests").doc('unclaimed').collection('products').get().then((querySnapshot) => {
+     db.collection("requests").doc('unclaimed').collection('jobs').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
 
             if (doc.exists) {
@@ -31,7 +31,7 @@ var search1 = []
                 // doc.data() will be undefined in this case
                 product_data=[{
                   value: false,
-                  name: 'No Products Found',
+                  name: 'No jobs Found',
                   Price: 'N/A',
                   reviews: 'N/A',
                   status: 'N/A' }]
@@ -40,11 +40,11 @@ var search1 = []
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
-    db.collection("requests").doc('unclaimed').collection('products')
+    db.collection("requests").doc('unclaimed').collection('jobs')
     .onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {
             if (change.type === "added" && change.doc.data().status === "New") {
-               db.collection("requests").doc('unclaimed').collection('products').doc(change.doc.id).update({
+               db.collection("requests").doc('unclaimed').collection('jobs').doc(change.doc.id).update({
                status: "read"
             })
             .then(() => {                //console.log("New city: ", change.doc.data());
@@ -208,7 +208,7 @@ function Snatch(firebase_id){
 
   var id = firebase_id.replace('snatchThis',"")
   console.log(id)
-  db.collection("requests").doc('unclaimed').collection('products').doc(id).update({
+  db.collection("requests").doc('unclaimed').collection('jobs').doc(id).update({
    status: "Swiped!"
   })
   .then(() => {
@@ -218,14 +218,14 @@ function Snatch(firebase_id){
 }
 function removeDoc(id){
     
-  db.collection("requests").doc('unclaimed').collection('products').doc(id).get().then((doc) => {
+  db.collection("requests").doc('unclaimed').collection('jobs').doc(id).get().then((doc) => {
     doc = doc
     console.log("Document data:", doc.data())
     console.log(doc)
 
-    db.collection("requests").doc('claimed').collection('products').doc(id).set(doc.data())
+    db.collection("requests").doc('claimed').collection('jobs').doc(id).set(doc.data())
       .then(() => {
-          db.collection("requests").doc('unclaimed').collection('products').doc(id).delete().then(() => {
+          db.collection("requests").doc('unclaimed').collection('jobs').doc(id).delete().then(() => {
               console.log("Document successfully deleted!");
           }).catch((error) => {
               console.error("Error removing document: ", error);
