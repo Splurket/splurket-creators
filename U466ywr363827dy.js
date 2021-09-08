@@ -133,6 +133,25 @@ app = new Vue({
     filteredKeys() {
       return this.keys.filter(key => key !== 'Name');
     } },
+    mounted() {
+    // Code that will run only after the
+    // entire view has been rendered
+          // hide the overlay when everything has loaded
+      // you could choose some other event, e.g. if you're loading
+      // data asynchronously, you could wait until that process returns
+
+    var timer = window.setInterval(function(){
+    var in1 = document.getElementById('app').innerHTML
+    if(in1.includes('No data available')) {
+     document.getElementById('loading-wrapper').style.display = "block";
+     document.getElementById('app').style.display = "none";
+     console.log(in1)
+  }else{
+      document.getElementById('loading-wrapper').style.display = "none";
+     document.getElementById('app').style.display = "block";
+     window.clearInterval(timer);
+    }
+}, 100);
 
   methods: {
     nextPage() {
