@@ -152,6 +152,7 @@ app = new Vue({
      window.clearInterval(timer);
     }
 }, 100);
+},
 
   methods: {
     nextPage() {
