@@ -134,27 +134,20 @@ app = new Vue({
 
       ],
       frontKeys: [
-      "category",
+      "Category",
 
-      "description",
+      "Description",
 
-      "email",
+      "Payment",
 
-      "name",
+      "Permissions",
 
-      "payment",
+      "Price",
 
-      "permissions",
+      "Skills",
 
-      "phone",
+      "Time",
 
-      "price",
-
-      "skills",
-
-      "time",
-
-      "user",
 
       ],
 

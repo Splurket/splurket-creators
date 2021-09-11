@@ -165,8 +165,6 @@ app = new Vue({
 
       "Description",
 
-      "Name",
-
       "Payment",
 
       "Permissions",
@@ -179,7 +177,6 @@ app = new Vue({
 
       "Type",
 
-      "User",
 
       ],
 
