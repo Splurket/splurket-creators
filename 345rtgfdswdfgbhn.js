@@ -1,7 +1,32 @@
 
 //Quotes Script
 
+/*
 
+category
+
+description
+
+email
+
+name
+
+payment
+
+permissions
+
+phone
+
+price
+
+skills
+
+time
+
+type
+
+user
+*/
 
 var product_items;
 var catshit;
@@ -16,7 +41,19 @@ var search1 = []
               var docid = doc.id
               var doc= doc.data();
               catshit = doc.product_category;
-              var push_data1 = {value: false, frontid: `front${docid}`, backid: `backfuck${docid}`, id: `${docid}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: `${doc.product_reviewsn}`, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`,*/ desc: `${doc.description}`, skills: `${doc.skills}`, permissions: `${doc.permissions}`, payment:`${doc.payment}`, category:`${doc.category}`, image: `${doc.cover}`}
+              var push_data1 = {
+                value: false, 
+                category:`${doc.category}`,
+                desc:`${doc.description}`,
+                name:`${doc.name}`,
+                payment:`${doc.payment}`,
+                permissions:`${doc.permissions}`,
+                price:`${doc.price}`,
+                skills:`${doc.skills}`,
+                time:`${doc.time}`,
+                type:`${doc.type}`,
+                user:`${doc.user}`
+              }
               search1.push(doc.name)
               if (product_data.includes('{')){
                 var push_data = ','+push_data1;
@@ -121,11 +158,29 @@ app = new Vue({
 
       ],
       frontKeys: [
-      'Date',
-      'Skills',
-      'Payment',
-      'Category',
-      'Permissions',
+      "category",
+
+      "description",
+
+      "email",
+
+      "name",
+
+      "payment",
+
+      "permissions",
+
+      "phone",
+
+      "price",
+
+      "skills",
+
+      "time",
+
+      "type",
+
+      "user",
 
       ],
 
