@@ -42,7 +42,10 @@ var search1 = []
               var doc= doc.data();
               catshit = doc.product_category;
               var push_data1 = {
-                value: false, 
+                value: false,
+                frontid: `front${docid}`, 
+                backid: `backfuck${docid}`, 
+                id: `${docid}`,
                 category:`${doc.category}`,
                 description:`${doc.description}`,
                 name:`${doc.name}`,
