@@ -44,7 +44,7 @@ var search1 = []
               var push_data1 = {
                 value: false, 
                 category:`${doc.category}`,
-                desc:`${doc.description}`,
+                description:`${doc.description}`,
                 name:`${doc.name}`,
                 payment:`${doc.payment}`,
                 permissions:`${doc.permissions}`,
@@ -158,29 +158,25 @@ app = new Vue({
 
       ],
       frontKeys: [
-      "category",
+      "Category",
 
-      "description",
+      "Description",
 
-      "email",
+      "Name",
 
-      "name",
+      "Payment",
 
-      "payment",
+      "Permissions",
 
-      "permissions",
+      "Price",
 
-      "phone",
+      "Skills",
 
-      "price",
+      "Time",
 
-      "skills",
+      "Type",
 
-      "time",
-
-      "type",
-
-      "user",
+      "User",
 
       ],
 
