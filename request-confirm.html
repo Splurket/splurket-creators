@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./arcflashstyle.css">
+  <!-- Favicon -->
+  <!--<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Request | Splurket Creators </title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="icon" src="https://splurket.com/assets/images/Logo.ico">
+  <link rel="stylesheet" href="https://splurket.com/assets/css/bd-coming-soon.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.css">
+  <link rel="stylesheet" href="https://splurket.com/pages/styles.css">
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <!-- css -->
+  <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
+      <!-- css -->
+  <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+</head>
+<style type="text/css">
+  /*  ***MOBILE MENU*** */
+body, html {
+  margin: 0;
+  font-family: arial;
+  height: 100vh;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.nav-mobile {
+  background: #446CB3;
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+  cursor: auto;
+  font-size: 18px;
+  list-style-type: none;
+  box-shadow: 0 5px 5px -5px #333;
+}
+.nav-mobile:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.nav-mobile svg {
+  height: 45px;
+  width: 65px;
+  padding: 9px;
+}
+.nav-mobile svg path {
+  fill: #fff;
+}
+.nav-mobile svg.icon-close {
+  display: none;
+  padding: 15px;
+  background-size: 30px 30px;
+}
+.nav-mobile li {
+  width: 100%;
+  height: 45px;
+  line-height: 46px;
+  text-align: center;
+  float: left;
+}
+.nav-mobile li a {
+  display: block;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.nav-mobile .menu-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  display: block;
+}
+.nav-mobile .menu-button:after {
+  opacity: 0;
+  top: 150zpx;
+  content: "";
+  width: 100vw;
+  display: block;
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0, 0, 0.3, 1);
+  transition-delay: 0.1s;
+}
+#menu-toggle{
+  display:none;
+}
+#menu-toggle.active ~ .menu-button .icon-close, #menu-toggle:checked ~ .menu-button .icon-close {
+  display: none;
+}
+#menu-toggle.active ~ .menu-button .icon-open, #menu-toggle:checked ~ .menu-button .icon-open {
+  display: none;
+}
+#menu-toggle.active ~ .menu-button:after, #menu-toggle:checked ~ .menu-button:after {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+#menu-toggle.active ~ .menu-sidebar, #menu-toggle:checked ~ .menu-sidebar {
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+.nav-mobile .menu-container {
+  width: 65px;
+  float: left;
+  cursor: pointer;
+  position: absolute;
+}
+.nav-mobile .menu-container .menu-sidebar {
+  box-shadow: 5px 0 5px -5px #333;
+  display: block;
+  width: 65vw;
+  bottom: 0;
+  background: white;
+  color: #333;
+  position: fixed;
+  transform: translateX(-405px);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  top: 150px;
+  z-index: 2;
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+}
+.nav-mobile .menu-container .menu-sidebar .arrow {
+  position: absolute;
+  line-height: 50px;
+  font-size: 32px;
+  color: #555;
+  top: 0;
+  z-index: 0;
+}
+.nav-mobile .menu-container .menu-sidebar .arrow.left {
+  left: 25px;
+}
+.nav-mobile .menu-container .menu-sidebar .arrow.right {
+  right: 25px;
+}
+.nav-mobile .menu-container .menu-sidebar li {
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+}
+.nav-mobile .menu-container .menu-sidebar li:hover {
+  background: #eee;
+}
+.nav-mobile .menu-container .menu-sidebar li .menu-sub {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  overflow: scroll;
+  background: white;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
+  border-left: 1px solid #ccc;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  max-width: 400px;
+}
+.nav-mobile .menu-container .menu-sidebar li .menu-sub li {
+  overflow: scroll;
+}
+.nav-mobile .menu-container .menu-sidebar li .menu-sub .menu-sub-title {
+  padding-left: 50px;
+}
+.nav-mobile .menu-container .menu-sidebar li .submenu-label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.nav-mobile .menu-container .menu-sidebar li .submenu-toggle {
+  display: none;
+}
+/*.nav-mobile .menu-container .menu-sidebar li .submenu-toggle.active ~ .menu-sub, .nav-mobile .menu-container .menu-sidebar li .submenu-toggle:checked ~ .menu-sub {
+  width: 65vw;
+  visibility: visible;
+  z-index: 1;
+  transition: width 0.35s cubic-bezier(0, 0, 0.3, 1);
+}*/
+</style>
+<style type="text/css">
+
+    .headerdrop {
+      position: absolute;
+      border-top:solid 2px;
+      border-color: white;
+      top:98px;
+      background-color: #52b36c;
+      width:100%;
+      color: white;
+      display: none;
+      z-index:6;
+
+}
+    .headerdrop:hover{
+        display: block;
+    }
+    .search-box{
+    display: inline;
+    border-right: 1px solid var(--secondary);
+    padding-right: 12px;
+    margin-right: 10px;
+}
+.v-application a {
+    color: black!important;
+}
+body{
+  color:black !important;
+}
+.footercontainer a {
+  color:white !important;
+}
+.product-detail__content .product__review {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 1.6rem; */
+    /* padding-bottom: 1.6rem; */
+    border-bottom: 0.5px solid var(--primaryColor);
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+textarea {
+  resize: vertical;
+  height: 100%;
+}
+.slippery{
+  color:white !important;
+}
+.slippery i{
+  color:white;
+
+}
+#markdown-editor .toolbar .group {
+    border-right: 1px solid white;
+    margin-right: 4px;
+    display: inline;
+}
+.underline:hover{
+  text-decoration: underline;
+  color:#52b36c;
+  cursor: pointer;
+}
+</style>
+<div id="loading-wrapper">
+  <div id="loading-text">Splurketing...</div>
+  <div id="loading-content"></div>
+  <div>
+    <center><div id="loading-tips"></div></center>
+</div>
+</div>
+    
+<style>
+  #loading-tips{
+    position: relative;
+    top: 300px;
+    font-family: Arial;
+    color:white;
+    background-color: #52b36c;
+    padding:15px 15px 15px 15px;
+    width:300px
+  }
+  #loading-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  #loading-text {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    color: rgb(20, 121, 60);
+    width: 100px;
+    height: 30px;
+    margin: -7px 0 0 -45px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+  }
+
+  #loading-content {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 35%;
+    width: 170px;
+    height: 170px;
+    margin: -85px 0 0 -85px;
+    border: 3px solid #F00;
+  }
+
+  #loading-content {
+    border: 3px solid transparent;
+    border-top-color: rgb(121, 61, 185);
+    border-bottom-color: rgb(121, 61, 185);
+    border-radius: 50%;
+    -webkit-animation: loader 2s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
+    animation: loader 2s linear infinite;
+  }
+
+  @keyframes loader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+    <!-- Header.. -->
+<body>
+<iframe src="https://splurket.com/pages/header" style="border:none;width:100%;" id="iframehead" scrolling="no"></iframe>
+<div class="dropdown-content" id="dropcont" style="color:white; min-width:240px;border-top: solid 2px;border-color: white;z-index: 100;" onmouseout="this.style.display = 'none'" onmouseover="this.style.display = 'block'">
+    <div><br>
+        <p style="display:inline-block"; id="avatarusername1" onclick="profilego()">Signed In As:</p>
+    </div>
+<hr><br>
+    <p onclick="profilego()">Your Profile</p>
+    <p>Splurket Pay</p>
+    <p>Splurket Creators</p>
+    <p>Your Payment History</p>
+    <p>Your Job Request History</p>
+    <br><hr><br>
+    <div>
+    <center><p onclick="signout()">Sign Out</p></center>
+  </div>
+</div>
+<!--Home Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="homeheaderdrop"onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'"> 
+        <div class="fcolumn" style="margin-left:100px"> 
+            <h2 style="font-size:20px;">Splurket</h2><br><hr><br>
+                <p>Profile</p>
+                <p>Marketplace</p>
+                <p>Splurket Pay</p>
+                <p>Splurket Creators</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">Splurket Creators</h2><br><hr><br>
+                <p>Become A Creator</p>
+                <p>Add A Product</p>
+                <p>Share Your Talent</p>
+                <p>Fulfill Customer Orders</p>
+        </div>
+
+    </div>
+    <!--marketplace Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="marketplaceheaderdrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">   
+        <div class="fcolumn" style="margin-left:100px"> 
+            <h2 style="font-size:20px;">Marketplace</h2><br><hr><br>
+                <p>Explore</p>
+                <p>Categories</p>
+                <p>Cart</p>
+                <p>Checkout</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">Orders and Job Requests</h2><br><hr><br>
+                <p>New Job Request</p>
+                <p>Your Orders And Job Requests</p>
+                <p>Job Payment Completion</p>
+                <p>Get A Quote</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">Talent</h2><br><hr><br>
+                <p>Explore Talent</p>
+                <p>Hire Talent</p>
+                <p>Get A Quote</p>
+        </div>
+    </div>
+    <!--Messages Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="messageheaderdrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">
+        <div class="fcolumn" style="margin-left:100px">
+            <h2 style="font-size:20px;">Messages</h2><br><hr><br>
+                    <p>New Message</p>
+                    <p>All Messages</p>
+                    <p>Recipients</p>
+        </div>
+        <div class="fcolumn" style="margin-left:100px">
+
+        </div>
+        <div class="fcolumn" style="margin-left:100px">
+            <center><h3 style="background-color: red;padding:10px;">For Added Safety and Your Protection, Keep Payments and Communications Within Splurket.</h3></center>
+        </div>
+    </div>
+
+    <!--Support Dropdown-->
+    <div class="headerdrop" hidden="hidden" id="supportheaderdrop" onmouseover="this.style.display = 'block'" onmouseout="this.style.display = 'none'">
+        <div class="fcolumn" style="margin-left:100px"> 
+            <h2 style="font-size:20px;">About</h2><br><hr><br>
+                <p>Overview</p>
+                <p>What Is Splurket</p>
+                <p>What Sets Us Apart</p>
+                <p>Privacy Policy</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">FAQ</h2><br><hr><br>
+                <p>How Do I Get Started</p>
+                <p>How Do I Pay For An Order/Complete Job</p>
+                <p>How Can I Become a Seller/Creator</p>
+                <p>What Happens When I Get A Quote?</p>
+                <p>More</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">Blog</h2><br><hr><br>
+                <p>Latest</p>
+                <p>All Posts</p>
+                <p>Getting Started Guides</p>
+        </div>
+        <div class="fcolumn"> 
+            <h2 style="font-size:20px;left:100px;">Community</h2><br><hr><br>
+                <p>Discord</p>
+                <p>Events</p>
+                <p>Referrals</p>
+        </div>
+        </div>
+
+    
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+        var name, email, photoUrl, uid, emailVerified;
+
+        var config = {
+            apiKey: "AIzaSyC-BUGGSsvUX8z4W1LcsJzS59yrL4__EsE",
+            authDomain: "splurket-66df1.firebaseapp.com",
+            databaseURL: "https://splurket-66df1-default-rtdb.firebaseio.com",
+            projectId: "splurket-66df1",
+            storageBucket: "splurket-66df1.appspot.com",
+            messagingSenderId: "286706779903",
+            appId: "1:286706779903:web:fd91c29319f9804e192eca",
+            measurementId: "G-QWQ2M658KL"
+          };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+        /*firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var user = firebase.auth().currentUser;
+            //splurket@gmail.com
+            var email1 = user.email;
+            
+            /*var email = getParameterByName('user'); 
+            console.log(email)
+            //still splurket
+            
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Accept", "application/json, /;q=0.5");
+            var raw = JSON.stringify({
+              "stringtoencrypt": `${email1}`
+            });
+            //document.write(raw)
+            var requestOptions = {
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
+            };
+            fetch("https://americanrivergold.com/fluffybunnyin", requestOptions)
+              .then(function (response) {
+                  return response.json();
+              })
+              .then(function (data) {
+                //should be a base64 string by now
+                getuserdata(data);
+            });
+          } else {
+            console.log('fuck')
+            document.getElementById("avatar").style.display = "none";
+            document.getElementById("login").style.display = "block";
+            document.getElementById('cartbutton').style.top='20px';
+            var all = document.getElementsByClassName('headerdrop');
+            for (var i = 0; i < all.length; i++) {
+              all[i].style.top = '83px';
+            }
+          }
+        });
+        function getuserdata(data) {
+            email = data.encryptedstring;
+                var docRef = db.collection("users").doc(email);
+                docRef.get().then((doc) => {
+                    if (doc.exists) {
+                        data1 = doc.data()
+                        pro_pic = data1.pro_pic;
+                        if (data1.username == "" ){
+                            user_name = data1.email
+                        }
+                        if (data1.username != "") {
+                            user_name = data1.username;
+                        }
+                        document.getElementById("avatarpic").src = pro_pic;
+                        //document.getElementById("avatarpic1").src = pro_pic;
+                        document.getElementById("avatarusername1").innerText = "Signed In As: " + user_name;
+                        document.getElementById("avatar").style.display = "block";
+                        document.getElementById("avatarpic").style.display = "inline-block";
+                        var all = document.getElementsByClassName('headerdrop');
+                        for (var i = 0; i < all.length; i++) {
+                          all[i].style.top = '98px';
+                        }
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                        console.log(doc.data())
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
+                });
+        }
+        function profilego() {
+            var localstuff1 = localStorage.getItem('usercreds');
+            var localstuff = JSON.parse(localstuff1)
+            var loginemail = btoa(localstuff.email);
+            var loginpassword = btoa(localstuff.password);
+            location.href = "https://myaccount.splurket.com/login?bunnyluck="+loginemail+"&rabbitfoot="+loginpassword
+        }
+        function signout() {
+            firebase.auth().signOut().then(() => {
+                localStorage.removeItem('usercreds');
+                var all = document.getElementsByClassName('headerdrop');
+                for (var i = 0; i < all.length; i++) {
+                  all[i].style.top = '83px';
+                }
+            }).catch((error) => {
+              // An error happened.
+            });
+        }*/
+    </script><!-- partial:index.partial.html -->
+    <div style="position: sticky;top: 0px;z-index: 4;">
+<ul class="nav-mobile">      
+  <li class="menu-container"> 
+    <input id="menu-toggle" type="checkbox" style="display:none">
+    <label for="menu-toggle" class="menu-button">   
+    </label>      
+    <ul class="menu-sidebar" style="overflow:scroll">
+      <div id="menu1">
+      <li>
+        <input type="checkbox" id="sub-one" class="submenu-toggle" onclick="document.getElementById('menu1').style.display='none';document.getElementById('menu2').style.display='none';document.getElementById('menu3').style.display='none';document.getElementById('menu4').style.display='none';document.getElementById('sub1').style.display='block';">        
+        <label class="submenu-label" for="sub-one">Home</label>
+        <div class="arrow right">&#8250;</div>
+        </li>
+      </div>
+        <div id="sub1" style="display: none">           
+        <ul class="menu-sub" style="list-style: none">
+          <li class="menu-sub-title" id="back1">
+            <div class="arrow left" style="display: inline-block;left:0px;width:100%;" >&#8249;</div> 
+            <label class="submenu-label" for="sub-one" >Back</label>             
+          </li>
+          <h4 style="margin-bottom:5px">Splurket</h4>        
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Requests</a></li>
+          <li><a href="#">Splurket Pay</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Support</a></li>
+          <h4 style="margin-bottom:5px">Splurket Creators</h4>        
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Sell A Product</a></li>
+          <li><a href="#">Sell Your Talent</a></li>
+          <li><a href="#">Resources</a></li>                                 
+        </ul>
+      </div>
+      </li>
+
+      <div id="menu2">
+      <li>
+        <input type="checkbox" id="sub-two" class="submenu-toggle" onclick="document.getElementById('menu1').style.display='none';document.getElementById('menu2').style.display='none';document.getElementById('menu3').style.display='none';document.getElementById('menu4').style.display='none';document.getElementById('sub2').style.display='block';">        
+        <label class="submenu-label" for="sub-two">Marketplace</label>
+        <div class="arrow right">&#8250;</div> 
+      </li>
+    </div>
+     <div id="sub2" style="display: none">
+        <ul class="menu-sub" style="list-style: none">
+          <li class="menu-sub-title" id="back2">
+            <div class="arrow left" style="display: inline-block;left:0px;width:100%;" >&#8249;</div> 
+            <label class="submenu-label" for="sub-two">Back</label>             
+          </li>  
+          <h4 style="margin-bottom:5px">Marketplace</h4>    
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Cart</a></li>     
+          <li><a href="#">Checkout</a></li>  
+          <h4 style="margin-bottom:5px">Requests And Orders</h4>  
+          <li>New Request</li>
+          <li>Your Orders And Requests</li>
+          <li>Make A Payment</li>
+          <li>Get A Quote</li>  
+          <h4 style="margin-bottom:5px">Talent</h4>
+          <li>Explore Talent</li>
+          <li>Hire Talent</li>
+          <li>Get A Quote</li>
+          <li></li>
+          <li></li>                            
+        </ul>
+        </div>              
+      </li>
+      <div id="menu3">
+       <li>
+        <input type="checkbox" id="sub-three" class="submenu-toggle" onclick="document.getElementById('menu1').style.display='none';document.getElementById('menu2').style.display='none';document.getElementById('menu3').style.display='none';document.getElementById('menu4').style.display='none';document.getElementById('sub3').style.display='block';">        
+        <label class="submenu-label" for="sub-three">Messages</label>
+        <div class="arrow right">&#8250;</div>
+        </li>
+        </div> 
+         <div id="sub3" style="display: none">
+        <ul class="menu-sub" style="list-style: none">
+          <li class="menu-sub-title" id="back3">
+            <div class="arrow left" style="display: inline-block;left:0px;width:100%;" >&#8249;</div> 
+            <label class="submenu-label" for="sub-three">Back</label>             
+          </li>      
+          <li>New Message</li>
+          <li>All Messages</li>
+          <li>Recipients</li>                               
+        </ul> 
+        </div>             
+      </li> 
+      <div id="menu4">   
+      <li>
+        <input type="checkbox" id="sub-four" class="submenu-toggle" onclick="document.getElementById('menu1').style.display='none';document.getElementById('menu2').style.display='none';document.getElementById('menu3').style.display='none';document.getElementById('menu4').style.display='none';document.getElementById('sub4').style.display='block';">        
+        <label class="submenu-label" for="sub-four">Support</label>
+        <div class="arrow right">&#8250;</div> 
+      </li>
+    </div>
+     <div id="sub4" style="display: none">
+        <ul class="menu-sub" style="list-style: none">
+          <li class="menu-sub-title" id="back4">
+            <label class="submenu-label" for="sub-four">Back</label>     
+            <div class="arrow left" style="display: inline-block;left:0px;width:100%;">&#8249;</div>       
+          </li>      
+            <h4>About</h4>
+                <li>Overview</li>
+                <li>What Is Splurket</li>
+                <li>What Sets Us Apart</li>
+                <li>Privacy Policy</li>
+            <h4 >FAQ</h4>
+                <li>How Do I Get Started</li>
+                <li>How Do I Pay For An Order/Complete Job</li>
+                <li>How Can I Become a Seller/Creator</li>
+                <li>What Happens When I Get A Quote?</li>
+                <li>More</li>
+            <h4 >Blog</h4>
+                <li>Latest</li>
+                <li>All Posts</li>
+                <li>Getting Started Guides</li>
+            <h4 >Community</h4>
+                <li>Discord</li>
+                <li>Events</li>
+                <li>Referrals</li>
+                <li></li>
+                <li></li>                               
+        </ul>    
+        </div>          
+      </li>                                     
+    </ul> 
+  </li>
+</ul>
+</div>
+<!-- partial -->
+  <script>
+    document.getElementById("back1").addEventListener('click', myFunction1)
+
+function myFunction1(){
+    document.getElementById('menu1').style.display='block';
+    document.getElementById('menu2').style.display='block';
+    document.getElementById('menu3').style.display='block';
+    document.getElementById('menu4').style.display='block';
+    document.getElementById('sub1').style.display='none';
+}
+
+    document.getElementById("back2").addEventListener('click', myFunction2)
+
+function myFunction2(){
+    document.getElementById('menu1').style.display='block';
+    document.getElementById('menu2').style.display='block';
+    document.getElementById('menu3').style.display='block';
+    document.getElementById('menu4').style.display='block';
+    document.getElementById('sub2').style.display='none';
+}
+
+    document.getElementById("back3").addEventListener('click', myFunction3)
+
+function myFunction3(){
+    document.getElementById('menu1').style.display='block';
+    document.getElementById('menu2').style.display='block';
+    document.getElementById('menu3').style.display='block';
+    document.getElementById('menu4').style.display='block';
+    document.getElementById('sub3').style.display='none';
+}
+
+    document.getElementById("back4").addEventListener('click', myFunction4)
+
+function myFunction4(){
+    document.getElementById('menu1').style.display='block';
+    document.getElementById('menu2').style.display='block';
+    document.getElementById('menu3').style.display='block';
+    document.getElementById('menu4').style.display='block';
+    document.getElementById('sub4').style.display='none';
+}
+function tablistlube(){
+    var ele1 = document.querySelectorAll('[role="tablist"]');
+    ele1[0].style.display="block" //Remove active class for first element
+    document.getElementById('tablist-open').style.display="none"
+    document.getElementById('tablist-close').style.display="block"
+}
+function tablistclose(){
+    var ele1 = document.querySelectorAll('[role="tablist"]');
+    ele1[0].style.display="none" //Remove active class for first element
+    document.getElementById('tablist-open').style.display="block"
+    document.getElementById('tablist-close').style.display="none"
+}
+</script>
+
+    
+    <!-- Header ENDS HERE!!!!.. -->
+<div id="app" style="width:100%;display: none;">
+  <v-app id="inspire">
+  <main id="main">
+    <div class="container">
+      <v-data-iterator
+        :items="products"
+        :items-per-page.sync="itemsPerPage"
+        :page.sync="page"
+        :search="search"
+        :sort-by="sortBy.toLowerCase()"
+        :sort-desc="sortDesc"
+        hide-default-footer
+        disable-pagination
+        dense
+      ></v-data-iterator>
+      <!-- Products Details -->
+      <section class="section product-details__section">
+        <div class="product-detail__container">
+          <div class="product-detail__left">
+            <div class="details__container--left">
+              <div class="product__pictures">
+                <div class="pictures__container" v-for="(image, key) in images" >
+                  <img class="picture" :src="image" id="key" onmouseover="document.getElementById('mainpicture').src=this.src"/>
+                </div>
+                <!--<div class="pictures__container">
+                  <img class="picture" src="../assets/images/products/iPhone/iphone2.jpeg" id="pic2" />
+                </div>
+                <div class="pictures__container">
+                  <img class="picture" src="../assets/images/products/iPhone/iphone3.jpeg" id="pic3" />
+                </div>
+                <div class="pictures__container">
+                  <img class="picture" src="../assets/images/products/iPhone/iphone4.jpeg" id="pic4" />
+                </div>
+                <div class="pictures__container">
+                  <img class="picture" src="../assets/images/products/iPhone/iphone5.jpeg" id="pic5" />
+                </div>-->
+              </div>
+              <div class="product__picture" id="product__picture">
+                <!-- <div class="rect" id="rect"></div> -->
+                <div class="picture__container">
+                  <img src="" id="mainpicture" />
+                </div>
+              </div>
+              <div class="zoom" id="zoom"></div>
+            </div>
+           
+          </div>
+          <template v-for="product in products">
+          <div class="product-detail__right">
+            <div class="product-detail__content">
+              <h3>{{ product.name }}</h3>
+              <div class="price">
+                <span class="new__price">{{ product.price }}</span>
+              </div>
+              <div class="product__review">
+                <div class="rating">
+                  <v-rating
+                  v-model="product.reviewsn"
+                  background-color="green lighten-3"
+                  color="green"
+                  medium
+                  readonly
+                ></v-rating>
+                 <p style="display: inline-block;margin: 0px;top:265px;left:50px;" class="cardtit underline" :id="product.creator" onclick="window.top.location.href='./user?user='+this.id"> Creator: <strong>{{ product.creator }}</strong>
+                </p>
+                </div>
+                <a href="#" class="rating__quatity" style="padding-bottom: 20px">{{product.reviewsn}} reviews</a>
+              </div><br>
+              <p>
+                {{product.desc}}
+              </p>
+              <div class="product__info-container">
+                <ul class="product__info">
+                <!--<v-list dense>
+                  <v-list-item
+                    v-for="product in products"
+                    :key="product.name"
+                  >
+                    <v-list-item-content>
+                      {{  }}:
+                    </v-list-item-content>
+                    <v-list-item-content
+                      class="align-end"
+                      :class="{ 'blue--text': sortBy === key }"
+                    ><center><v-chip
+                      close-icon="mdi-delete"
+                      color="green"
+                      outlined
+                    > {{ item[key.toLowerCase()] }}</v-chip></center>
+                    </v-list-item-content>
+                    <div class="input-counter">
+                      <span>Quantity:</span>
+                      <div>
+                        <span class="minus-btn">
+                          <svg>
+                            <use xlink:href="../assets/images/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </span>
+                        <input type="text" min="1" value="1" max="10" class="counter-btn">
+                        <span class="plus-btn">
+                          <svg>
+                            <use xlink:href="../assets/images/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>-->
+                  </li>
+                </ul>
+                <!--<div class="product-info__btn">
+                  <a href="#">
+                    <span>
+                      <svg>
+                        <use xlink:href="../assets/images/sprite.svg#icon-crop"></use>
+                      </svg>
+                    </span>&nbsp;
+                    SIZE GUIDE
+                  </a>
+                  <a href="#">
+                    <span>
+                      <svg>
+                        <use xlink:href="../assets/images/sprite.svg#icon-truck"></use>
+                      </svg>
+                    </span>&nbsp;
+                    SHIPPING
+                  </a>
+                  <a href="#">
+                    <span>
+                      <svg>
+                        <use xlink:href="../assets/images/sprite.svg#icon-envelope-o"></use>
+                      </svg>&nbsp;
+                    </span>
+                    ASK ABOUT THIS PRODUCT
+                  </a>
+                </div>
+              </div>
+            </div>-->
+            <center style="width:400px"><strong><v-btn
+              depressed
+              color="#52b36c"
+              style="color:white;width:50%"
+              :id="product.id"
+              :data-id="product.id"
+              :data-description='product.name'
+              :data-price='product.price'
+              :data-image="product.image"
+              onclick="addCart(this)"
+            >
+              Add To Cart
+            </v-btn></strong></center>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+
+      
+      <template v-for="product in products">
+            <div style="height:100%;width:100%;position:relative;margin-bottom:5%">
+              <v-tabs color="#52b36c" centered>
+                <v-tab style="font-size:17px">Description</v-tab>
+                  <v-tab-item
+                  >
+                  <div width="100" >
+                      <iframe id="ifrm" :src="product.iframe" style="border:none;width:100%;height:100%" onmouseover="setHeight(this.id)">
+                      </iframe>
+
+
+                  </div>
+                  </v-tab-item>
+                    <v-tab style="font-size:17px">Reviews</v-tab>
+                        <v-tab-item
+                  >
+                    <v-col
+                      v-for="review in reviews"
+                      :key="review.name"
+                      cols="12"
+                      sm="6"
+                      md="4"
+                      lg="3"
+                      style="min-width:100%;width:100%"
+
+                    >
+
+                    <v-card style="width:100%"><br>
+                        <v-card-title class="subheading font-weight-bold">
+                          {{ review.name }}
+                        </v-card-title>
+                        <v-card-text style="color:#878787;font-size:15px;padding-left: 16px;padding-top: 0px;" class="e546783wyte">{{ review.desc }}</v-card-text>
+                        <v-card-text style="color:black;font-size:15px;padding-left: 16px;padding-top: 0px;height:30px" class="e546783wyte underline" :id="review.reviewer" onclick="window.top.location.href='./user?user='+this.id">- {{ review.reviewer }}</v-card-text>
+                        <v-rating
+                          v-model="review.rate"
+                          background-color="green lighten-3"
+                          color="green"
+                          small
+                          readonly
+                          style=""
+                        ></v-rating>
+                        <!--<v-list dense>
+                          <v-list-product
+                            v-for="(key, index) in filteredKeys"
+                            :key="index"
+                          >
+                            <v-list-product-content :class="{ 'blue--text': sortBy === key }">
+                              {{ key }}:
+                            </v-list-product-content>
+                            <v-list-product-content
+                              class="align-end"
+                              :class="{ 'blue--text': sortBy === key }"
+                            >
+                              {{ product[key.toLowerCase()] }}
+                            </v-list-product-content>
+                          </v-list-product>-->
+
+                      </v-card>
+                  </v-tab-item>
+              </v-col>
+          </v-row>
+        </v-tab-item>
+                    <v-tab style="font-size:17px">Badges</v-tab>
+                        <v-tab-item
+                      >
+                      <!--<v-row style="margin-top:10px;position:relative;width:100%;height:100%">
+                        <v-col
+                          v-for="badge in badges"
+                          :key="badge.name"
+                          cols="12"
+                          sm="6"
+                          md="4"
+                          lg="3"
+                          style="min-width:324px"
+                        >
+                        <v-card style="width:100%">
+                            <img :src="badge.image" style="height:250px;width:100%"><br>
+                            <v-card-title class="subheading font-weight-bold">
+                              {{ badge.name }}
+                            </v-card-title>-->
+
+                            <!--<v-list dense>
+                              <v-list-product
+                                v-for="(key, index) in filteredKeys"
+                                :key="index"
+                              >
+                                <v-list-product-content :class="{ 'blue--text': sortBy === key }">
+                                  {{ key }}:
+                                </v-list-product-content>
+                                <v-list-product-content
+                                  class="align-end"
+                                  :class="{ 'blue--text': sortBy === key }"
+                                >
+                                  {{ product[key.toLowerCase()] }}
+                                </v-list-product-content>
+                              </v-list-product>-->
+
+                          <!--</v-card>
+                      </v-tab-item>
+                  </v-col>
+              </v-row>-->
+            </v-tab-item>
+          </v-tabs></center>
+</div>
+</template>
+
+  </main>
+
+  <!-- Footer -->
+<div class="footercontainer" width="100%" style="max-width:100%;z-index:6;background-color:#52b36c;height:100%">
+  <div class="frow">
+    <center><div class="fcolumn">
+      <img src="../assets/images/Logo.png" width="120px" height="120px">
+      <p style="color:white">Splurket</p>
+      <p style="color:white;font-size: 15px">Imagine No Limits</p>
+    </div>
+    <div class="fcolumn">
+      <h2>Connect</h2>
+      <a onclick="this.innerText = 'Splurket@gmail.com' ">Email</a><br>
+      <a href="">Discord</a><br>
+      <a href="https://www.instagram.com/splurket_store/">Instagram</a><br>
+      <a href="">Facebook</a><br>
+
+    </div>
+    <div class="fcolumn">
+      <h2>Explore</h2>
+      <a href="">Home</a><br>
+      <a href="">Store</a><br>
+      <a href="">About</a><br>
+      <a href="">Cart</a><br>
+      <a href="">Contact</a><br>
+
+    </div>
+    <div class="fcolumn">
+      <h2>Company</h2>
+      <a href="">Home</a><br>
+      <a href="">Legal</a><br>
+      <a href="">Refund</a><br>
+      <a href="">Payment Security</a><br>
+    </div></center>
+  </div>
+  <center><p style="color:white; margin:0px; padding-bottom:20px;">Copyright © 2021 Splurket, All Rights Reserved</p></center>
+</div>
+</head>
+</div>
+</v-app>
+</body>
+</html>
+  <script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.js'></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><!--<script  src="./script.js"></script>-->
+  <script src="../cart/cart.js"></script>
+  <!-- Glide Carousel Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+
+  <!-- Animate On Scroll -->
+
+  <!-- Custom JavaScript -->
+
+  <script src="./js/products.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/S765tryeu3y6.js"></script>
+</body>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+    <script>
+      iframehead = document.getElementById("iframehead");
+       function addCart(clicked_button) {
+            var data = {...clicked_button.dataset};
+            //document.write(`${data.id} clicked - ${JSON.stringify(data)}`);
+
+            addToCart(data);
+          }
+    </script>
+    <script type="text/javascript">
+        populateCart();
+
+        function populateCart() {
+
+          var cartBody = document.querySelector("#cart > tbody");
+          var cart = getCart();
+          Crtitems = (JSON.stringify(Object.keys(cart).length))
+          var CartItemsNote = Crtitems;
+          if (CartItemsNote > '0') {
+            document.getElementById('iframehead').contentWindow.document.getElementById('lblCartCount').innerText = CartItemsNote;
+          }
+          else if (CartItemsNote =='0') {
+            document.getElementById('iframehead').contentWindow.document.getElementById('lblCartCount').innerText= '0';
+          }
+        }
+
+        function getCart() {
+          return JSON.parse(localStorage.getItem('cart')) || {};
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+<script>
+  function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    var email = getParameterByName('user')
+    var request = getParameterByName('request')
+    var type = getParameterByName('type')
+    
+var i = -1
+var tiparr = ["Get To Splurk!", "Become A Creator, Unlease Your Potential!", "Don't See What You Want In The Marketplace? Have It made Today!", "Have Some Files? Sell Them Here!", "Sell ANYTHING Digital!"]
+setInterval(function () {
+  if(i == tiparr.length-1){
+    document.getElementById("loading-tips").innerHTML = tiparr[0]
+        i=0; return;
+      }else if(i == undefined){
+    document.getElementById("loading-tips").innerHTML = tiparr[0]
+        i=0; return;
+    }else{
+      i++
+      document.getElementById("loading-tips").innerHTML = tiparr[i]
+    }
+}, 3000); // Execute something() 1 second later.*/
+</script>    
+
+  
+<!--finishing loading splash styling -->  
