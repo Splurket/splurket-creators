@@ -1,4 +1,6 @@
 var productid;
+var product_type;
+var product_status
   function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -8,6 +10,8 @@ var productid;
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 productid= getParameterByName('product');
+product_type = getParameterByName('type');
+product_status = getParameterByName('status');
 function getDocHeight(doc) {
     doc = doc || document;
     // stackoverflow.com/questions/1145850/
@@ -29,60 +33,11 @@ function setHeight(id){
   var products=[];
   var images=[];
   var reviews=[];
-var docRef = db.collection("products").doc(productid);
+var docRef = db.collection("requests").doc(product_status).collection(product_type).doc(productid);
+//console.log(docRef)
         docRef.get().then((doc) => {
           if (doc.exists) {
             var doc= doc.data();
-
-/*document.getElementsByTagName("head")[0].innerHTML=`
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./arcflashstyle.css">
-  <!-- Favicon -->
-  <!--<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />-->
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Animate On Scroll -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Splurket: Imagine No Limts™</title>
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-  <link rel="icon" src="/assets/images/Logo.ico">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.css">
-  <link rel="stylesheet" href="./styles.css">
-      <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Firebase-->
-  <link rel="icon" type="image/x-icon" href="../assets/images/Logo.png" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-  <!-- css -->
-  <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
-      <!-- css -->
-  <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
-  <link href="https://unpkg.com/vueperslides/dist/vueperslides.css" rel="stylesheet">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="${doc.product_name}">
-    <meta property="og:description" content="${doc.product_description}">
-    <meta property="og:site_name" content="Splurket">
-    <meta property="og:image" content="${doc.product_cover}">
-    <meta itemprop="name" content="Splurket">
-    <meta itemprop="image" content="${doc.product_cover}">
-    <meta property="og:url" content="http://www.Splurket.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@splurket_store">
-    <meta name="twitter:description" content="${doc.product_description}">
-    <meta name="twitter:title" content="Splurket">
-    <meta name="twitter:image" content="${doc.product_cover}">`*/
-
             images.push(doc.product_cover)
             var images1=doc.product_images
             images2=images1.split(',');
@@ -106,8 +61,8 @@ var docRef = db.collection("products").doc(productid);
             //document.write(JSON.stringify(error))
       // An error happened.
     });
-    db.collection("products").doc(productid).collection('reviews').get().then((querySnapshot) => {
-    querySnapshot.forEach((doc2) => {
+    db.collection("requests").doc(product_status).collection(product_type).doc(productid).get().then((doc2) => {
+    doc = doc
       if (doc2.exists) {
         var doc= doc2.data();
         var reviewrate=parseFloat(`${doc.rate}`)
@@ -132,7 +87,6 @@ var docRef = db.collection("products").doc(productid);
         }
       })
 
-    })
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
@@ -174,11 +128,11 @@ new Vue({
       // data asynchronously, you could wait until that process returns
 
     var timer = window.setInterval(function(){
-    var in1 = document.getElementById('app').innerHTML
+   // var in1 = document.getElementById('app').innerHTML
     if(in1.includes('No data available')) {
      document.getElementById('loading-wrapper').style.display = "block";
      document.getElementById('app').style.display = "none";
-     console.log(in1)
+     //console.log(in1)
   }else{
       document.getElementById('loading-wrapper').style.display = "none";
      document.getElementById('app').style.display = "block";

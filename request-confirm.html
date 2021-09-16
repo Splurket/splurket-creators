@@ -292,7 +292,7 @@ textarea {
   cursor: pointer;
 }
 </style>
-<div id="loading-wrapper">
+<div id="loading-wrapper" style="display: none;">
   <div id="loading-text">Splurketing...</div>
   <div id="loading-content"></div>
   <div>
@@ -777,7 +777,7 @@ function tablistclose(){
 
     
     <!-- Header ENDS HERE!!!!.. -->
-<div id="app" style="width:100%;display: none;">
+<div id="app" style="width:100%;display: block;">
   <v-app id="inspire">
   <main id="main">
     <div class="container">
@@ -1085,7 +1085,7 @@ function tablistclose(){
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src='https://cdn.jsdelivr.net/npm/vuetify@2.4.11/dist/vuetify.min.js'></script>
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><!--<script  src="./script.js"></script>-->
-  <script src="../cart/cart.js"></script>
+
   <!-- Glide Carousel Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
 
@@ -1100,39 +1100,7 @@ function tablistclose(){
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
     <script>
       iframehead = document.getElementById("iframehead");
-       function addCart(clicked_button) {
-            var data = {...clicked_button.dataset};
-            //document.write(`${data.id} clicked - ${JSON.stringify(data)}`);
-
-            addToCart(data);
-          }
-    </script>
-    <script type="text/javascript">
-        populateCart();
-
-        function populateCart() {
-
-          var cartBody = document.querySelector("#cart > tbody");
-          var cart = getCart();
-          Crtitems = (JSON.stringify(Object.keys(cart).length))
-          var CartItemsNote = Crtitems;
-          if (CartItemsNote > '0') {
-            document.getElementById('iframehead').contentWindow.document.getElementById('lblCartCount').innerText = CartItemsNote;
-          }
-          else if (CartItemsNote =='0') {
-            document.getElementById('iframehead').contentWindow.document.getElementById('lblCartCount').innerText= '0';
-          }
-        }
-
-        function getCart() {
-          return JSON.parse(localStorage.getItem('cart')) || {};
-        }
-
-    </script>
-
-
-
-
+</script>
 
 
 

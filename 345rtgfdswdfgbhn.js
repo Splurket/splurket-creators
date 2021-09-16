@@ -276,8 +276,8 @@ function removeDoc(id){
     
   db.collection("requests").doc('unclaimed').collection('quotes').doc(id).get().then((doc) => {
     doc = doc
-    console.log("Document data:", doc.data())
-    console.log(doc)
+    //console.log("Document data:", doc.data())
+    //console.log(doc)
 
     db.collection("requests").doc('claimed').collection('quotes').doc(id).set(doc.data())
       .then(() => {
