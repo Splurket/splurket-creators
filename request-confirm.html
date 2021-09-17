@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./arcflashstyle.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><!--<link rel="stylesheet" href="./arcflashstyle.css">-->
   <!-- Favicon -->
   <!--<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />-->
 
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
+  <!--<link rel="stylesheet" href="styles.css" />-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -833,17 +833,17 @@ function tablistclose(){
               </div>
               <div class="product__review">
                 <div class="rating">
-                  <v-rating
+                  <!--<v-rating
                   v-model="product.reviewsn"
                   background-color="green lighten-3"
                   color="green"
                   medium
                   readonly
-                ></v-rating>
+                ></v-rating>-->
                  <p style="display: inline-block;margin: 0px;top:265px;left:50px;" class="cardtit underline" :id="product.creator" onclick="window.top.location.href='./user?user='+this.id"> Creator: <strong>{{ product.creator }}</strong>
                 </p>
                 </div>
-                <a href="#" class="rating__quatity" style="padding-bottom: 20px">{{product.reviewsn}} reviews</a>
+                <!--<a href="#" class="rating__quatity" style="padding-bottom: 20px">{{product.reviewsn}} reviews</a>-->
               </div><br>
               <p>
                 {{product.desc}}
@@ -946,95 +946,7 @@ function tablistclose(){
 
                   </div>
                   </v-tab-item>
-                    <v-tab style="font-size:17px">Reviews</v-tab>
-                        <v-tab-item
-                  >
-                    <v-col
-                      v-for="review in reviews"
-                      :key="review.name"
-                      cols="12"
-                      sm="6"
-                      md="4"
-                      lg="3"
-                      style="min-width:100%;width:100%"
 
-                    >
-
-                    <v-card style="width:100%"><br>
-                        <v-card-title class="subheading font-weight-bold">
-                          {{ review.name }}
-                        </v-card-title>
-                        <v-card-text style="color:#878787;font-size:15px;padding-left: 16px;padding-top: 0px;" class="e546783wyte">{{ review.desc }}</v-card-text>
-                        <v-card-text style="color:black;font-size:15px;padding-left: 16px;padding-top: 0px;height:30px" class="e546783wyte underline" :id="review.reviewer" onclick="window.top.location.href='./user?user='+this.id">- {{ review.reviewer }}</v-card-text>
-                        <v-rating
-                          v-model="review.rate"
-                          background-color="green lighten-3"
-                          color="green"
-                          small
-                          readonly
-                          style=""
-                        ></v-rating>
-                        <!--<v-list dense>
-                          <v-list-product
-                            v-for="(key, index) in filteredKeys"
-                            :key="index"
-                          >
-                            <v-list-product-content :class="{ 'blue--text': sortBy === key }">
-                              {{ key }}:
-                            </v-list-product-content>
-                            <v-list-product-content
-                              class="align-end"
-                              :class="{ 'blue--text': sortBy === key }"
-                            >
-                              {{ product[key.toLowerCase()] }}
-                            </v-list-product-content>
-                          </v-list-product>-->
-
-                      </v-card>
-                  </v-tab-item>
-              </v-col>
-          </v-row>
-        </v-tab-item>
-                    <v-tab style="font-size:17px">Badges</v-tab>
-                        <v-tab-item
-                      >
-                      <!--<v-row style="margin-top:10px;position:relative;width:100%;height:100%">
-                        <v-col
-                          v-for="badge in badges"
-                          :key="badge.name"
-                          cols="12"
-                          sm="6"
-                          md="4"
-                          lg="3"
-                          style="min-width:324px"
-                        >
-                        <v-card style="width:100%">
-                            <img :src="badge.image" style="height:250px;width:100%"><br>
-                            <v-card-title class="subheading font-weight-bold">
-                              {{ badge.name }}
-                            </v-card-title>-->
-
-                            <!--<v-list dense>
-                              <v-list-product
-                                v-for="(key, index) in filteredKeys"
-                                :key="index"
-                              >
-                                <v-list-product-content :class="{ 'blue--text': sortBy === key }">
-                                  {{ key }}:
-                                </v-list-product-content>
-                                <v-list-product-content
-                                  class="align-end"
-                                  :class="{ 'blue--text': sortBy === key }"
-                                >
-                                  {{ product[key.toLowerCase()] }}
-                                </v-list-product-content>
-                              </v-list-product>-->
-
-                          <!--</v-card>
-                      </v-tab-item>
-                  </v-col>
-              </v-row>-->
-            </v-tab-item>
           </v-tabs></center>
 </div>
 </template>
@@ -1045,7 +957,7 @@ function tablistclose(){
 <div class="footercontainer" width="100%" style="max-width:100%;z-index:6;background-color:#52b36c;height:100%">
   <div class="frow">
     <center><div class="fcolumn">
-      <img src="../assets/images/Logo.png" width="120px" height="120px">
+      <img src="https://splurket.com/assets/images/Logo.png" width="120px" height="120px">
       <p style="color:white">Splurket</p>
       <p style="color:white;font-size: 15px">Imagine No Limits</p>
     </div>

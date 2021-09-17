@@ -1,6 +1,4 @@
 var productid;
-var product_type;
-var product_status
   function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -10,8 +8,6 @@ var product_status
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 productid= getParameterByName('product');
-product_type = getParameterByName('type');
-product_status = getParameterByName('status');
 function getDocHeight(doc) {
     doc = doc || document;
     // stackoverflow.com/questions/1145850/
@@ -33,19 +29,14 @@ function setHeight(id){
   var products=[];
   var images=[];
   var reviews=[];
-var docRef = db.collection("requests").doc(product_status).collection(product_type).doc(productid);
-//console.log(docRef)
+var docRef = db.collection("requests").doc('unclaimed').collection('products').doc(productid);
         docRef.get().then((doc) => {
           if (doc.exists) {
             var doc= doc.data();
-            images.push(doc.product_cover)
-            var images1=doc.product_images
-            images2=images1.split(',');
-            images2.forEach((images3) => {images.push(images3)});
-            document.getElementById('mainpicture').src=doc.product_cover;
+            //document.getElementById('mainpicture').src=doc.product_cover;
             //document.write(JSON.stringify(doc))
-            reviewsn1=parseFloat(doc.product_reviewsn)
-            var push_data2 = {value: false, id: `${doc.product_id}`, name:`${doc.product_name}`, price: `${doc.product_price}`, date: `${doc.creation_date}`, reviewsn: reviewsn1, creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`, desc: `${doc.product_description}`, iframe: `./arctest?product=${doc.product_id}`}
+            //reviewsn1=parseFloat(doc.product_reviewsn)
+            var push_data2 = {value: false, id: `${doc.product_id}`, name:`${doc.product_name}`, price: `${doc.product_price}`, date: `${doc.creation_date}`, /*reviewsn: reviewsn1,*/ creator: `${doc.product_creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`, desc: `${doc.product_description}`, iframe: `./arctest?product=${doc.product_id}`}
             if (products.includes('{')){
               var push_data = ','+push_data2;
               products.push(push_data)
@@ -61,8 +52,8 @@ var docRef = db.collection("requests").doc(product_status).collection(product_ty
             //document.write(JSON.stringify(error))
       // An error happened.
     });
-    db.collection("requests").doc(product_status).collection(product_type).doc(productid).get().then((doc2) => {
-    doc = doc
+   /* db.collection("products").doc(productid).collection('reviews').get().then((querySnapshot) => {
+    querySnapshot.forEach((doc2) => {
       if (doc2.exists) {
         var doc= doc2.data();
         var reviewrate=parseFloat(`${doc.rate}`)
@@ -87,6 +78,7 @@ var docRef = db.collection("requests").doc(product_status).collection(product_ty
         }
       })
 
+    })*/
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
@@ -120,27 +112,6 @@ new Vue({
     filteredKeys() {
       return this.keys.filter(key => key !== 'Name');
     } },
-    mounted() {
-    // Code that will run only after the
-    // entire view has been rendered
-          // hide the overlay when everything has loaded
-      // you could choose some other event, e.g. if you're loading
-      // data asynchronously, you could wait until that process returns
-
-    var timer = window.setInterval(function(){
-   // var in1 = document.getElementById('app').innerHTML
-    if(in1.includes('No data available')) {
-     document.getElementById('loading-wrapper').style.display = "block";
-     document.getElementById('app').style.display = "none";
-     //console.log(in1)
-  }else{
-      document.getElementById('loading-wrapper').style.display = "none";
-     document.getElementById('app').style.display = "block";
-     window.clearInterval(timer);
-    }
-}, 100);
-
-    },
 
   methods: {
     nextPage() {
