@@ -794,14 +794,7 @@ function tablistclose(){
       ></v-data-iterator>
       <!-- Products Details -->
       <section class="section product-details__section">
-        <div class="product-detail__container">
-          <div class="product-detail__left">
-            <div class="details__container--left">
-              <div class="product__pictures">
-                <div class="pictures__container" v-for="(image, key) in images" >
-                  <img class="picture" :src="image" id="key" onmouseover="document.getElementById('mainpicture').src=this.src"/>
-                </div>
-                 <template>
+         <template>
             <v-col
               v-for="item in products"
               :key="item.name"
@@ -896,6 +889,14 @@ function tablistclose(){
             </v-col>
           </v-row>
         </template>
+        <div class="product-detail__container">
+          <div class="product-detail__left">
+            <div class="details__container--left">
+              <div class="product__pictures">
+                <div class="pictures__container" v-for="(image, key) in images" >
+                  <img class="picture" :src="image" id="key" onmouseover="document.getElementById('mainpicture').src=this.src"/>
+                </div>
+                
                 <!--<div class="pictures__container">
                   <img class="picture" src="../assets/images/products/iPhone/iphone2.jpeg" id="pic2" />
                 </div>
