@@ -61,11 +61,8 @@ var docRef = db.collection("requests").doc('unclaimed').collection('products').d
         if (reviews.includes('{')){
             var push_data = ','+reviewdata;
             reviews.push(push_data)
-
-
           }else{
             reviews.push(reviewdata)
-
           }//document.write(product_data)
         } else {
             // doc.data() will be undefined in this case
@@ -77,7 +74,6 @@ var docRef = db.collection("requests").doc('unclaimed').collection('products').d
               rate: 'N/A' }]
         }
       })
-
     })*/
 new Vue({
   el: '#app',
@@ -123,5 +119,3 @@ new Vue({
     updateItemsPerPage(number) {
       this.itemsPerPage = number;
     } } });
-
-
