@@ -801,6 +801,101 @@ function tablistclose(){
                 <div class="pictures__container" v-for="(image, key) in images" >
                   <img class="picture" :src="image" id="key" onmouseover="document.getElementById('mainpicture').src=this.src"/>
                 </div>
+                 <template v-slot:default="props">
+            <v-col
+              v-for="item in props.items"
+              :key="item.name"
+              cols="12"
+              sm="6"
+              md="4"
+              lg="3"
+            >
+              <v-card :id="item.name">
+                <div style="
+                    height: 5px;
+                "></div>
+                <center><v-img
+                  height="150px"
+                  width="150px"
+                  :src="item.image"
+                  :id="item.id"
+                  style="border-radius: 50%;margin-top:50px"
+                ></v-img></center>
+              </div>
+                <center><v-card-title class="subheading font-weight-bold" :id="item.id" style="display:block">
+                  {{ item.name }}
+                </v-card-title></center>
+                <strong><center><p style="font-family: 'Shadows Into Light Two';font-size:15px">{{ item.tag }}</p></center></strong>
+                <center><v-divider style="width:80%"></v-divider></center><br>
+                <center><p style="font-size:15px;top: 290px;left: 125px;margin-bottom:0px !important">Splurkocity:</p></center>
+                <center><v-rating
+                  v-model="item.reviewsn"
+                  background-color="green lighten-3"
+                  color="green"
+                  medium
+                  readonly
+                ></v-rating></center><br>
+                <center><strong><v-btn style="background-color:#52b36c; color:white">
+                Message Me!
+              </v-btn></strong></center><br>
+  
+                <!--<v-list dense>
+                  <v-list-item
+                    v-for="(key, index) in filteredKeys"
+                    :key="index"
+                  >
+                    <v-list-item-content :class="{ 'blue--text': sortBy === key }">
+                      {{ key }}:
+                    </v-list-item-content>
+                    <v-list-item-content
+                      class="align-end"
+                      :class="{ 'blue--text': sortBy === key }"
+                    >
+                      {{ item[key.toLowerCase()] }}
+                    </v-list-item-content>
+                  </v-list-item>-->
+              </v-card>
+              <div style="height:5%"></div>
+              <v-card :id="item.name" style="padding-top:50px">
+                <center><h1 class="shadowlight">Extra Info</h1></center>
+                <center><v-divider style="width:80%"></v-divider></center><br>
+              </div>  
+                <v-list dense>
+                  <v-list-item
+                    v-for="(key, index) in filteredKeys"
+                    :key="index"
+                  >
+                    <v-list-item-content :class="{ 'blue--text': sortBy === key }">
+                      {{ key }}:
+                    </v-list-item-content>
+                    <v-list-item-content
+                      class="align-end"
+                      :class="{ 'blue--text': sortBy === key }"
+                    ><center><v-chip
+                      close-icon="mdi-delete"
+                      color="green"
+                      outlined
+                    > {{ item[key.toLowerCase()] }}</v-chip></center>
+                    </v-list-item-content>
+                  </v-list-item>
+              </v-list>
+              <v-list-item
+                  >
+                    <v-list-item-content>
+                      Skills:
+                    </v-list-item-content>
+                </v-list-item>
+                    <v-chip
+                    v-for="skill in skills"
+                      close-icon="mdi-delete"
+                      color="green"
+                      outlined
+                      style="margin-bottom: 10px;margin-left: 5px;"
+                    >{{ skill }}</v-chip>
+              </v-card>
+            </v-col>
+          </v-row>
+        </template>
                 <!--<div class="pictures__container">
                   <img class="picture" src="../assets/images/products/iPhone/iphone2.jpeg" id="pic2" />
                 </div>
