@@ -801,9 +801,9 @@ function tablistclose(){
                 <div class="pictures__container" v-for="(image, key) in images" >
                   <img class="picture" :src="image" id="key" onmouseover="document.getElementById('mainpicture').src=this.src"/>
                 </div>
-                 <template v-slot:default="props">
+                 <template>
             <v-col
-              v-for="item in props.items"
+              v-for="item products"
               :key="item.name"
               cols="12"
               sm="6"
