@@ -802,7 +802,7 @@ function tablistclose(){
               sm="6"
               md="4"
               lg="3"
-                   style="position:absolute;"
+              style="position:absolute;"
             >
               <v-card :id="item.name">
                 <div style="
@@ -849,44 +849,7 @@ function tablistclose(){
                     </v-list-item-content>
                   </v-list-item>-->
               </v-card>
-              <div style="height:5%"></div>
-              <v-card :id="item.name" style="padding-top:50px">
-                <center><h1 class="shadowlight">Extra Info</h1></center>
-                <center><v-divider style="width:80%"></v-divider></center><br>
-              </div>  
-                <v-list dense>
-                  <v-list-item
-                    v-for="(key, index) in filteredKeys"
-                    :key="index"
-                  >
-                    <v-list-item-content :class="{ 'blue--text': sortBy === key }">
-                      {{ key }}:
-                    </v-list-item-content>
-                    <v-list-item-content
-                      class="align-end"
-                      :class="{ 'blue--text': sortBy === key }"
-                    ><center><v-chip
-                      close-icon="mdi-delete"
-                      color="green"
-                      outlined
-                    > {{ item[key.toLowerCase()] }}</v-chip></center>
-                    </v-list-item-content>
-                  </v-list-item>
-              </v-list>
-              <v-list-item
-                  >
-                    <v-list-item-content>
-                      Skills:
-                    </v-list-item-content>
-                </v-list-item>
-                    <v-chip
-                    v-for="skill in skills"
-                      close-icon="mdi-delete"
-                      color="green"
-                      outlined
-                      style="margin-bottom: 10px;margin-left: 5px;"
-                    >{{ skill }}</v-chip>
-              </v-card>
+              
             </v-col>
           </v-row>
         </template>
