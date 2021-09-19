@@ -37,6 +37,9 @@ var docRef = db.collection("requests").doc('unclaimed').collection('products').d
             //document.write(JSON.stringify(doc))
             //reviewsn1=parseFloat(doc.product_reviewsn)
             var push_data2 = {value: false, id: `${doc.product_id}`, name:`${doc.name}`, price: `${doc.price}`, date: `${doc.date}`, /*reviewsn: reviewsn1,*/ creator: `${doc.creator}`, image: `${doc.product_cover}`, creatorpic: `${doc.product_creatorpic}`, desc: `${doc.description}`, iframe: `./arctest?product=${doc.product_id}`, user: `${doc.user}`}
+            db.collection("pubusers").doc(doc.user).get().then((doc) => {
+              console.log(doc.data())
+            })
             if (products.includes('{')){
               var push_data = ','+push_data2;
               products.push(push_data)
