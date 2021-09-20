@@ -8,6 +8,8 @@ var productid;
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 productid= getParameterByName('product');
+product_status= getParameterByName('status');
+product_type= getParameterByName('type');
 function getDocHeight(doc) {
     doc = doc || document;
     // stackoverflow.com/questions/1145850/
@@ -29,7 +31,7 @@ function setHeight(id){
   var products=[];
   var images=[];
   var reviews=[];
-var docRef = db.collection("requests").doc('unclaimed').collection('products').doc(productid);
+var docRef = db.collection("requests").doc(product_status).collection(product_type).doc(productid);
         docRef.get().then((doc) => {
           if (doc.exists) {
             var doc= doc.data();
