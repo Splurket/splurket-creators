@@ -21,7 +21,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -62,6 +63,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr JS
 		============================================ -->
+    <link rel="stylesheet" href="css/WidgetStyles.css">
+    <link rel="stylesheet" href="css/starability.css">
+    <!-- Widget styles
+		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/authcontrol.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
@@ -79,7 +84,7 @@
                 <!--LOGO IN LEFT CORNER-->
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <a href="/index.html" class="nav-brand text-dark" style="color:white;font-family: 'Shadows Into Light Two';">Splurket<span class="label label-default" style="font-size: 15px;background-color: white;color: #52b36c;padding:5px;font-family: 'Arial';margin-left: 5px;">Alpha</span></a>
+                        <a href="/index.html" class="nav-brand" style="color:white;font-family: 'Shadows Into Light Two';">Splurket<span class="label label-default" style="font-size: 15px;background-color: white;color: #52b36c;padding:5px;font-family: 'Arial';margin-left: 5px;">Alpha</span></a>
                     </div>
                 </div>
 
@@ -661,6 +666,139 @@
                         </div>
                     </div>
                 </div>
+
+                <div class=" container" id="widgets-container">
+                    <div class="row first-r">
+                        <div class="col-sm-3 user-info rounded">
+                            <div class="container">
+                                <img src="/images/profile-pic.jpg" class="profile-pic" alt="">                            
+                                <span >
+                                    <p class="name text-center mt-3 font-weight-bold">John Doe</p>
+                                    Location: United states <br>
+                                    Education: XYZ <br>
+                                    Skills: HTML, Python
+                                </span>
+                                <br>
+                                <button class="btn mt-2 mb-2 user-info-edit align-center">Edit</button>
+                            </div>                          
+                        </div>
+                       <div class="col-sm-9 products">
+                           <div class="product-container continer rounded">
+                               <h4 class="text-center text-light pt-2">Your Products</h4>
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active container">
+                                   <div class=" row  my-2 d-flex justify-content-center">
+                                       <div class="product col-sm-4 rounded">
+                                           <div class="">
+                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                            <p class="product-title text-center mt-1">Product XYZ</p>
+                                            <p class="starability-result rating" data-rating="3"></p>                                           
+                                                <div class="buttons d-flex justify-content-center">
+                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                   </div>                                         
+                                                </div>                                                                                  
+                                        </div>                                    
+                                       <div class="product col-sm-4 rounded">
+                                           <div class="">
+                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                            <p class="product-title text-center mt-1">Product XYZ</p>
+                                            <p class="starability-result rating" data-rating="3"></p>                                           
+                                                <div class="buttons d-flex justify-content-center">
+                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                   </div>                                         
+                                                </div>                                                                                  
+                                        </div>                                    
+                                  </div>
+                                                                   
+                                </div>
+                                  <div class="carousel-item container">
+                                   <div class=" row  my-2 d-flex justify-content-center">
+                                       <div class="product col-sm-4 rounded">
+                                           <div class="">
+                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                            <p class="product-title text-center mt-1">Product XYZ</p>
+                                            <p class="starability-result rating" data-rating="3"></p>                                           
+                                                <div class="buttons d-flex justify-content-center">
+                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                   </div>                                         
+                                                </div>                                                                                  
+                                        </div>                                    
+                                       <div class="product col-sm-4 rounded">
+                                           <div class="">
+                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                            <p class="product-title text-center mt-1">Product XYZ</p>
+                                            <p class="starability-result rating" data-rating="3"></p>                                           
+                                                <div class="buttons d-flex justify-content-center">
+                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                   </div>                                         
+                                                </div>                                                                                  
+                                        </div>                                    
+                                  </div>
+                                                                   
+                                </div>
+                               
+                                <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next carousel-btn " href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
+                           </div>
+                           <div class="buttons d-flex justify-content-center ">
+                            <button class="btn product-container-btn m-1" > <a href="./newproduct.html"> Add new product</a></button>
+                           <button class="btn product-container-btn m-1"> <a href="#">View all products</a> </button>
+                           </div>                                              
+                            </div>
+                      </div>
+                </div>
+                <div class="row second-row mt-4">
+                    <div class=" recent-orders col-sm-5 col-xl-4 rounded">
+                       <div class="recent-orders-container rounded">
+                            <h5 class="text-center mt-2 mb-1">Recent orders</h5>
+                        <div class="order container my-2 rounded">                           
+                           <div class="row p-2">
+                                <div class="col-sm-7">
+                                    <span class="order-info">
+                                        Product: XYZ <br>
+                                        Status: Delivered
+                                    </span>
+                                </div>
+                                <div class="col-sm-5 view-btn ">                                    
+                                        <button class="btn view-details-btn"><a href="#">View details</a></button>                             
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="order container my-2 rounded">                           
+                           <div class="row p-2">
+                                <div class="col-sm-7">
+                                    <span class="order-info">
+                                        Product: XYZ <br>
+                                        Status: Delivered
+                                    </span>
+                                </div>
+                                <div class="col-sm-5 view-btn ">                                    
+                                        <button class="btn view-details-btn"><a href="#">View details</a></button>                             
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                       </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -671,9 +809,10 @@
         <center><iframe src="./vueproducts.html" style="border:none;background-color: #F6F8FA" width="1140px" height="1000px" id="iframe1"></iframe></center>
     </div>
 
+  
     <!-- Main Menu area End-->
     <!-- Start Status area -->
-    <div class="notika-status-area dashboard-sex">
+    <!--<div class="notika-status-area dashboard-sex">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -714,10 +853,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- End Status area-->
     <!-- Start Sale Statistic area-->
-    <div class="sale-statistic-area dashboard-sex">
+    <!--<div class="sale-statistic-area dashboard-sex">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
@@ -769,11 +908,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- End Sale Statistic area-->
     
     <!-- Start Email Statistic area-->
-    <div class="notika-email-post-area dashboard-sex">
+    <!--<div class="notika-email-post-area dashboard-sex">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -956,10 +1095,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- End Email Statistic area-->
     <!-- Start Realtime sts area-->
-    <div class="realtime-statistic-area dashboard-sex">
+    <!--<div class="realtime-statistic-area dashboard-sex">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -1183,10 +1322,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- End Realtime sts area-->
     <!-- Start Footer area-->
-    <div class="footer-copyright-area">
+    <div class="footer-copyright-area" > 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1204,7 +1343,10 @@
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- wow JS
 		============================================ -->
     <script src="js/wow.min.js"></script>
@@ -1250,8 +1392,8 @@
     <script src="js/knob/knob-active.js"></script>
     <!--  wave JS
 		============================================ -->
-    <script src="js/wave/waves.min.js"></script>
-    <script src="js/wave/wave-active.js"></script>
+    <!-- <script src="js/wave/waves.min.js"></script> -->
+    <!-- <script src="js/wave/wave-active.js"></script> -->
     <!--  todo JS
 		============================================ -->
     <script src="js/todo/jquery.todo.js"></script>
