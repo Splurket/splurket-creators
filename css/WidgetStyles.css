@@ -1,7 +1,8 @@
 #widgets-container{
     margin-top: 20px;
+    /* max-width:1366px !important; */
 }
-
+/* ***********************First row widgets********************** */
 /* User Profile widget */
 .user-info{
     background-color: #52B36C;
@@ -86,28 +87,65 @@ background-color: white;
 .carousel-btn{
     opacity: 1;
 }
-/*Recent orders widget*/
-.recent-orders{
+/* ******************Second row wdigets********* */
+/*your orders widget*/
+.your-orders{
     background-color: #52B36C;
     color: white;
 }
-.order{
+.order-row{
     background-color: white;
 }
-.order-info{
+.order-text{
     color: #52B36C;
+    font-size: larger;
+    font-weight: bold;
 }
 .view-details-btn{
-    background-color: #52B36C;
+    background-color: white;
     display: block;
     margin-top: auto;
     margin-bottom: auto;
 }
 .view-details-btn>a{
     margin-top: auto;
+    color:#52B36C;
+}
+.order-text-sm{
+    color: #52B36C;
+    font-size:medium;
+    font-weight: bold;
+}
+/* ****************Third row widgets************** */
+.payments{
+    background-color:#52B36C;
     color: white;
 }
-.view-btn{
-    display: flex;
+.payment-row-container{
+    background-color: white;
+    color: #52B36C;
+}
+.sales{
+    background-color:#52B36C;
+    color: white;
+    /* margin-top: 1.2rem; */
+}
+.s-title,.c-title{
+    font-size: xx-large;
+}
+.value{
+    font-size: x-large;
+    font-weight: bold;
+}
+.percentage{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.d-info{
+    display: inline-flex;
     align-items: center;
+}
+.customer{
+    background-color:#52B36C;
+    color: white;
 }
