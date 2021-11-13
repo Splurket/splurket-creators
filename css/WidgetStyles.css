@@ -149,3 +149,33 @@ background-color: white;
     background-color:#52B36C;
     color: white;
 }
+/**************Top products*********/
+.top-selling{
+    background-color:#52B36C;
+        color: white;
+}
+.top-products-list-container{
+    background-color: white;
+}
+.top-product-titles{
+    color:#52B36C ;
+}
+.top-product{
+    background-color:#52B36C ;
+    color: white;
+}
+.top-product-title{
+    width: 50px;
+}
+.product-img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.checked{ /**Rating stars***/
+    color: gold;
+}
+.top-product-data{
+    font-size: x-large;
+    width: 50px;
+}
