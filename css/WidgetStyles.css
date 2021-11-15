@@ -98,7 +98,7 @@ background-color: white;
 }
 .order-text{
     color: #52B36C;
-    font-size: larger;
+    font-size: medium;
     font-weight: bold;
 }
 .view-details-btn{
@@ -113,8 +113,17 @@ background-color: white;
 }
 .order-text-sm{
     color: #52B36C;
-    font-size:medium;
+    font-size:small;
     font-weight: bold;
+}
+/* **************Sales stats chart************* */
+.sale-chart-container{
+    background-color:#52B36C ;
+    color: white;
+    height: 100%;
+}
+.chart{
+    background-color: white; 
 }
 /* ****************Third row widgets************** */
 .payments{

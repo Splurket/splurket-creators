@@ -69,6 +69,10 @@
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/authcontrol.js"></script>
+     <!-- chart JS
+		============================================ -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
     <link href='https://fonts.googleapis.com/css?family=Shadows Into Light Two' rel='stylesheet'>
 </head>
 
@@ -529,11 +533,11 @@
         <!-- Main Menu area start/NAVIGATION TABS END!!-->
 
     <!--MAIN NAVIGATION TABS, EDITED-->
-    <div class="main-menu-area mg-tb-40">
-        <!-- <div class="container"> -->
-            <!-- <div class="row"> -->
-                <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
-                    <!-- <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" style="font-size: 20px">
+    <div class="main-menu-area mg-t-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" style="font-size: 20px">
                         <li class="active"><a data-toggle="tab" href="#Dashboard"> Dashboard</a>
                         </li>
                         <li><a data-toggle="tab" href="#mailbox"> Products</a>
@@ -546,12 +550,13 @@
                         </li>
                         <li><a data-toggle="tab" href="#Forms"> Messages</a>
                         </li>
-                     </ul> -->
-                    <!-- <div class="tab-content custom-menu-content">
+                     </ul>
+                    <div class="tab-content custom-menu-content">
                         <div id="Dashboard" class="tab-pane in active notika-tab-menu-bg animated ">
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="index.html">Overview</a>
                                 </li>
+                                <li> </li>
                              </ul>
                         </div>
                         <div id="mailbox" class="tab-pane notika-tab-menu-bg animated">
@@ -603,8 +608,8 @@
                                 <li><a href="fellowsplurkians.html"> Fellow Splurkians</a>
                                 </li>
                             </ul>
-                        </div> -->
-                        <!--<div id="Appviews" class="tab-pane notika-tab-menu-bg animated ">
+                        </div>
+                        <div id="Appviews" class="tab-pane notika-tab-menu-bg animated ">
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="notification.html">Notifications</a>
                                 </li>
@@ -642,11 +647,11 @@
                                 </li>
                                 <li><a href="404.html">404 Page</a>
                                 </li>
-                            </ul>-->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------- OVERVIEW WIDGETS ---------------------------->
                 <div class="container mx-6" id="widgets-container">
                     <div class="row first-row">
                         <div class="col-sm-3 user-info rounded">
@@ -744,7 +749,7 @@
                       </div>
                 </div>
                 <div class="row second-row mt-4">
-                    <div class=" your-orders col-sm-3 col-xl-4 rounded">
+                    <div class=" your-orders col-sm-3 col-lg-4 rounded">
                        <div class="your-orders-container rounded p-1">
                             <h4 class="text-center mt-2 mb-1">Your orders</h4>
                         <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
@@ -813,6 +818,18 @@
                        
                         
                        </div>
+                    </div>
+                    <div class="sales-chart col-sm-8">
+                        <div class="sale-chart-container rounded p-1 ml-4">
+                            <h4 class="text-center mt-2 ">Sales Statistics</h4>
+                            <div class="chart m-4 rounded">
+                                <div class="chart-container p-1" style="position: relative; height:100%; width:100%">
+                                 <!-- Render 2 canvas for responsiveness -->
+                                    <canvas id="line-chart-xl" class="chart-canvas  d-none d-xl-block " height="175">  </canvas>
+                                    <canvas id="line-chart-lg" class="chart-canvas d-xl-none " height="210">  </canvas>
+                                </div>
+                            </div>                          
+                            </div>
                     </div>
                 </div>
                 <div class="row third-row mt-4">
@@ -945,7 +962,8 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
+    </div>
     </div>
     <!--MAIN NAVIGATION TABS, EDITED END-->
 
@@ -1548,12 +1566,15 @@
 	<!--  Chat JS
 		============================================ -->
     <script src="js/chat/moment.min.js"></script>
-    <script src="js/chat/jquery.chat.js"></script>
+    <script src="js/chat/jquery.chat.js"></script>   
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
 	<!-- tawk chat JS
 		============================================ -->
+        <!-- Sales statistics chart config -->
+        <script src="js/dashboard.js"></script>
+      
 </body>
 
 </html>
