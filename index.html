@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr JS
 		============================================ -->
-    <link rel="stylesheet" href="css/WidgetStyles.css">
+    <link rel="stylesheet" href="css/DashboardWidgetStyles.css">
     <link rel="stylesheet" href="css/starability.css">
     <!-- Widget styles
 		============================================ -->
@@ -77,7 +77,7 @@
 </head>
 
 
-<body>
+<body class="d-flex-column">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -535,9 +535,9 @@
     <!--MAIN NAVIGATION TABS, EDITED-->
     <div class="main-menu-area mg-t-40">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" style="font-size: 20px">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
+                    <!-- <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" style="font-size: 20px">
                         <li class="active"><a data-toggle="tab" href="#Dashboard"> Dashboard</a>
                         </li>
                         <li><a data-toggle="tab" href="#mailbox"> Products</a>
@@ -550,8 +550,8 @@
                         </li>
                         <li><a data-toggle="tab" href="#Forms"> Messages</a>
                         </li>
-                     </ul>
-                    <div class="tab-content custom-menu-content">
+                     </ul> -->
+                    <!-- <div class="tab-content custom-menu-content">
                         <div id="Dashboard" class="tab-pane in active notika-tab-menu-bg animated ">
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="index.html">Overview</a>
@@ -649,320 +649,346 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
+                <!-- </div> -->
+                <div class="nav-tabs d-flex justify-content-center mt-4">
+                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+                        <li class="nav-item mx-2">
+                          <a class="nav-link active" id="pills-dashboard-tab" data-toggle="pill" href="#pills-dashboard" role="tab" aria-controls="pills-home" aria-selected="true">Dashboard</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" id="pills-payments-tab" data-toggle="pill" href="#pills-payments" role="tab" aria-controls="pills-payments" aria-selected="false">Payments</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" id="pills-products-tab" data-toggle="pill" href="#pills-products" role="tab" aria-controls="pills-products" aria-selected="false">Payments</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" id="pills-customerReq-tab" data-toggle="pill" href="#pills-customerReq" role="tab" aria-controls="pills-customerReq" aria-selected="false">Customer Requests</a>
+                        </li>
+                      </ul>
                 </div>
-                <!-------------------------- OVERVIEW WIDGETS ---------------------------->
-                <div class="container mx-6" id="widgets-container">
-                    <div class="row first-row">
-                        <div class="col-sm-3 user-info rounded">
-                            <div class="container">
-                                <img src="/images/profile-pic.jpg" class="profile-pic" alt="">                            
-                                <span >
-                                    <p class="name text-center mt-3 font-weight-bold">John Doe</p>
-                                    Location: United states <br>
-                                    Education: XYZ <br>
-                                    Skills: HTML, Python
-                                </span>
-                                <br>
-                                <button class="btn mt-2 mb-2 user-info-edit align-center">Edit</button>
-                            </div>                          
-                        </div>
-                       <div class="col-sm-9 products">
-                           <div class="product-container continer rounded">
-                               <h4 class="text-center text-light pt-2">Your Products</h4>
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active container">
-                                   <div class=" row  my-2 d-flex justify-content-center">
-                                       <div class="product col-sm-4 rounded">
-                                           <div class="">
-                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
-                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
-                                            <p class="product-title text-center mt-1">Product XYZ</p>
-                                            <p class="starability-result rating" data-rating="3"></p>                                           
-                                                <div class="buttons d-flex justify-content-center">
-                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
-                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
-                                                   </div>                                         
-                                                </div>                                                                                  
-                                        </div>                                    
-                                       <div class="product col-sm-4 rounded">
-                                           <div class="">
-                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
-                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
-                                            <p class="product-title text-center mt-1">Product XYZ</p>
-                                            <p class="starability-result rating" data-rating="3"></p>                                           
-                                                <div class="buttons d-flex justify-content-center">
-                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
-                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
-                                                   </div>                                         
-                                                </div>                                                                                  
-                                        </div>                                    
-                                  </div>
-                                                                   
+               
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-dashboard" role="tabpanel" aria-labelledby="pills-dashboard-tab">
+                        <div class="container mx-6" id="widgets-container">
+                            <div class="row first-row">
+                                <div class="col-sm-3 user-info rounded">
+                                    <div class="container">
+                                        <img src="/images/profile-pic.jpg" class="profile-pic" alt="">                            
+                                        <span >
+                                            <p class="name text-center mt-3 font-weight-bold">John Doe</p>
+                                            Location: United states <br>
+                                            Education: XYZ <br>
+                                            Skills: HTML, Python
+                                        </span>
+                                        <br>
+                                        <button class="btn mt-2 mb-2 user-info-edit align-center">Edit</button>
+                                    </div>                          
                                 </div>
-                                  <div class="carousel-item container">
-                                   <div class=" row  my-2 d-flex justify-content-center">
-                                       <div class="product col-sm-4 rounded">
-                                           <div class="">
-                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
-                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
-                                            <p class="product-title text-center mt-1">Product XYZ</p>
-                                            <p class="starability-result rating" data-rating="3"></p>                                           
-                                                <div class="buttons d-flex justify-content-center">
-                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
-                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
-                                                   </div>                                         
-                                                </div>                                                                                  
-                                        </div>                                    
-                                       <div class="product col-sm-4 rounded">
-                                           <div class="">
-                                            <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
-                                            <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
-                                            <p class="product-title text-center mt-1">Product XYZ</p>
-                                            <p class="starability-result rating" data-rating="3"></p>                                           
-                                                <div class="buttons d-flex justify-content-center">
-                                                    <button class="btn product-edit mr-1 ml-auto">Edit</button>
-                                                    <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
-                                                   </div>                                         
-                                                </div>                                                                                  
-                                        </div>                                    
-                                  </div>
-                                                                   
+                               <div class="col-sm-9 products">
+                                   <div class="product-container continer rounded">
+                                       <h4 class="text-center text-light pt-2">Your Products</h4>
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active container">
+                                           <div class=" row  my-2 d-flex justify-content-center">
+                                               <div class="product col-sm-4 rounded">
+                                                   <div class="">
+                                                    <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                                    <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                                    <p class="product-title text-center mt-1">Product XYZ</p>
+                                                    <p class="starability-result rating" data-rating="3"></p>                                           
+                                                        <div class="buttons d-flex justify-content-center">
+                                                            <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                            <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                           </div>                                         
+                                                        </div>                                                                                  
+                                                </div>                                    
+                                               <div class="product col-sm-4 rounded">
+                                                   <div class="">
+                                                    <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                                    <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                                    <p class="product-title text-center mt-1">Product XYZ</p>
+                                                    <p class="starability-result rating" data-rating="3"></p>                                           
+                                                        <div class="buttons d-flex justify-content-center">
+                                                            <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                            <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                           </div>                                         
+                                                        </div>                                                                                  
+                                                </div>                                    
+                                          </div>
+                                                                           
+                                        </div>
+                                          <div class="carousel-item container">
+                                           <div class=" row  my-2 d-flex justify-content-center">
+                                               <div class="product col-sm-4 rounded">
+                                                   <div class="">
+                                                    <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                                    <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                                    <p class="product-title text-center mt-1">Product XYZ</p>
+                                                    <p class="starability-result rating" data-rating="3"></p>                                           
+                                                        <div class="buttons d-flex justify-content-center">
+                                                            <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                            <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                           </div>                                         
+                                                        </div>                                                                                  
+                                                </div>                                    
+                                               <div class="product col-sm-4 rounded">
+                                                   <div class="">
+                                                    <img src="https://via.placeholder.com/150" width="150" height="100" class="rounded product-image">
+                                                    <!-- <img src="./images/img_placeholder.png" width="150" height="100" class="rounded product-image"> -->
+                                                    <p class="product-title text-center mt-1">Product XYZ</p>
+                                                    <p class="starability-result rating" data-rating="3"></p>                                           
+                                                        <div class="buttons d-flex justify-content-center">
+                                                            <button class="btn product-edit mr-1 ml-auto">Edit</button>
+                                                            <button class="btn btn-danger ml-1 mr-auto ">Delete</button>
+                                                           </div>                                         
+                                                        </div>                                                                                  
+                                                </div>                                    
+                                          </div>
+                                                                           
+                                        </div>
+                                       
+                                        <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next carousel-btn " href="#carouselExampleControls" role="button" data-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="sr-only">Next</span>
+                                        </a>
+                                      </div>
+                                   </div>
+                                   <div class="buttons d-flex justify-content-center ">
+                                    <button class="btn product-container-btn m-1" > <a href="./newproduct.html"> Add new product</a></button>
+                                   <button class="btn product-container-btn m-1"> <a href="#">View all products</a> </button>
+                                   </div>                                              
+                                    </div>
+                              </div>
+                             </div>
+                            <div class="row second-row mt-4">
+                                <div class=" your-orders col-sm-3 col-lg-4 rounded">
+                                <div class="your-orders-container rounded p-1">
+                                    <h4 class="text-center mt-2 mb-1">Your orders</h4>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text">
+                                        Pending
+                                    </span>
+                                    <span class="order-text">
+                                        1
+                                    </span>
+                                </div>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text">
+                                        Unshipped
+                                    </span>
+                                    <span class="order-text">
+                                        1
+                                    </span>
+                                </div>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text">
+                                       Return requests
+                                    </span>
+                                    <span class="order-text">
+                                        0
+                                    </span>
+                                </div>
+                                <hr class="my-2">
+                                <h6 class="order-subheading">Shipped By Splurket</h6>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text-sm">
+                                       In Last day
+                                    </span>
+                                    <span class="order-text-sm">
+                                        0
+                                    </span>
+                                </div>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text-sm">
+                                       In Last 7 days
+                                    </span>
+                                    <span class="order-text-sm">
+                                        0
+                                    </span>
+                                </div>
+                                <hr class="my-2">
+                                <h6 class="order-subheading">Shipped By Seller</h6>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text-sm">
+                                       In Last day
+                                    </span>
+                                    <span class="order-text-sm">
+                                        0
+                                    </span>
+                                </div>
+                                <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
+                                    <span class="order-text-sm">
+                                       In Last 7 days
+                                    </span>
+                                    <span class="order-text-sm">
+                                        0
+                                    </span>
+                                </div>
+                                <div class="view-btn d-flex justify-content-center my-2">                                    
+                                    <button class="btn view-details-btn"><a href="#">View details</a></button>                             
                                 </div>
                                
-                                <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next carousel-btn " href="#carouselExampleControls" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                              </div>
-                           </div>
-                           <div class="buttons d-flex justify-content-center ">
-                            <button class="btn product-container-btn m-1" > <a href="./newproduct.html"> Add new product</a></button>
-                           <button class="btn product-container-btn m-1"> <a href="#">View all products</a> </button>
-                           </div>                                              
+                                
+                                </div>
                             </div>
-                      </div>
+                            <div class="sales-chart col-sm-8">
+                                <div class="sale-chart-container rounded p-1 ml-4">
+                                    <h4 class="text-center mt-2 ">Sales Statistics</h4>
+                                    <div class="chart m-4 rounded">
+                                        <div class="chart-container p-1" style="position: relative; height:100%; width:100%">
+                                         <!-- Render 2 canvas for responsiveness -->
+                                            <canvas id="line-chart-xl" class="chart-canvas  d-none d-xl-block " height="175">  </canvas>
+                                            <canvas id="line-chart-lg" class="chart-canvas d-xl-none " height="210">  </canvas>
+                                        </div>
+                                    </div>                          
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row third-row mt-4">
+                            <div class="col-sm-5 p-0">
+                                <div class="payments rounded p-1 ">
+                                    <div class="payments-container p-2">
+                                        <h4 class="text-center mt-2 mb-1 ">Payments</h4>
+                                        <div class="payment-row-container rounded recent-payment p-2 my-2 ">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">Most Recent Payment</h5>
+                                                <h5 class="m-0">$12,345</h5>
+                                            </div>
+                                            <span class="payment-info ">Transferred to your Bank account on August 31,2021</span>
+                                        </div>
+                                        <div class="payment-row-container rounded balance p-2 my-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">Balance</h5>
+                                                <h5 class="m-0">$20,000</h5>
+                                            </div>
+                                        </div>
+                                        <div class="view-btn d-flex justify-content-center my-2 mt-3">                                    
+                                            <button class="btn view-details-btn"><a href="#">View Payment Summary</a></button>                             
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sales rounded p-3 my-4">
+                                    <div class="sales-container rounded ">
+                                        <div class="left  d-flex justify-content-between">
+                                            <span class="s-title">Sales</span>
+                                            <span class="percentage d-inline-block ml-auto">+43%</span> <br>                                   
+                                        </div>
+                                        <div class="right  d-flex justify-content-between">                                    
+                                            <span class="value">$32,999</span>
+                                            <span class="d-info align-center">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customer rounded p-3 my-4">
+                                    <div class="customer-container rounded ">
+                                        <div class="left  d-flex justify-content-between">
+                                            <span class="c-title">Customers</span>
+                                            <span class="percentage d-inline-block ml-auto">+27%</span> <br>                                   
+                                        </div>
+                                        <div class="right  d-flex justify-content-between">                                    
+                                            <span class="value">55,123</span>
+                                            <span class="d-info align-center">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-sm-7 p-0 ">
+                                <div class="top-selling rounded p-2 ml-4">
+                                    <div class="top-selling-container p-1 ">
+                                        <h4 class="text-center mt-2 mb-3 ">Top Selling Products</h4>
+                                        <div class="top-products-list-container m-2 p-2 rounded">
+                                            <div class="top-product-titles d-flex px-1">
+                                                <div class="top-product-title mr-auto p-2">Product</div>
+                                                <div class="top-product-title p-2  mx-5" >Value</div>
+                                                <div class="top-product-title p-2  mx-5">Sold</div>
+                                            </div>
+                                            <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
+                                                <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
+                                                <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
+                                                    <p class="m-0">Product XYZ</p>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>                                                
+                                                </div>
+                                                <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
+                                                <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
+                                            </div>
+                                            <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
+                                                <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
+                                                <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
+                                                    <p class="m-0">Product XYZ</p>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>                                                
+                                                </div>
+                                                <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
+                                                <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
+                                            </div>
+                                            <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
+                                                <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
+                                                <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
+                                                    <p class="m-0">Product XYZ</p>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>                                                
+                                                </div>
+                                                <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
+                                                <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
+                                            </div>
+                                            <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
+                                                <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
+                                                <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
+                                                    <p class="m-0">Product XYZ</p>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>                                                
+                                                </div>
+                                                <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
+                                                <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
+                                            </div>
+                                            <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
+                                                <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
+                                                <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
+                                                    <p class="m-0">Product XYZ</p>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>                                                
+                                                </div>
+                                                <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
+                                                <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
                 </div>
-                <div class="row second-row mt-4">
-                    <div class=" your-orders col-sm-3 col-lg-4 rounded">
-                       <div class="your-orders-container rounded p-1">
-                            <h4 class="text-center mt-2 mb-1">Your orders</h4>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text">
-                                Pending
-                            </span>
-                            <span class="order-text">
-                                1
-                            </span>
-                        </div>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text">
-                                Unshipped
-                            </span>
-                            <span class="order-text">
-                                1
-                            </span>
-                        </div>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text">
-                               Return requests
-                            </span>
-                            <span class="order-text">
-                                0
-                            </span>
-                        </div>
-                        <hr class="my-2">
-                        <h6 class="order-subheading">Shipped By Splurket</h6>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text-sm">
-                               In Last day
-                            </span>
-                            <span class="order-text-sm">
-                                0
-                            </span>
-                        </div>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text-sm">
-                               In Last 7 days
-                            </span>
-                            <span class="order-text-sm">
-                                0
-                            </span>
-                        </div>
-                        <hr class="my-2">
-                        <h6 class="order-subheading">Shipped By Seller</h6>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text-sm">
-                               In Last day
-                            </span>
-                            <span class="order-text-sm">
-                                0
-                            </span>
-                        </div>
-                        <div class="order-row container d-flex justify-content-between rounded my-2 p-2">
-                            <span class="order-text-sm">
-                               In Last 7 days
-                            </span>
-                            <span class="order-text-sm">
-                                0
-                            </span>
-                        </div>
-                        <div class="view-btn d-flex justify-content-center my-2">                                    
-                            <button class="btn view-details-btn"><a href="#">View details</a></button>                             
-                        </div>
-                       
-                        
-                       </div>
                     </div>
-                    <div class="sales-chart col-sm-8">
-                        <div class="sale-chart-container rounded p-1 ml-4">
-                            <h4 class="text-center mt-2 ">Sales Statistics</h4>
-                            <div class="chart m-4 rounded">
-                                <div class="chart-container p-1" style="position: relative; height:100%; width:100%">
-                                 <!-- Render 2 canvas for responsiveness -->
-                                    <canvas id="line-chart-xl" class="chart-canvas  d-none d-xl-block " height="175">  </canvas>
-                                    <canvas id="line-chart-lg" class="chart-canvas d-xl-none " height="210">  </canvas>
-                                </div>
-                            </div>                          
-                            </div>
-                    </div>
-                </div>
-                <div class="row third-row mt-4">
-                    <div class="col-sm-5 p-0">
-                        <div class="payments rounded p-1 ">
-                            <div class="payments-container p-2">
-                                <h4 class="text-center mt-2 mb-1 ">Payments</h4>
-                                <div class="payment-row-container rounded recent-payment p-2 my-2 ">
-                                    <div class="d-flex justify-content-between">
-                                        <h5 class="m-0">Most Recent Payment</h5>
-                                        <h5 class="m-0">$12,345</h5>
-                                    </div>
-                                    <span class="payment-info ">Transferred to your Bank account on August 31,2021</span>
-                                </div>
-                                <div class="payment-row-container rounded balance p-2 my-2">
-                                    <div class="d-flex justify-content-between">
-                                        <h5 class="m-0">Balance</h5>
-                                        <h5 class="m-0">$20,000</h5>
-                                    </div>
-                                </div>
-                                <div class="view-btn d-flex justify-content-center my-2 mt-3">                                    
-                                    <button class="btn view-details-btn"><a href="#">View Payment Summary</a></button>                             
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sales rounded p-3 my-4">
-                            <div class="sales-container rounded ">
-                                <div class="left  d-flex justify-content-between">
-                                    <span class="s-title">Sales</span>
-                                    <span class="percentage d-inline-block ml-auto">+43%</span> <br>                                   
-                                </div>
-                                <div class="right  d-flex justify-content-between">                                    
-                                    <span class="value">$32,999</span>
-                                    <span class="d-info align-center">Since last month</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customer rounded p-3 my-4">
-                            <div class="customer-container rounded ">
-                                <div class="left  d-flex justify-content-between">
-                                    <span class="c-title">Customers</span>
-                                    <span class="percentage d-inline-block ml-auto">+27%</span> <br>                                   
-                                </div>
-                                <div class="right  d-flex justify-content-between">                                    
-                                    <span class="value">55,123</span>
-                                    <span class="d-info align-center">Since last month</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-sm-7 p-0 ">
-                        <div class="top-selling rounded p-2 ml-4">
-                            <div class="top-selling-container p-1 ">
-                                <h4 class="text-center mt-2 mb-3 ">Top Selling Products</h4>
-                                <div class="top-products-list-container m-2 p-2 rounded">
-                                    <div class="top-product-titles d-flex px-1">
-                                        <div class="top-product-title mr-auto p-2">Product</div>
-                                        <div class="top-product-title p-2  mx-5" >Value</div>
-                                        <div class="top-product-title p-2  mx-5">Sold</div>
-                                    </div>
-                                    <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
-                                        <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
-                                        <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
-                                            <p class="m-0">Product XYZ</p>
-                                            <div class="stars">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>                                                
-                                        </div>
-                                        <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
-                                        <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
-                                    </div>
-                                    <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
-                                        <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
-                                        <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
-                                            <p class="m-0">Product XYZ</p>
-                                            <div class="stars">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>                                                
-                                        </div>
-                                        <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
-                                        <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
-                                    </div>
-                                    <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
-                                        <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
-                                        <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
-                                            <p class="m-0">Product XYZ</p>
-                                            <div class="stars">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>                                                
-                                        </div>
-                                        <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
-                                        <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
-                                    </div>
-                                    <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
-                                        <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
-                                        <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
-                                            <p class="m-0">Product XYZ</p>
-                                            <div class="stars">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>                                                
-                                        </div>
-                                        <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
-                                        <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
-                                    </div>
-                                    <div class="top-product m-1 my-2 p-2 rounded d-flex align-items-center">
-                                        <img src="/images/img_placeholder.png" alt="" class="product-img d-inline-block">
-                                        <div class="top-product-name mx-2 mr-auto d-inline-flex flex-column">
-                                            <p class="m-0">Product XYZ</p>
-                                            <div class="stars">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>                                                
-                                        </div>
-                                        <p class="top-product-data t-value my-auto mx-5 p-2">$2222</p>
-                                        <p class="top-product-data t-sold  my-auto mx-5 p-2">3334</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <div class="tab-pane fade" id="pills-payments" role="tabpanel" aria-labelledby="pills-payments-tab">Payments page</div>
+                    <div class="tab-pane fade" id="pills-products" role="tabpanel" aria-labelledby="pills-products-tab">Products page</div>
+                    <div class="tab-pane fade" id="pills-customerReq" role="tabpanel" aria-labelledby="pills-customerReq-tab">Customer request page</div>
+                  </div>
+
+                <!-------------------------- OVERVIEW WIDGETS ---------------------------->
+                
     </div>
     </div>
     <!--MAIN NAVIGATION TABS, EDITED END-->
@@ -1488,7 +1514,7 @@
     </div>-->
     <!-- End Realtime sts area-->
     <!-- Start Footer area-->
-    <div class="footer-copyright-area" > 
+    <div class="footer-copyright-area"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

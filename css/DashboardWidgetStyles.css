@@ -1,3 +1,20 @@
+/* *****************Nav tabs********************** */
+html,body{
+    height: 100%;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: white;
+    background-color: #52B36C;
+    text-decoration: none;
+}
+.nav-link{
+    color:#52B36C;
+}
+.nav-tabs{
+    border: none;
+}
+
+/************************Dashboard widget styles***********  */
 #widgets-container{
     margin-top: 20px;
     /* max-width:1366px !important; */
