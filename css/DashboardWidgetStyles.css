@@ -1,0 +1,207 @@
+/* *****************Nav tabs********************** */
+html,body{
+    height: 100%;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: white;
+    background-color: #52B36C;
+    text-decoration: none;
+}
+.nav-link{
+    color:#52B36C;
+}
+.nav-tabs{
+    border: none;
+}
+
+/************************Dashboard widget styles***********  */
+#widgets-container{
+    margin-top: 20px;
+    /* max-width:1366px !important; */
+}
+/* ***********************First row widgets********************** */
+/* User Profile widget */
+.user-info{
+    background-color: #52B36C;
+    color: white;
+    font-size:120%;    
+    border-radius: 40%;
+}
+.profile-pic{
+    border-radius: 50%;
+    height: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+.name{
+    font-size: larger;
+}
+.user-info-edit{
+    margin-left: auto;
+    margin-right: auto; 
+   
+    display: block;
+    color: #52B36C;
+    background-color: white;
+   
+}
+/* Product list styles */
+.product{
+    margin: 2%;
+}
+.products{   
+    width: 100%;
+    margin-bottom: 0;
+}
+.product-container{
+    background-color: #52B36C;
+    margin-left: 20px;
+    padding: 2%;
+    
+}
+.product{
+    background-color: white;
+    padding: 2%;
+    height:75%;
+    width: 50%;
+}
+.product-title{
+    color:#52B36C ;
+    font-size:120%;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.product-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rating{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttons{
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    
+}
+.product-edit{
+background-color:#52B36C ;
+color: white;
+}
+.product-container-btn{
+color: #52B36C;
+background-color: white;
+}
+.btn > a{
+    color: #52B36C;
+}
+/*Product carousel styles */
+.carousel-btn{
+    opacity: 1;
+}
+/* ******************Second row wdigets********* */
+/*your orders widget*/
+.your-orders{
+    background-color: #52B36C;
+    color: white;
+}
+.order-row{
+    background-color: white;
+}
+.order-text{
+    color: #52B36C;
+    font-size: medium;
+    font-weight: bold;
+}
+.view-details-btn{
+    background-color: white;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.view-details-btn>a{
+    margin-top: auto;
+    color:#52B36C;
+}
+.order-text-sm{
+    color: #52B36C;
+    font-size:small;
+    font-weight: bold;
+}
+/* **************Sales stats chart************* */
+.sale-chart-container{
+    background-color:#52B36C ;
+    color: white;
+    height: 100%;
+}
+.chart{
+    background-color: white; 
+}
+/* ****************Third row widgets************** */
+.payments{
+    background-color:#52B36C;
+    color: white;
+}
+.payment-row-container{
+    background-color: white;
+    color: #52B36C;
+}
+.sales{
+    background-color:#52B36C;
+    color: white;
+    /* margin-top: 1.2rem; */
+}
+.s-title,.c-title{
+    font-size: xx-large;
+}
+.value{
+    font-size: x-large;
+    font-weight: bold;
+}
+.percentage{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.d-info{
+    display: inline-flex;
+    align-items: center;
+}
+.customer{
+    background-color:#52B36C;
+    color: white;
+}
+/**************Top products*********/
+.top-selling{
+    background-color:#52B36C;
+        color: white;
+}
+.top-products-list-container{
+    background-color: white;
+}
+.top-product-titles{
+    color:#52B36C ;
+}
+.top-product{
+    background-color:#52B36C ;
+    color: white;
+}
+.top-product-title{
+    width: 50px;
+}
+.product-img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.checked{ /**Rating stars***/
+    color: gold;
+}
+.top-product-data{
+    font-size: x-large;
+    width: 50px;
+}
